@@ -85,7 +85,7 @@ const App = () => {
 
                {isSmallScreen && <PageModal showNavbar={showNavbar}/>}
 
-              {isScroll &&
+              {isScroll && !isSmallScreen &&
               <div className='floating_menu'>
               <Menu
               showNavbar={showNavbar}
@@ -104,6 +104,10 @@ const App = () => {
               showNavbar={showNavbar}
               isSmallScreen={isSmallScreen}
               setShowNavbar={setShowNavbar}
+              MenuContainer={{position: 'fixed',
+                              margin: '10px',
+                              marginRight: '15px'
+                              }}
                />}
  
                 

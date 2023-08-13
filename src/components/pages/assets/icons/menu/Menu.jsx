@@ -3,7 +3,10 @@ import './Menu.css';
 import { Twirl as Hamburger } from 'hamburger-react';
 import { ThemeContext } from '../../../../../context/ThemeContext';
 
-const Menu = ({ position, showNavbar, isSmallScreen, setShowNavbar, AppMenuContainer }) => {
+const Menu = ({ showNavbar,
+               setShowNavbar,
+                AppMenuContainer,
+                  MenuContainer }) => {
   
   const handleClick = () => {
     setShowNavbar(!showNavbar);
@@ -12,7 +15,7 @@ const Menu = ({ position, showNavbar, isSmallScreen, setShowNavbar, AppMenuConta
   return (
     <ThemeContext.Consumer>
       {theme => (
-        <div style={AppMenuContainer} className='menu_container'>
+        <div style={{...AppMenuContainer,...MenuContainer}} className='menu_container'>
               <Hamburger onClick={handleClick} toggled={showNavbar} toggle={setShowNavbar} 
               color= {showNavbar? '#fafafa': '#fafafa' } 
               hideOutline={false}

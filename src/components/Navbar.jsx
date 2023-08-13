@@ -45,11 +45,12 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
           isScroll={isScroll}
           isSmallScreen={isSmallScreen}
           NavbarLinksContainer={{width: '80%', 
-                                height:'60%',
+                                height:'fit-content',
                                 flexDirection: 'column',
-                                justifyContent:'space-evenly'}}
+                                justifyContent:'space-evenly',
+                              alignItems:'center'}}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{fontSize:'34px'}}/>
+          NavbarLinksLink={{fontSize:window.innerWidth < 500 ? '18px' :'34px'}}/>
          
 {/*        
 
@@ -75,10 +76,9 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
                         navbarSvg={{border: 'black solid 1px'}}/>
                                        } */}
             {isSmallScreen &&
-            <>
-          <div className='nav_row_title'><h4>Connect</h4></div>
-          <br />
-          <br />
+            <> {window.innerHeight > 800 &&
+          <div className='nav_row_title'><h4>Connect</h4></div>}
+         
           <SocialLinks 
           navSocialLink={{
               display: 'flex',
@@ -96,8 +96,7 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
               showNavbar={showNavbar}/>
             </>
            }
-           <br />
-           <br />
+       
             {isSmallScreen && (<div className='nav_email'>  <h4>Email </h4>
             <h3>roniebenitez01@gmail.com</h3></div>
            ) }
