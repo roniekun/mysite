@@ -1,0 +1,24 @@
+.policy_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top:175px;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    display: flex;
+    position: relative;
+    align-self: center;
+    text-align: center;
+    font-family: 'Ranade', sans-serif;
+
+}
+.policy{
+    padding:10%;
+    font-size: 14px;
+    line-height: 24px;
+}
+.lists{
+    font-family: 'Futura PT';
+}

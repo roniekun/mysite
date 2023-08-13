@@ -1,0 +1,15 @@
+.gallery_container{
+    height: 100%;
+    width: 100vw;
+    background-color: #fff;
+}
+.gallery_content{
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    width: 100%;
+    padding-top: 175px;
+    font-size: 35px;
+    font-weight: 500;
+   
+}

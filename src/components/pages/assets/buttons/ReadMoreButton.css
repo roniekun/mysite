@@ -1,0 +1,24 @@
+.read__more__btn{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: fit-content;
+    padding: 9px 16px;
+    height: fit-content;
+    font-size: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: transparent;
+    margin-top:10px;
+    border: 2px solid #181818;
+    font-family: 'Teko';
+    color: #181818;
+
+}
+.read__more__btn:hover{
+
+    opacity: 1;
+    color: white;
+    background-color: #181818;
+}

@@ -1,0 +1,26 @@
+.portfolio__container{
+
+      display: flex;
+      overflow-x: hidden;
+      width: 100vw;
+      height: auto;
+      flex-direction: column;
+      position: relative;
+      padding-top: 175px;
+   
+
+      
+      
+    }
+   
+.carousel__container{
+     position: relative;
+
+
+
+    }
+    @media (max-width: 600px) {
+      .portfolio__container{
+      padding-top: 60px;
+    }
+  }

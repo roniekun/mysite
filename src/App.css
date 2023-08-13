@@ -1,0 +1,63 @@
+/* Animation */
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.app__container{
+ 
+  overflow-y: scroll;
+  position: relative;
+  flex-direction: column;
+  z-index: 0;
+  margin-top: 0;
+  top:0;
+  margin: 0;
+  bottom: 0;
+  height: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #F5F5F7;
+  transition:.5s;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+/* DARKMODECONTEXT */
+/* Global */
+#component-dark {
+  background-color: #0B0E18;
+  color: white;
+  fill:white;
+}
+
+@media (max-width: 600px) {
+
+  .app__container{
+    padding:0;
+  }
+
+.description{
+        
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 10px;
+  text-align: justify;
+  margin-bottom: 2em;
+ 
+
+
+}
+}
+
+
+
+
+
+

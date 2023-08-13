@@ -1,0 +1,19 @@
+.contact__container{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;    
+    padding-top: 175px;
+    
+    /* background: rgb(116,82,74);
+    background: -moz-linear-gradient(56deg, rgba(116,82,74,1) 0%, rgba(67,44,62,1) 0%, rgba(42,79,80,1) 29%, rgba(36,123,173,1) 52%, rgba(41,41,42,1) 86%);
+    background: -webkit-linear-gradient(56deg, rgba(116,82,74,1) 0%, rgba(67,44,62,1) 0%, rgba(42,79,80,1) 29%, rgba(36,123,173,1) 52%, rgba(41,41,42,1) 86%);
+    background: linear-gradient(56deg, rgba(116,82,74,1) 0%, rgba(67,44,62,1) 0%, rgba(42,79,80,1) 29%, rgba(36,123,173,1) 52%, rgba(41,41,42,1) 86%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#74524a",endColorstr="#29292a",GradientType=1);
+   */
+    }
+    
+  

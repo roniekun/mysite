@@ -1,0 +1,39 @@
+.blog_container{
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;    
+    padding-top: 175px;
+    background-color: white;
+
+    }
+.no_content{
+
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-family: 'Futura PT';
+    padding: 10%;
+
+    
+  
+}
+@media(max-width: 600px){
+    
+    .blog_container{
+        padding-top:50px;
+     
+    }
+    .no_content{
+         
+        padding: 5%;
+    }
+}
+    
+  

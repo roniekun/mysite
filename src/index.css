@@ -1,0 +1,26 @@
+
+:root{
+    --gold: #FFB600;
+    --primary-color: #101214;
+    --orange: #a84916;
+    --gray: #6d6d6d;
+
+}
+body {
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   background-color: #202020;
+   position: relative;
+   min-height: 100vh; 
+   overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
