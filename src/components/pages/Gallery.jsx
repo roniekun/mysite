@@ -7,6 +7,7 @@ const Gallery = ({isSmallScreen,setShowNavbar}) => {
   return (
     <div className='gallery_container'>
         {!isSmallScreen &&  <NavbarLinks 
+        GalleryNavbarLink={{color: '#181818'}}
           setShowNavbar={setShowNavbar}
           isSmallScreen={isSmallScreen}/>}
         <div className='gallery_content'></div>

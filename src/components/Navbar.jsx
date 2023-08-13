@@ -36,6 +36,9 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
         {(themeContext) => (
           <nav 
           ref={navbarContainerRef}
+          style={{
+            width: isSmallScreen ? '100vw' : '50vw'
+          }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
           
@@ -48,9 +51,10 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
                                 height:'fit-content',
                                 flexDirection: 'column',
                                 justifyContent:'space-evenly',
-                              alignItems:'center'}}
+                              alignItems:'center',
+                            backgroundColor: 'transparent'}}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{fontSize:window.innerWidth < 500 ? '18px' :'34px'}}/>
+          NavbarLinksLink={{fontSize:'28px', color: 'whitesmoke'}}/>
          
 {/*        
 

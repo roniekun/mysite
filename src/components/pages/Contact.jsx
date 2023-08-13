@@ -13,6 +13,7 @@ function Contact({isSmallScreen, setShowNavbar}) {
                                             right: '0',
                                             zIndex: '9999'}}
             setShowNavbar={setShowNavbar}
+            ContactNavbarLink={{color: '#181818'}}
             isSmallScreen={isSmallScreen}/>}
       <ContactContent/>
       <Footer isSmallScreen={isSmallScreen}/>

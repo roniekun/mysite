@@ -11,7 +11,9 @@ function Portfolio({showNavbar, isSmallScreen, setShowNavbar}) {
         {!isSmallScreen && <NavbarLinks PortfolioNavbarLinks={{position:'absolute',
                                             top:'0', 
                                             right: '0',
-                                            zIndex: '9999'}}
+                                            zIndex: '9999',
+                                            color: '#181818'}}
+           PortfolioNavbarLink={{color: '#181818'}}                                   
           setShowNavbar={setShowNavbar}
           isSmallScreen={isSmallScreen}/>}
         <PortfolioContent/>

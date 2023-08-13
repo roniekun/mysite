@@ -6,6 +6,7 @@ const Policy = ({isSmallScreen, setShowNavbar}) => {
   return (
     <div className='policy_container'>
           {!isSmallScreen &&<NavbarLinks 
+          PolicyNavbarLink={{color: '#181818'}}
             setShowNavbar={setShowNavbar}
             isSmallScreen={isSmallScreen}/>}
       <h2 className='heading'>Privacy Policy</h2>

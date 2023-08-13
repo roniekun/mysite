@@ -18,6 +18,7 @@ function About({isSmallScreen, setShowNavbar }) {
                                             right: '0',
                                             zIndex: '9999'}}
         setShowNavbar={setShowNavbar}
+        AboutNavbarLink={{color: '#181818'}}
         isSmallScreen={isSmallScreen}/>}
       <AboutContent />
       <Footer isSmallScreen={isSmallScreen} /> 

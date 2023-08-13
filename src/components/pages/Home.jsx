@@ -9,7 +9,9 @@ function Home({isSmallScreen,isMediumScreen,setShowNavbar}) {
     {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{position:'absolute',
         top:'0', 
         right: '0',
-        zIndex: '9999'}}
+        zIndex: '9999',
+        }}
+    HomeNavbarLink={{color: '#181818'}}
     setShowNavbar={setShowNavbar}
     isSmallScreen={isSmallScreen}/>}
     <HomeContent isSmallScreen={isSmallScreen} isMediumScreen={isMediumScreen}/>

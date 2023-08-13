@@ -4,7 +4,6 @@
     flex-direction: row;
     margin-top: 0;
     list-style: none;
-    width: 600px;
     right:0;
     height: 100vh;
     flex-direction: row;
@@ -14,14 +13,11 @@
     align-items: center;
     justify-content: center;
     transform: translateX(100%);
+    background-color: black;
 
    
   }
-  .bg-color{
-    background-color: whitesmoke;
-    
-
-  }
+ 
 
 /* 
   .navbar_container::after{
@@ -99,7 +95,7 @@
       font-weight: 100;
       position: relative;
       color:#fafafa;
-      font-size: 14px;
+      font-size: 12px;
       background-color: transparent;
       font-family:sans-serif;
       padding-inline:2px;

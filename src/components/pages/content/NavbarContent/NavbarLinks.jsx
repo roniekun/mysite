@@ -13,7 +13,13 @@ const NavbarLinks = ({
   AboutNavbarLinks,
   NavbarLinksContainer,
   NavbarLinksWrapper,
-  NavbarLinksLink
+  NavbarLinksLink,
+  HomeNavbarLink,
+  PortfolioNavbarLink,
+  ContactNavbarLink,
+  AboutNavbarLink,
+  GalleryNavbarLink,
+  PolicyNavbarLink
 }) => {
 
   const location = useLocation();
@@ -62,7 +68,8 @@ const NavbarLinks = ({
       {links.map((link, index) => (
         <div style={NavbarLinksWrapper} className="link_wrapper" key={link.to}>
           <NavLink
-            style={NavbarLinksLink}
+            style={{...NavbarLinksLink,...HomeNavbarLink,...PortfolioNavbarLink,
+            ...ContactNavbarLink,...AboutNavbarLink,...GalleryNavbarLink,...PolicyNavbarLink}}
             ref={navbarlinkRefs[index]}
             onClick={() => handleLinkClick()}
             className={`navbar_link ${

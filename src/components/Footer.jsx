@@ -4,6 +4,7 @@ import './Footer.css';
 import SocialLinks from './pages/assets/icons/SocialLinks';
 import UsefulLinks from './pages/assets/links/UsefulLinks';
 import RequestBtn from './pages/assets/buttons/RequestBtn';
+import MagneticEffect from '../assets/MagneticEffect/MagneticEffect';
 
 function Footer({ showNavbar, isSmallScreen}) {
   const [showFooter, setShowFooter] = useState(window.innerWidth > 768);
@@ -26,12 +27,15 @@ function Footer({ showNavbar, isSmallScreen}) {
       <>
        <h1 className='footer_cta' >Your website, your brand's canvas – 
        let's paint your online masterpiece today!</h1>
-           <RequestBtn/>
       </>
-          <UsefulLinks/>
-       
+      <MagneticEffect>
+       <div>
+       <RequestBtn/>
+       </div>
+       </MagneticEffect>
 
-    <> 
+          <UsefulLinks/>
+      <> 
       <SocialLinks  
       isSmallScreen={isSmallScreen} 
       displayIcons={true}
