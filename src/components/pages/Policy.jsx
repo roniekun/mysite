@@ -1,9 +1,13 @@
 import React from 'react';
 import './Policy.css';
 import Footer from '../Footer';
-const Policy = ({isSmallScreen}) => {
+import NavbarLinks from './content/NavbarContent/NavbarLinks';
+const Policy = ({isSmallScreen, setShowNavbar}) => {
   return (
     <div className='policy_container'>
+          {!isSmallScreen &&<NavbarLinks 
+            setShowNavbar={setShowNavbar}
+            isSmallScreen={isSmallScreen}/>}
       <h2 className='heading'>Privacy Policy</h2>
   <div className="policy">
 

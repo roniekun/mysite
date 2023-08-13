@@ -1,4 +1,4 @@
-.home__container{
+.home_container{
     display: flex;
     overflow-x: hidden;
     width: 100vw;
@@ -10,7 +10,7 @@
     }
 
     @media (max-width: 600px) {
-        .home__container{
+        .home_container{
 
             padding-top:50px;
             margin: 0;

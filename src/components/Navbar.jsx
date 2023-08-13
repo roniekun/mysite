@@ -1,112 +1,66 @@
-import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { ThemeContext } from '../context/ThemeContext';
 import SocialLinks from './pages/assets/icons/SocialLinks';
 import SiteLogo from './SiteLogo';
 import RequestBtn from './pages/assets/buttons/RequestBtn';
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { delay } from 'framer-motion';
+import NavbarLinks from './pages/content/NavbarContent/NavbarLinks';
+import { gsap } from 'gsap';
+
 
 
 const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDesktop, isScroll }) => {
-  const location = useLocation();
   const navbarContainerRef = useRef(null);
-  
 
-  
   useEffect(() => {
-
-    if (  showNavbar ) {
-      gsap.to(navbarContainerRef.current, { y: '0%', 
-                                            duration: 0.5, 
-                                            opacity: 1, 
-                                            ease: 'power2.out', 
-                                          });
+    if (showNavbar) {
+      gsap.to(navbarContainerRef.current, {
+        x: '0%',
+        duration: 0.5,
+        opacity: 1,
+        ease: 'power2.out',
+      });
     } else {
-      gsap.to(navbarContainerRef.current, { y: isSmallScreen?  '-100%' : '0', 
-                                            duration: 0.3, 
-                                            opacity:  1, 
-                                            ease: 'power2.in',
-                                            });
+      gsap.to(navbarContainerRef.current, {
+        x:'100%',
+        duration: 0.3,
+        opacity: 1,
+        ease: 'power2.in',
+      });
     }
-  }, [showNavbar, isSmallScreen ]);
-
-  const links = [
-    { to: '/', text: 'home' },
-    { to: '/about', text: 'about' },
-    { to: '/portfolio', text: 'work' },
-    { to: '/contact', text: 'contact' },
-  ];
-
- const navbarlinkRefs = links.map(() => useRef(null));
-
- useEffect(() => {
-  if (showNavbar && isSmallScreen ) {
-    navbarlinkRefs.forEach((navbarlinkRef, index) => {
-      gsap.fromTo(
-        navbarlinkRef.current,
-        { y: '100%', opacity: 0,},
-        {
-          y: '0',
-          opacity: 1,
-          duration: 0.7,
-          delay: index * 0.1,
-          skewY:0
-          
-        }
-      );
-    });
-  }
-}, [showNavbar,isSmallScreen, navbarlinkRefs]);
-
-
-  const handleLinkClick = () => {
-
-    window.scrollTo({ top: 0 })
-    setShowNavbar(!isSmallScreen);
-  };
+  }, [showNavbar, isSmallScreen]);
 
   return (
     <>
       <ThemeContext.Consumer>
         {(themeContext) => (
           <nav 
-          ref={navbarContainerRef} 
+          ref={navbarContainerRef}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
-            <>
-          { isSmallScreen && <div className='nav_row_title'> <h4 >Sections</h4> </div>} 
           
-            <>
+          <NavbarLinks 
+          showNavbar={showNavbar}
+          setShowNavbar={setShowNavbar}
+          isScroll={isScroll}
+          isSmallScreen={isSmallScreen}
+          NavbarLinksContainer={{width: '80%', 
+                                height:'60%',
+                                flexDirection: 'column',
+                                justifyContent:'space-evenly'}}
+          NavbarLinksWrapper={{}}
+          NavbarLinksLink={{fontSize:'34px'}}/>
+         
+{/*        
+
            {isDesktop && <SiteLogo showNavbar={showNavbar} 
                                     navbarContainer={{ color : '#3D3D3d',
                                      width: '15vw',
                                      fontSize: '16px',
-                                     fontFamily: 'Rajdhani,sans serif'}} />}
-            <div className="links_container">
-              
-
-              {links.map((link, index) => (
-                <div
-                  className="link_wrapper"
-                  key={link.to}
-                  
-                >
-                  <NavLink 
-                     ref={navbarlinkRefs[index]}  
-                    onClick={() => 
-                    handleLinkClick(location.pathname === link.to)}
-                    className={`navbar_link ${isScroll? 'scrolled_link': ''} ${location.pathname === link.to ? 'active_link' : ''}`}
-                    to={link.to}
-                  >
-                    {link.text}
-                  </NavLink>
-                </div>
-              ))}
-            </div></>
-            </>
-            {!isMediumScreen && !isSmallScreen && 
+                                     fontFamily: 'Rajdhani,sans serif'}} />} */}
+         
+            
+            {/* {!isMediumScreen && !isSmallScreen && 
             <RequestBtn isDesktop={isDesktop}
                        navbarButton={{border:'none',
                                        background: 'transparent',
@@ -119,7 +73,7 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
                                         color : '#3D3D3d',
                                         fontFamily: 'Rajdhani,sans serif'}}
                         navbarSvg={{border: 'black solid 1px'}}/>
-                                       }
+                                       } */}
             {isSmallScreen &&
             <>
           <div className='nav_row_title'><h4>Connect</h4></div>

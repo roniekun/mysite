@@ -6,7 +6,7 @@
   margin:0;
   box-sizing: border-box;
 }
-.app__container{
+.app_container{
  
   overflow-y: scroll;
   position: relative;
@@ -29,6 +29,23 @@
   
 }
 
+    .floating_menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      width: 60px;
+      background-color: red;
+      border-radius: 50%;
+      position: fixed;
+      top:50px;
+      right: 50px;
+      z-index: 99999;
+     
+
+
+}
+
 /* DARKMODECONTEXT */
 /* Global */
 #component-dark {
@@ -39,7 +56,7 @@
 
 @media (max-width: 600px) {
 
-  .app__container{
+  .app_container{
     padding:0;
   }
 
@@ -50,8 +67,15 @@
   margin-bottom: 10px;
   text-align: justify;
   margin-bottom: 2em;
+}
  
+  .floating_menu{
 
+    right: 20px;
+    top:70px;
+    
+
+  
 
 }
 }

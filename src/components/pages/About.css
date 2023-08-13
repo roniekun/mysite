@@ -1,4 +1,4 @@
-.about__container{
+.about_container{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -12,7 +12,7 @@
     }
   
     @media (max-width: 600px) {
-        .about__container{
+        .about_container{
             position: relative;
             padding-top:50px;
             margin: 0;

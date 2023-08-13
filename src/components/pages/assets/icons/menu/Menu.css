@@ -1,11 +1,13 @@
 .menu_container{
-    z-index: 99999;
+    z-index: 999;
     top:0;
     right:0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 7px;
+    align-self: right;
+    background-color: black;
+
     
    
 }
@@ -14,13 +16,9 @@
 
     .menu_container{
         box-sizing: border-box;
-        z-index: 99999;
         position: relative;
-        align-self: flex-end;
-        height: fit-content;
-        transform: translate(-30%, 10%);
+        z-index: 99999;
 
-        
     }
 
 

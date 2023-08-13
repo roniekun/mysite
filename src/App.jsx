@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
@@ -13,6 +12,7 @@ import Policy from './components/pages/Policy';
 import Menu from './components/pages/assets/icons/menu/Menu';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 import PageModal from './assets/PageModal'
+import { color } from 'framer-motion';
 
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -22,12 +22,10 @@ const App = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
   const [showNavbar, setShowNavbar] = useState();
 
-
-
   const handleResize = useCallback(() => {
 
     const screenWidth = window.innerWidth;
-    setShowNavbar(screenWidth > 600  && window.scrollY === 0);
+    setShowNavbar(screenWidth > 600);
     setIsDesktop(screenWidth > 600);
     setIsSmallScreen(screenWidth <= 600);
     setIsMediumScreen(screenWidth <= 1024 && screenWidth > 600)
@@ -38,12 +36,14 @@ const App = () => {
 
     const currentScroll = window.scrollY;
 
-    if (isDesktop){ 
-      setShowNavbar(  scrollPosition > currentScroll || currentScroll <= 200 ); 
-      setScrollPosition(currentScroll);
-    }
-    setIsScroll(window.scrollY > 200);
-     console.log(`scroll is ${isScroll}`);
+    // if (isDesktop){ 
+    //   setShowNavbar(  scrollPosition > currentScroll || currentScroll <= 200 ); 
+    //   setScrollPosition(currentScroll);
+    // }
+
+      if (currentScroll<=600){
+        setShowNavbar(false);
+      }
 
     }, [scrollPosition, isScroll]);
 
@@ -56,6 +56,8 @@ const App = () => {
 
     const handleScrollEvent = () => {
       handleScroll();
+      setIsScroll(window.scrollY > window.innerWidth/2);
+      console.log(`scroll is ${isScroll}`);
     };
 
     window.addEventListener('resize', handleResizeEvent);
@@ -75,26 +77,32 @@ const App = () => {
         <ThemeContext.Consumer>
           {({ theme }) => {
             return (
-              <div className='app__container' id={`component-${theme}`}>
+              <div className='app_container' id={`component-${theme}`}>
 
                {isSmallScreen && <PageModal showNavbar={showNavbar}/>}
-                <Header
-                  showNavbar={showNavbar}
-                  isDesktop={isDesktop}
-                  isSmallScreen={isSmallScreen}
-                  setShowNavbar={setShowNavbar}
-                />
+
+              {isScroll &&
+              <div className='floating_menu'>
+              <Menu
+              showNavbar={showNavbar}
+              isSmallScreen={isSmallScreen}
+              setShowNavbar={setShowNavbar}
+              displayNames={false}
+              AppMenuContainer={{position: 'relative',
+                                backgroundColor:'transparent'
+                                }}
+              colorTheme={theme === "dark" ? 'white' : 'black'}
+             />
+            
+            </div>} 
+
+             { isSmallScreen &&  <Menu
+              showNavbar={showNavbar}
+              isSmallScreen={isSmallScreen}
+              setShowNavbar={setShowNavbar}
+               />}
+ 
                 
-               { isSmallScreen &&
-                <Menu
-                  showNavbar={showNavbar}
-                  isSmallScreen={isSmallScreen}
-                  setShowNavbar={setShowNavbar}
-                  displayNames={false}
-                  position= {'fixed'}
-                  colorTheme={theme === "dark" ? 'white' : 'black'}
-                 />}
-                      
                 <Navbar
                   showNavbar={showNavbar}
                   isDesktop={isDesktop}
@@ -106,13 +114,39 @@ const App = () => {
   
 
                 <Routes>
-                  <Route path='/' element={<Home isSmallScreen={isSmallScreen} isMediumScreen={isMediumScreen} showNavbar={showNavbar} />} />
-                  <Route path='/about' element={<About isSmallScreen={isSmallScreen} showNavbar={showNavbar} />} />
-                  <Route path='/portfolio' element={<Portfolio isSmallScreen={isSmallScreen}  showNavbar={showNavbar} />} />
+                  <Route path='/' 
+                  element={<Home 
+                  isSmallScreen={isSmallScreen} 
+                  isMediumScreen={isMediumScreen} 
+                  showNavbar={showNavbar}
+                  setShowNavbar={setShowNavbar} />} />
+                  
+                  <Route path='/about' 
+                  element={<About 
+                  isSmallScreen={isSmallScreen} 
+                  showNavbar={showNavbar}
+                  setShowNavbar={setShowNavbar} />} />
+                  <Route path='/portfolio' 
+                  element={<Portfolio 
+                  isSmallScreen={isSmallScreen}  
+                  showNavbar={showNavbar}
+                  setShowNavbar={setShowNavbar} />} />
                   {/* <Route path='/blog' element={<Blog isSmallScreen={isSmallScreen}  showNavbar={showNavbar} />} /> */}
-                  <Route path='/gallery' element={<Gallery isSmallScreen={isSmallScreen}  showNavbar={showNavbar} />} />
-                  <Route path='/contact' element={<Contact isSmallScreen={isSmallScreen}  showNavbar={showNavbar} />} />
-                  <Route path='/policy' element={<Policy isSmallScreen={isSmallScreen}  showNavbar={showNavbar} />} />
+                  <Route path='/gallery' 
+                  element={<Gallery 
+                  isSmallScreen={isSmallScreen}  
+                  showNavbar={showNavbar}
+                  setShowNavbar={setShowNavbar} />} />
+                  <Route path='/contact'
+                   element={<Contact 
+                   isSmallScreen={isSmallScreen}  
+                   showNavbar={showNavbar}
+                   setShowNavbar={setShowNavbar} />} />
+                  <Route path='/policy' 
+                  element={<Policy 
+                  isSmallScreen={isSmallScreen}
+                  setShowNavbar={setShowNavbar}  
+                  showNavbar={showNavbar} />} />
                   <Route component={NotFound} />
                 </Routes>
                 {/* <AutoscrollButton
