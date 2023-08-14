@@ -133,29 +133,37 @@ const App = () => {
                   isSmallScreen={isSmallScreen} 
                   isMediumScreen={isMediumScreen} 
                   showNavbar={showNavbar}
-                  setShowNavbar={setShowNavbar} />} />
+                  setShowNavbar={setShowNavbar}
+                  isScroll={isScroll} />}
+                  />
                   
                   <Route path='/about' 
                   element={<About 
                   isSmallScreen={isSmallScreen} 
                   showNavbar={showNavbar}
-                  setShowNavbar={setShowNavbar} />} />
+                  setShowNavbar={setShowNavbar} />}
+                  />
+
                   <Route path='/portfolio' 
                   element={<Portfolio 
                   isSmallScreen={isSmallScreen}  
                   showNavbar={showNavbar}
                   setShowNavbar={setShowNavbar} />} />
+
                   {/* <Route path='/blog' element={<Blog isSmallScreen={isSmallScreen}  showNavbar={showNavbar} />} /> */}
+                 
                   <Route path='/gallery' 
                   element={<Gallery 
                   isSmallScreen={isSmallScreen}  
                   showNavbar={showNavbar}
                   setShowNavbar={setShowNavbar} />} />
+
                   <Route path='/contact'
                    element={<Contact 
                    isSmallScreen={isSmallScreen}  
                    showNavbar={showNavbar}
                    setShowNavbar={setShowNavbar} />} />
+
                   <Route path='/policy' 
                   element={<Policy 
                   isSmallScreen={isSmallScreen}

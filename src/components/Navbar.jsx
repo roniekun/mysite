@@ -37,7 +37,7 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
           <nav 
           ref={navbarContainerRef}
           style={{
-            width: isSmallScreen ? '100vw' : '50vw'
+            width: isSmallScreen || isMediumScreen ? '100vw' : '50vw'
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
