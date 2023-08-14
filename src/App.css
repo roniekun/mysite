@@ -41,10 +41,7 @@
       top:50px;
       right: 50px;
       z-index: 99999;
-     
-
-
-}
+      } 
 
 /* DARKMODECONTEXT */
 /* Global */
@@ -74,8 +71,8 @@
     right: 20px;
     top:70px;
     
+    
 
-  
 
 }
 }

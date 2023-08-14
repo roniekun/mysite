@@ -12,6 +12,7 @@ import Policy from './components/pages/Policy';
 import Menu from './components/pages/assets/icons/menu/Menu';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 import PageModal from './assets/PageModal'
+import FramerMagnetic from './assets/MagneticEffect/FramerMagnetic';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
 
 const App = () => {
@@ -85,8 +86,7 @@ const App = () => {
 
               <PageModal showNavbar={showNavbar}/>
 
-            
-              {isScroll && !isSmallScreen &&
+             {isScroll && !isSmallScreen &&
               <MagneticEffect>
               <div className='floating_menu'>
               <Menu
@@ -99,6 +99,7 @@ const App = () => {
                                 }}
               colorTheme={theme === "dark" ? 'white' : 'black'}
              />
+            
             </div>
             </MagneticEffect>} 
             

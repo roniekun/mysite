@@ -29,7 +29,7 @@ function Footer({ showNavbar, isSmallScreen}) {
        let's paint your online masterpiece today!</h1>
       </>
       <MagneticEffect>
-       <div>
+       <div >
        <RequestBtn/>
        </div>
        </MagneticEffect>
