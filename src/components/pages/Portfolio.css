@@ -2,6 +2,8 @@
 
       display: flex;
       overflow-x: hidden;
+      justify-content: center;
+      align-items: center;
       width: 100vw;
       height: auto;
       flex-direction: column;

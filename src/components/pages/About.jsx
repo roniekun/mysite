@@ -15,7 +15,6 @@ function About({isSmallScreen, setShowNavbar }) {
     <div id={`component-${theme}`} className='about_container'> 
         {!isSmallScreen &&<NavbarLinks AboutNavbarLinks={{position:'absolute',
                                             top:'0', 
-                                            right: '0',
                                             zIndex: '9999'}}
         setShowNavbar={setShowNavbar}
         AboutNavbarLink={{color: '#181818'}}

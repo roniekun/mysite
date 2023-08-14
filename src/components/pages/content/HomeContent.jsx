@@ -29,53 +29,29 @@ const HomeContent = ({isSmallScreen,isMediumScreen}) => {
         <p className='ptag_home'>
           He creates websites using React and is currently expanding his expertise in front-end development.
         </p>
+         <img src="images/coding-desk.jpg" alt="#" />
       </NavLink>
 
-      <NavLink to="/gallery" onClick={() => window.scrollTo({ top: 0 })} className='third_container'>
+      <NavLink className='third_container' to="/gallery" onClick={() => window.scrollTo({ top: 0 })}  >
         <p className='ptag_home_title'>Photography</p>
         <p className='ptag_home qoute'>
           I find joy in the art of Photography.
           While I don't limit myself to a specific niche,
           my portfolio reflects a diverse array of captivating shots.
         </p>
+        <img src="images/camera.jpg" alt="#" />
+        
       </NavLink>
       </div>
 
       <div className='home_forth_container'>
         <p className='ptag_home'>
-          <span>Stay awhile </span><br /> immerse yourself in the fusion of technology and artistic expression.<br />
-          Whether you're intrigued by coding wizardry or drawn to the beauty of visual storytelling,<br />
+          <span>Stay awhile </span><br /> immerse yourself in the fusion of technology and artistic expression.
+          Whether you're intrigued by coding wizardry or drawn to the beauty of visual storytelling,
           I hope this leaves you inspired and eager to embark on future collaborations.
         </p>
+        <img src="images/coding.jpg" alt="#" />
       </div> 
-      {/* {showContactForm && <PageModal zIndex={'9999'} showContactForm={showContactForm}/>}
-      {showContactForm &&
-       <div className= {showContactForm  ? 'contact_form_container' : 'hidden'}>
-        <span  onClick={handleClick} style={{color: 'white', position: 'absolute', right: '0', cursor: 'pointer', margin: '5%', 
-        background:'black'}} className="material-symbols-outlined">
-        close
-        </span>
-       <ContactForm /></div> 
-     } */}
-     {/* <div className='fifth_container'>
-
-          <h1 className='ptag_title'>Technology I use </h1> 
-          <div className='tech_lists'>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>React</li>
-        <li>Git</li>
-        <li>npm</li>
-         <li>Vite</li>
-        <li>Firebase</li>
-        <li>Sony Alpha</li>
-        <li>Adobe Ligthroom</li>
-    </ul>
-</div>
-     
-        </div> */}
     </div>
   );
 };

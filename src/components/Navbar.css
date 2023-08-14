@@ -14,8 +14,6 @@
     justify-content: center;
     transform: translateX(100%);
     background-color: black;
-
-   
   }
  
 
@@ -44,7 +42,11 @@
     z-index: -1;
 
   }
-
+  @media (max-width: 1024px) {
+    .navbar_container{
+    width: 100vw;
+    }
+    }
   @media (max-width: 600px) {
   
     .navbar_container {

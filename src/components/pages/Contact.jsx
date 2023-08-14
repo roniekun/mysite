@@ -10,7 +10,6 @@ function Contact({isSmallScreen, setShowNavbar}) {
     <><div className='contact_container'>
           {!isSmallScreen &&<NavbarLinks  ContactNavbarLinks={{position:'absolute',
                                             top:'0', 
-                                            right: '0',
                                             zIndex: '9999'}}
             setShowNavbar={setShowNavbar}
             ContactNavbarLink={{color: '#181818'}}

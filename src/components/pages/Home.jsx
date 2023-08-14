@@ -6,10 +6,12 @@ function Home({isSmallScreen,isMediumScreen,setShowNavbar}) {
   
   return (
   <div className='home_container'>
-    {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{position:'absolute',
+    {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{
         top:'0', 
-        right: '0',
         zIndex: '9999',
+        backgroundColor:'whitesmoke',
+        position: 'fixed',
+        width: '100%'
         }}
     HomeNavbarLink={{color: '#181818'}}
     setShowNavbar={setShowNavbar}
