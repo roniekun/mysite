@@ -28,7 +28,7 @@
     letter-spacing: 1px;
     display: flex;
     color: whitesmoke;
-    text-transform: uppercase;
+    text-transform: capitalize;
     line-height: 24px;
     font-size: 16px;
     font-weight: 400;

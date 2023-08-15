@@ -124,7 +124,8 @@ const App = () => {
                   transform:  isScroll ? 'translateY(-100%)': '',
                   width: '100%',
                   height: '50px'}}
-                  HomeNavbarLink={{color: '#181818'}}
+                  HomeNavbarLink={{color: '#181818',
+                                    textTransform: 'uppercase'}}
                   setShowNavbar={setShowNavbar}
                   isSmallScreen={isSmallScreen}/>}
                 
