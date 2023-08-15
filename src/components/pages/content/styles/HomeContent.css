@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 200px;
+    row-gap: 100px;
 }
 
 .first_container {
@@ -204,6 +204,7 @@
     margin-bottom: 5%;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: #181818;
 }
 .home_forth_container img{
     position: absolute;
@@ -279,7 +280,6 @@
     transition: .5s;
     transform-style: preserve-3d;
 }
-
 
 @media (max-width: 1024px) {
     .first_container {

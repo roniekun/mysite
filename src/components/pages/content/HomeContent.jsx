@@ -1,4 +1,4 @@
-import './HomeContent.css';
+import './styles/HomeContent.css';
 import { NavLink} from 'react-router-dom';
 import RequestBtn from '../assets/buttons/RequestBtn';
 
@@ -43,14 +43,12 @@ const HomeContent = ({isSmallScreen,isMediumScreen}) => {
         
       </NavLink>
       </div>
-
       <div className='home_forth_container'>
         <p className='ptag_home'>
           <span>Stay awhile </span><br /> immerse yourself in the fusion of technology and artistic expression.
           Whether you're intrigued by coding wizardry or drawn to the beauty of visual storytelling,
           I hope this leaves you inspired and eager to embark on future collaborations.
         </p>
-        <img src="images/coding.jpg" alt="#" />
       </div> 
     </div>
   );

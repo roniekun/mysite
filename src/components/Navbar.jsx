@@ -1,4 +1,4 @@
-import './Navbar.css';
+import './styles/Navbar.css';
 import { ThemeContext } from '../context/ThemeContext';
 import SocialLinks from './pages/assets/icons/SocialLinks';
 import SiteLogo from './SiteLogo';

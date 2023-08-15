@@ -1,5 +1,5 @@
 import React from 'react';
-import './About.css';
+import './styles/About.css';
 import Footer from '../Footer';
 import AboutContent from './content/AboutContent';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -13,12 +13,6 @@ function About({isSmallScreen, setShowNavbar }) {
     <ThemeContext.Consumer>
   {({ theme }) => (
     <div id={`component-${theme}`} className='about_container'> 
-        {!isSmallScreen &&<NavbarLinks AboutNavbarLinks={{position:'absolute',
-                                            top:'0', 
-                                            zIndex: '9999'}}
-        setShowNavbar={setShowNavbar}
-        AboutNavbarLink={{color: '#181818'}}
-        isSmallScreen={isSmallScreen}/>}
       <AboutContent />
       <Footer isSmallScreen={isSmallScreen} /> 
     </div>

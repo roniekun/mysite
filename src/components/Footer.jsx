@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import './Footer.css'; 
+import './styles/Footer.css'; 
 import SocialLinks from './pages/assets/icons/SocialLinks';
 import UsefulLinks from './pages/assets/links/UsefulLinks';
 import RequestBtn from './pages/assets/buttons/RequestBtn';

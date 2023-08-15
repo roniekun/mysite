@@ -1,5 +1,5 @@
 import React from 'react';
-import './Policy.css';
+import './styles/Policy.css';
 import Footer from '../Footer';
 import NavbarLinks from './content/NavbarContent/NavbarLinks';
 const Policy = ({isSmallScreen, setShowNavbar}) => {

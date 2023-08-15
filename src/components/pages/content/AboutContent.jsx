@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './AboutContent.css'
+import './styles/AboutContent.css'
 // import ReadMoreButton from '../../buttons/ReadMoreButton';
 import { ThemeContext } from '../../../context/ThemeContext';
 
@@ -8,7 +8,6 @@ const AboutContent = () => {
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
-
 
   return (
     <ThemeContext.Consumer>

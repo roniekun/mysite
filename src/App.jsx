@@ -14,6 +14,7 @@ import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 import PageModal from './assets/PageModal'
 import FramerMagnetic from './assets/MagneticEffect/FramerMagnetic';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
+import NavbarLinks from './components/pages/content/NavbarContent/NavbarLinks';
 
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -112,10 +113,20 @@ const App = () => {
               MenuContainer={{position: 'fixed',
                               margin: '10px',
                               marginRight: '15px'
-                              }}
-               />}
+                              }}/>}
                </div>  
- 
+                {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{
+                  top:'0', 
+                  zIndex: '9999',
+                  backgroundColor: isScroll ? 'transparent' : 'rgba(255,255,255,.2)',
+                  position: 'fixed',
+                  transition: '.5s',
+                  transform:  isScroll ? 'translateY(-100%)': '',
+                  width: '100%'
+                  }}
+                  HomeNavbarLink={{color: '#181818'}}
+                  setShowNavbar={setShowNavbar}
+                  isSmallScreen={isSmallScreen}/>}
                 
                 <Navbar
                   showNavbar={showNavbar}

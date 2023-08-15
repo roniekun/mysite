@@ -1,13 +1,11 @@
 import React from 'react'
-import './PortfolioContent.css';
+import './styles/PortfolioContent.css';
 import { ThemeContext } from '../../../context/ThemeContext';
 
 
 
 const PortfolioContent = () => {
  
-  
-
   return (
     <ThemeContext.Consumer>
   {({ theme }) => (

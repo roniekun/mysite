@@ -1,5 +1,5 @@
 import { ThemeContext } from '../context/ThemeContext';
-import './Header.css';
+import './styles/Header.css';
 import SiteLogo from './SiteLogo';
 
 
