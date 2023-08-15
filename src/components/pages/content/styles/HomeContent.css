@@ -8,7 +8,7 @@
 
 .home_content_container {
     height: 100%;
-    width: 70%;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@
     width: 100%;
     place-items: center;
     box-sizing: border-box;
-     background-image: url('/images/camera-bw.jpg'); 
+     background-image: url('/images/camera-bw.webp'); 
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -188,7 +188,7 @@
     height: 40%;
     width: 100%;
     z-index: 1;
-    background: linear-gradient(to top, black, transparent);
+    background: linear-gradient(to top, #142A39, transparent);
     border-radius: 7px;
 }
 
@@ -399,11 +399,5 @@
         transform: translate(-50%, -10%);
     }
 
-    .tech_lists li {
-        display: flex;
-        flex: 0 0 10%;
-        height: 100px;
-        margin: 10%;
-        font-size: 24px;
-    }
+
 }

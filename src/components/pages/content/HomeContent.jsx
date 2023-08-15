@@ -29,7 +29,7 @@ const HomeContent = ({isSmallScreen,isMediumScreen}) => {
         <p className='ptag_home'>
           He creates websites using React and is currently expanding his expertise in front-end development.
         </p>
-         <img src="images/coding-desk.jpg" alt="#" />
+         <img src="images/coding-desk.webp" alt="#" />
       </NavLink>
 
       <NavLink className='third_container' to="/gallery" onClick={() => window.scrollTo({ top: 0 })}  >
@@ -39,7 +39,7 @@ const HomeContent = ({isSmallScreen,isMediumScreen}) => {
           While I don't limit myself to a specific niche,
           my portfolio reflects a diverse array of captivating shots.
         </p>
-        <img src="images/camera.jpg" alt="#" />
+        <img src="images/camera.webp" alt="#" />
         
       </NavLink>
       </div>

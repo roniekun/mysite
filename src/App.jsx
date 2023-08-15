@@ -122,8 +122,8 @@ const App = () => {
                   position: 'fixed',
                   transition: '.5s',
                   transform:  isScroll ? 'translateY(-100%)': '',
-                  width: '100%'
-                  }}
+                  width: '100%',
+                  height: '50px'}}
                   HomeNavbarLink={{color: '#181818'}}
                   setShowNavbar={setShowNavbar}
                   isSmallScreen={isSmallScreen}/>}
