@@ -135,9 +135,9 @@ const App = () => {
                   transform:  isScroll ? 'translateY(-100%)': '',
                   width: '100%',
                   height: '50px'}}
-                  HomeNavbarLink={{textTransform: 'capitalize',
-                                  fontWeight: '500',
-                                  fontFamily: 'Inter, sans-serif'}}
+                  HomeNavbarLink={{textTransform: 'uppercase',
+                                  fontWeight: '600',
+                                  fontFamily: 'Rajdhani, sans-serif'}}
                   setShowNavbar={setShowNavbar}
                   isSmallScreen={isSmallScreen}/>}
                 

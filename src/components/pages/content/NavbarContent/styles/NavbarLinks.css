@@ -41,12 +41,13 @@
     letter-spacing: 1px;
     display: flex;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
+    line-height: 20px;
     width: auto;
     text-align: justify;
     overflow: hidden;
-    font-family: 'Cabinet Grotesk', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     color: gray;
   }
 

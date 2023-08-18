@@ -24,30 +24,37 @@ function Footer({ showNavbar, isSmallScreen}) {
 
     <div id={`component-${theme}`} className='footer_container'>
 
-      <>
+      <div className='footer_first_layer'>
        <h1 className='footer_cta' >Your website, your brand's canvas – 
        let's paint your online masterpiece today!</h1>
-      </>
+   
       <MagneticEffect>
        <div >
        <RequestBtn/>
        </div>
+   
        </MagneticEffect>
 
-          <UsefulLinks/>
-      <> 
       <SocialLinks  
       isSmallScreen={isSmallScreen} 
       displayIcons={true}
-      footerSocialLink={{color: '#6d6d6d', fill: '#6d6d6d',}}
-      footerIconContainer={{margin:'5px'}}/>
+      text={'Connect'}
+      footerSocialLink={{color: 'lightgray', fill: 'lightgray'}}
+      footerIconContainer={{}}/>
+ 
+       </div>
 
-
-      <p id={`component-${theme}`}  className='footer_text'>© 2023. All rights reserved. {isSmallScreen ? <br/> : ''} This site is a work in progress :)</p>  
-    </>
-
-
-
+     
+      <div className='footer_second_layer'> 
+      <h3>Connect</h3>
+      <br />
+      <p>Email: roniebenitez01@gmail.com</p>
+    
+      <UsefulLinks/>
+    </div>
+    <p id={`component-${theme}`}  
+      className='footer_text'>© 2023. All rights reserved. {isSmallScreen ? <br/> : ''}
+     This site is a work in progress :)</p>  
 </div>
 
 )}

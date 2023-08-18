@@ -21,13 +21,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
-    border: transparent;
+    border-radius: 3px;
     background-color: transparent;
-    color: gray;
+    color: lightgray;
     position: relative; /* Make sure the element has a positioned container */
     overflow: hidden; /* Hide overflowing animation */
-    fill:gray;
+    fill:lightgray;
+    border: 1px solid lightgray;
   }
   .request_btn::before{
     content: '';
@@ -92,7 +92,7 @@ width: 20px;
 }
 .svg_container{
 
-  border: 1px gray solid;
+  border: 1px lightgray solid;
   border-radius: 50%;
   margin-left: 5%;
   overflow: hidden;
@@ -120,7 +120,7 @@ transition: 1s;
 
 @media (max-width: 600px) {
   .request_btn_container{
-
+   
     height: 45px ;
   }
 
@@ -128,7 +128,5 @@ transition: 1s;
    
     font-size: 14px;
     z-index: 2;
-   
-  
 
 }}

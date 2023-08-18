@@ -15,7 +15,8 @@ const SocialLinks = ({ displayNames,
                       contactIconContainer,
                       footerIconContainer,
                       footerContainer,
-                      footerSocialLink }) => {
+                      footerSocialLink,
+                      text }) => {
 
   const [hoveredLink, setHoveredLink] = useState(null); // Step 1: Add state
 
@@ -35,7 +36,8 @@ const SocialLinks = ({ displayNames,
             <div         
               style={{ ...contactIconContainer,...footerIconContainer}} 
               key={link.name}
-              className='icon_container'>    
+              className='icon_container'>  
+            
                 <a
                   id={`component-${theme}`}
                   href={link.url}

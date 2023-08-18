@@ -3,8 +3,8 @@ import './UsefulLinks.css';
 
 const UsefulLinks = () => {
   return (
-    <div className='link__container' >
-      <h4 style={{ paddingBottom: '17px' }}>Useful links:</h4>
+    <div className='link_container' >
+      <h4>USEFUL LINKS:</h4>
       <ul className='links '>
         <li className='link' >
           <a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a>
@@ -24,9 +24,6 @@ const UsefulLinks = () => {
         <li className='link' >
           <a href=" https://www.typewolf.com/" target="_blank" rel="noopener noreferrer">Typewolf</a>
         </li>
-       
- 
-      
       </ul>
     </div>
   )
