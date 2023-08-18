@@ -11,7 +11,8 @@ const Navbar = ({ showNavbar,
                 isSmallScreen, 
                 isMediumScreen, 
                 setShowNavbar,  
-                isScroll }) => {
+                isScroll, 
+              isDesktop }) => {
   const navbarContainerRef = useRef(null);
 
   useEffect(() => {
@@ -50,11 +51,9 @@ const Navbar = ({ showNavbar,
           isScroll={isScroll}
           isSmallScreen={isSmallScreen}
           NavbarLinksContainer={{width: '80%', 
-                                height:'40%',
                                 flexDirection: 'column',
                                 justifyContent:'space-evenly',
-                              alignItems:'center',
-                            backgroundColor: 'transparent'}}
+                              alignItems:'center'}}
           NavbarLinksWrapper={{}}
           NavbarLinksLink={{fontSize:'34px', color: 'whitesmoke'}}/>
          
@@ -101,7 +100,7 @@ const Navbar = ({ showNavbar,
               showNavbar={showNavbar}/>
             </>
        
-            {isSmallScreen && (<div className='nav_email'>  <h4>Email </h4>
+            {isDesktop && (<div className='nav_email'>  <h4>Email </h4>
             <h3>roniebenitez01@gmail.com</h3></div>
            ) }
         
