@@ -43,7 +43,7 @@ function Footer({ showNavbar, isSmallScreen}) {
       footerIconContainer={{margin:'5px'}}/>
 
 
-      <p id={`component-${theme}`}  className='footer__text'>© 2023. All rights reserved. This site is a work in progress :)</p>  
+      <p id={`component-${theme}`}  className='footer_text'>© 2023. All rights reserved. This site is a work in progress :)</p>  
     </>
 
 

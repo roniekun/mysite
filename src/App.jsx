@@ -12,9 +12,9 @@ import Policy from './components/pages/Policy';
 import Menu from './components/pages/assets/icons/menu/Menu';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 import PageModal from './assets/PageModal'
-import FramerMagnetic from './assets/MagneticEffect/FramerMagnetic';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
 import NavbarLinks from './components/pages/content/NavbarContent/NavbarLinks';
+// import Lenis from '@studio-freight/lenis'
 
 const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -24,6 +24,20 @@ const App = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
   const [showNavbar, setShowNavbar] = useState();
 
+        // const lenis = new Lenis()
+
+        // lenis.on('scroll', (e) => {
+        //   console.log(e)
+        // })
+
+        // function raf(time) {
+        //   lenis.raf(time)
+        //   requestAnimationFrame(raf)
+        // }
+
+        // requestAnimationFrame(raf)
+
+  
   const handleResize = useCallback(() => {
 
     const screenWidth = window.innerWidth;
@@ -51,8 +65,6 @@ const App = () => {
       console.log(`Navigation bar triggerd at useCallback handleScroll: ${showNavbar}`)
 
     }, [scrollPosition, isScroll]);
-
-  
 
   useEffect(() => {
     const handleResizeEvent = () => {
@@ -104,7 +116,6 @@ const App = () => {
             </div>
             </MagneticEffect>} 
             
-
              <div>                 
              { isSmallScreen &&  <Menu
               showNavbar={showNavbar}
@@ -118,14 +129,15 @@ const App = () => {
                 {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{
                   top:'0', 
                   zIndex: '9999',
-                  backgroundColor: isScroll ? 'transparent' : 'rgba(255,255,255,.2)',
+                  backgroundColor: isScroll ? 'transparent' : 'rgba(255,255,255,.9)',
                   position: 'fixed',
                   transition: '.5s',
                   transform:  isScroll ? 'translateY(-100%)': '',
                   width: '100%',
                   height: '50px'}}
-                  HomeNavbarLink={{color: '#181818',
-                                    textTransform: 'uppercase'}}
+                  HomeNavbarLink={{textTransform: 'capitalize',
+                                  fontWeight: '500',
+                                  fontFamily: 'Inter, sans-serif'}}
                   setShowNavbar={setShowNavbar}
                   isSmallScreen={isSmallScreen}/>}
                 

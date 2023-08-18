@@ -2,10 +2,6 @@
     display:flex;
     position: relative;
     height: 800px;
- 
-
-    
-   
 }
 .about__first__section{
     display: flex;
@@ -13,7 +9,6 @@
     background-color: white;
     position: relative;
 }
-
 
 .about__text__container{
     display: flex;

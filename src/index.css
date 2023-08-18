@@ -4,11 +4,12 @@
     --primary-color: #101214;
     --orange: #a84916;
     --gray: #6d6d6d;
+    --print-black: #212427;
 
 }
 body {
    margin: 0;
-   font-family: 'Manrope', sans-serif;
+   font-family: 'Inter', sans-serif;
     font-weight: 400;
    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

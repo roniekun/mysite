@@ -27,7 +27,6 @@
         align-items: center;
         position: relative;
         width: 80%;
-        font-family: 'Clash Display';
         text-align: center;
         height: 600px;
       
@@ -116,7 +115,6 @@
         font-size: 34px;
         font-weight: 500;
         line-height:34px;
-        font-family: 'Clash Display';
         padding-block: 5%;
  
 }

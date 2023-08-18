@@ -7,9 +7,11 @@ import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/content/NavbarContent/NavbarLinks';
 import { gsap } from 'gsap';
 
-
-
-const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDesktop, isScroll }) => {
+const Navbar = ({ showNavbar,
+                isSmallScreen, 
+                isMediumScreen, 
+                setShowNavbar,  
+                isScroll }) => {
   const navbarContainerRef = useRef(null);
 
   useEffect(() => {
@@ -48,13 +50,13 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
           isScroll={isScroll}
           isSmallScreen={isSmallScreen}
           NavbarLinksContainer={{width: '80%', 
-                                height:'fit-content',
+                                height:'40%',
                                 flexDirection: 'column',
                                 justifyContent:'space-evenly',
                               alignItems:'center',
                             backgroundColor: 'transparent'}}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{fontSize:'28px', color: 'whitesmoke'}}/>
+          NavbarLinksLink={{fontSize:'34px', color: 'whitesmoke'}}/>
          
 {/*        
 
@@ -79,7 +81,7 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
                                         fontFamily: 'Rajdhani,sans serif'}}
                         navbarSvg={{border: 'black solid 1px'}}/>
                                        } */}
-            {isSmallScreen &&
+   
             <> {window.innerHeight > 800 &&
           <div className='nav_row_title'><h4>Connect</h4></div>}
          
@@ -93,13 +95,11 @@ const Navbar = ({ showNavbar, isSmallScreen, isMediumScreen, setShowNavbar, isDe
               textTransform: 'capitalize',
               width: 'fit-content',
               fontFamily: 'Rajdhani,sans serif',
-              fontWeight: '500'
-            
-          }}
+              fontWeight: '500'}}
+              
               displayNames={true}
               showNavbar={showNavbar}/>
             </>
-           }
        
             {isSmallScreen && (<div className='nav_email'>  <h4>Email </h4>
             <h3>roniebenitez01@gmail.com</h3></div>

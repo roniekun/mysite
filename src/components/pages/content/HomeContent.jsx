@@ -12,11 +12,10 @@ const HomeContent = ({isSmallScreen,isMediumScreen}) => {
       <div className='first_container'>
         <div className='hero_container'>
         <h1 className='hero'> 
-         <span> Unlock your</span> visual story<br /> 
+         <span className='one'> Unlock your </span> <br />
+         <span className='three' >VISUAL STORY</span><br /> 
           </h1>
           <h3 className='sub_hero'>Transforming Visions into Digital Masterpiece</h3>
-            {isMediumScreen &&  <RequestBtn/>}
-            {isSmallScreen &&  <RequestBtn/>}
         </div>
 
       
@@ -44,8 +43,7 @@ const HomeContent = ({isSmallScreen,isMediumScreen}) => {
       </NavLink>
       </div>
       <div className='home_forth_container'>
-        <p className='ptag_home'>
-          <span>Stay awhile </span><br /> immerse yourself in the fusion of technology and artistic expression.
+        <p><span>Stay awhile </span> and immerse yourself in the fusion of technology and artistic expression.
           Whether you're intrigued by coding wizardry or drawn to the beauty of visual storytelling,
           I hope this leaves you inspired and eager to embark on future collaborations.
         </p>

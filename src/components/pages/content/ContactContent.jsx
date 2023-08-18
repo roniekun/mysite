@@ -18,7 +18,9 @@ const ContactContent = ({}) => {
     <div className='contact__content__container'>
 
         <div className='form_header'>
-        <h1 className='form_heading'><span> Have an awesome idea?</span>  <br />Let's Talk!</h1>
+        <h1 className='form_heading'><span> </span>  <br />Let's Talk!</h1>
+        <br />
+        <br />
         <br />
           <p>
           If you're in need of a dedicated and innovative web developer who can bring your digital vision to life, 
