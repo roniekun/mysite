@@ -108,9 +108,8 @@ const App = () => {
               setShowNavbar={setShowNavbar}
               displayNames={false}
               AppMenuContainer={{position: 'relative',
-                                backgroundColor:'transparent'
+                                backgroundColor:'transparent',
                                 }}
-              colorTheme={theme === "dark" ? 'white' : 'black'}
              />
             
             </div>
@@ -126,6 +125,8 @@ const App = () => {
                               marginRight: '15px'
                               }}/>}
                </div>  
+
+
                 {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{
                   top:'0', 
                   zIndex: '9999',
@@ -137,7 +138,7 @@ const App = () => {
                   height: '50px'}}
                   HomeNavbarLink={{textTransform: 'uppercase',
                                   fontWeight: '600',
-                                  fontFamily: 'Rajdhani, sans-serif'}}
+                                  fontFamily: 'sans-serif'}}
                   setShowNavbar={setShowNavbar}
                   isSmallScreen={isSmallScreen}/>}
                 

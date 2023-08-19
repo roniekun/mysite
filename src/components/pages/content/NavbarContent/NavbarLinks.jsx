@@ -28,10 +28,10 @@ const NavbarLinks = ({
 
 
   const links = [
-    { to: '/', text: 'home' },
-    { to: '/about', text: 'about' },
-    { to: '/portfolio', text: 'work' },
-    { to: '/contact', text: 'contact' },
+    { to: '/', text: 'pitik ' },
+    { to: '/about', text: 'pitik  ' },
+    { to: '/portfolio', text: 'pitik  ' },
+    { to: '/contact', text: 'pitik  ' },
   ];
 
   const navbarlinkRefs = links.map(() => useRef(null));
@@ -43,9 +43,10 @@ const NavbarLinks = ({
           navbarlinkRef.current,
           { y: '100%', opacity: 0 },
           {
+            x: '0',
             y: '0',
             opacity: 1,
-            duration: 0.7,
+            duration: 0.3,
             delay: index * 0.1,
             skewY: 0,
           }

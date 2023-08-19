@@ -1,4 +1,4 @@
-.portfolio__container{
+.portfolio_container{
 
       display: flex;
       overflow-x: hidden;
@@ -9,6 +9,7 @@
       flex-direction: column;
       position: relative;
       padding-top: 175px;
+      height: 800px;
    
 
       

@@ -11,7 +11,7 @@
     z-index: 8888;
     align-items: center;
     justify-content: space-evenly;
-    transform: translateX(100%);
+    transform: translateY(-100%);
     background-color: black;
   }
 
@@ -40,20 +40,19 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      height: 100vh;
+      height: 60vh;
       width: 100vw;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(11, 15, 25, 0.1);
       border-radius: 3px;
       padding-inline: 5%;
-      padding-block: 20%;
-      background-color: var(--primary-color);
+      background-color: whitesmoke;
       position: fixed;
       inset: 0;
       z-index: 8888;
       top: 0;
       right: 0;
-      transform: translateX(100%);
+      transform: translateY(-100%);
       overflow: hidden;
       font-weight: 100;
       box-sizing: border-box;

@@ -1,18 +1,9 @@
-import React from 'react';
-import './styles/Portfolio.css';
-import PortfolioContent from './content/PortfolioContent';
-import Footer from '../Footer';
-import NavbarLinks from './content/NavbarContent/NavbarLinks';
+import React from 'react'
 
-function Portfolio({showNavbar, isSmallScreen, setShowNavbar}) {
+const Portfolio = () => {
   return (
-    <>
-        <div className='portfolio__container'>
-        <PortfolioContent/>
-       </div>
-      <Footer  isSmallScreen={isSmallScreen}/>
-    </>
-  );
+    <div className='portfolio_container'>Pitik South Cotabato</div>
+  )
 }
 
-export default Portfolio;
+export default Portfolio

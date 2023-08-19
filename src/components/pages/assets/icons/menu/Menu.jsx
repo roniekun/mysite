@@ -1,6 +1,6 @@
 import React from 'react';
 import './Menu.css';
-import { Twirl as Hamburger } from 'hamburger-react';
+import { Cross as Hamburger } from 'hamburger-react'; //https://hamburger-react.netlify.app/
 import { ThemeContext } from '../../../../../context/ThemeContext';
 
 const Menu = ({ showNavbar,

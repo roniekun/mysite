@@ -1,18 +1,35 @@
-import './styles/Home.css';
+import React from 'react'
 import Footer from '../Footer';
-import HomeContent from './content/HomeContent';
-import NavbarLinks from './content/NavbarContent/NavbarLinks';
-function Home({isSmallScreen,isMediumScreen,setShowNavbar, isScroll}) {
-  
-  return (
-  <div className='home_container'>
+import './styles/Home.css';
 
-    <HomeContent isSmallScreen={isSmallScreen} isMediumScreen={isMediumScreen}/>
-    <Footer isSmallScreen={isSmallScreen}/>
-   </div>
- 
+const Home = () => {
+  return (
+    <div className='home_container'>
+      <div className='content'>
+      <h1 className='title'>Pitik South Cotabato</h1>
+      <div className='one'>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+      </div>
+      <div className='two'>
+      <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+      </div>
+      <div className='three'>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+        <h1>Pitik South Cotabato</h1>
+      </div>
+      </div>
   
-  );
+      <Footer/>
+      </div>
+  )
 }
 
-export default Home;
+export default Home

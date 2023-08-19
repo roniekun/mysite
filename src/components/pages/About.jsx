@@ -1,25 +1,9 @@
-import React from 'react';
-import './styles/About.css';
-import Footer from '../Footer';
-import AboutContent from './content/AboutContent';
-import { ThemeContext } from '../../context/ThemeContext';
-import NavbarLinks from './content/NavbarContent/NavbarLinks';
+import React from 'react'
 
-
-
-function About({isSmallScreen, setShowNavbar }) {
-
+const About = () => {
   return (
-    <ThemeContext.Consumer>
-  {({ theme }) => (
-    <div id={`component-${theme}`} className='about_container'> 
-      <AboutContent />
-      <Footer isSmallScreen={isSmallScreen} /> 
-    </div>
-
-)}
-</ThemeContext.Consumer>
-  );
+    <div className='about_container'>Pitik South Cotabato</div>
+  )
 }
 
-export default About;
+export default About
