@@ -1,5 +1,5 @@
 import React from 'react'
-import './ContactModal.css';
+import './Contact-modal.css';
     const ContactModal = ({ isSuccess, message, closeModal }) => {
         return (
           <div className={isSuccess ? 'success' : 'error'}>

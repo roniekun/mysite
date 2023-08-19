@@ -1,9 +1,10 @@
 import './styles/Navbar.css';
 import { ThemeContext } from '../context/ThemeContext';
-import SocialLinks from './pages/assets/icons/SocialLinks';
+import SocialLinks from './pages/assets/icons/Socials';
 import React, { useEffect, useRef } from 'react';
-import NavbarLinks from './pages/content/NavbarContent/NavbarLinks';
+import NavbarLinks from './pages/Navlinks';
 import { gsap } from 'gsap';
+import { transform } from 'framer-motion';
 
 const Navbar = ({ showNavbar,
                 isSmallScreen, 
@@ -16,14 +17,16 @@ const Navbar = ({ showNavbar,
   useEffect(() => {
     if (showNavbar) {
       gsap.to(navbarContainerRef.current, {
-        y: '0%',
+        y:'0%',
+        x: '0%',
         duration: 0.5,
         opacity: 1,
         ease: 'power2.out',
       });
     } else {
       gsap.to(navbarContainerRef.current, {
-        y:'-100%',
+        y:isSmallScreen ? '-100%' : '0%',
+        x: isSmallScreen ? '0%' : '100%',
         duration: 0.3,
         opacity: 1,
         ease: 'power2.in',
@@ -38,7 +41,8 @@ const Navbar = ({ showNavbar,
           <nav 
           ref={navbarContainerRef}
           style={{
-            width: isSmallScreen || isMediumScreen ? '100vw' : '50vw'
+            width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
+            transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)'
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
@@ -51,27 +55,22 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{}}/>
-         
-   
-            <> {window.innerHeight > 800 &&
-          <div className='nav_row_title'><h4>Connect</h4></div>}
-         
+          NavbarLinksLink={{fontSize: isSmallScreen? '14px' : '34px',
+                            textTransform: 'capitalize'}}/>
+
+            <> 
           <SocialLinks 
           navSocialLink={{
               display: 'flex',
               justifyContent: 'center', 
               alignItems: 'center', 
               height: '20px',
-              margin: '5px',
+              fill: 'gray',
+              margin: '7px',
               width: 'fit-content',}}
               displayIcons={true}
               showNavbar={showNavbar}/>
             </>
-            {isDesktop && (<div className='nav_email'>  <h4>Email </h4>
-            <h3>roniebenitez01@gmail.com</h3></div>
-           ) }
-        
           </nav>
         )}
       </ThemeContext.Consumer>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { NavLink, useLocation } from 'react-router-dom';
-import './styles/NavbarLinks.css';
+import './styles/Navlinks.css';
 
 const NavbarLinks = ({
   showNavbar,
@@ -28,10 +28,9 @@ const NavbarLinks = ({
 
 
   const links = [
-    { to: '/', text: 'pitik ' },
-    { to: '/about', text: 'pitik  ' },
-    { to: '/portfolio', text: 'pitik  ' },
-    { to: '/contact', text: 'pitik  ' },
+    { to: '/', text: 'home ' },
+    { to: '/about', text: 'about  ' },
+    { to: '/contact', text: 'contact  ' },
   ];
 
   const navbarlinkRefs = links.map(() => useRef(null));
@@ -47,7 +46,7 @@ const NavbarLinks = ({
             y: '0',
             opacity: 1,
             duration: 0.3,
-            delay: index * 0.1,
+            delay: index * 0.3,
             skewY: 0,
           }
         );
@@ -71,7 +70,7 @@ const NavbarLinks = ({
       {links.map((link, index) => (
         <div style={NavbarLinksWrapper} className="link_wrapper" key={link.to}>
           <NavLink
-            style={{...NavbarLinksLink,...HomeNavbarLink,...PortfolioNavbarLink,
+            style={{...HomeNavbarLink,...PortfolioNavbarLink,
             ...ContactNavbarLink,...AboutNavbarLink,...GalleryNavbarLink,...PolicyNavbarLink}}
             ref={navbarlinkRefs[index]}
             onClick={() => handleLinkClick()}

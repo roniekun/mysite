@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/Policy.css';
 import Footer from '../Footer';
-import NavbarLinks from './content/NavbarContent/NavbarLinks';
+import NavbarLinks from './Navlinks';
 const Policy = ({isSmallScreen, setShowNavbar}) => {
   return (
     <div className='policy_container'>

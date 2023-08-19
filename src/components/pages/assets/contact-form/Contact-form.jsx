@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './ContactForm.css';
-import ContactModal from '../contactModal/ContactModal';
+import './Contact-form.css';
+import ContactModal from '../contact-modal/Contact-modal';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import { NavLink, useLocation} from 'react-router-dom';

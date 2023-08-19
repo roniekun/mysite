@@ -11,8 +11,7 @@
     z-index: 8888;
     align-items: center;
     justify-content: space-evenly;
-    transform: translateY(-100%);
-    background-color: black;
+    background-color: whitesmoke;
   }
 
   .hide::after{
@@ -52,7 +51,6 @@
       z-index: 8888;
       top: 0;
       right: 0;
-      transform: translateY(-100%);
       overflow: hidden;
       font-weight: 100;
       box-sizing: border-box;

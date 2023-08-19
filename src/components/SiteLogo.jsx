@@ -70,7 +70,7 @@ const SiteLogo = ({headerContainer, showNavbar , isSmallScreen, navbarContainer}
     onMouseLeave={handleMouseLeave}
     style={{color: isSmallScreen ? '#fafafa' : color,...navbarContainer,...headerContainer}} 
     className='site_logo_container'>
-    <span>roniekun</span>
+    <span>PSC LOGO</span>
     </NavLink> 
     </StyledDiv>
   )

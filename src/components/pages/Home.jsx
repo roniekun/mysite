@@ -1,10 +1,12 @@
 import React from 'react'
 import Footer from '../Footer';
 import './styles/Home.css';
+import SiteLogo from '../SiteLogo';
 
 const Home = () => {
   return (
     <div className='home_container'>
+      <SiteLogo/>
       <div className='content'>
       <h1 className='title'>Pitik South Cotabato</h1>
       <div className='one'>
