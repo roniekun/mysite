@@ -1,3 +1,4 @@
+import { delay } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 
 const PageModal = ({ showNavbar }) => {
@@ -16,9 +17,6 @@ const PageModal = ({ showNavbar }) => {
     }
     return () => clearTimeout(timer);
   }, [showNavbar]);
-
-
-
   return isVisible ? (
     <div
       style={{
@@ -28,8 +26,8 @@ const PageModal = ({ showNavbar }) => {
         height: '100vh',
         position:'fixed',
         zIndex: '7777',
-        backgroundColor: 'rgba( 0 , 0 , 0 , 0.7)',
-      
+        backgroundColor: 'rgba( 0 , 0 , 0 , 0.3)',
+        transitionDuration: '.3s'   
       }}
     ></div>
   ) : null;

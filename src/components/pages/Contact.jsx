@@ -9,7 +9,7 @@ const Contact = () => {
 
       <div className='contact'>
       <h1>contact us</h1>
-      <h4>contact detais</h4>
+      <h4>contact details</h4>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
          Obcaecati officia beatae quaerat dolore corrupti autem laboriosam animi.
         Enim provident itaque iure alias pariatur recusandae accusamus, maxime tempore

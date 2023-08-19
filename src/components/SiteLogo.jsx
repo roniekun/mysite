@@ -61,7 +61,6 @@ const SiteLogo = ({headerContainer, showNavbar , isSmallScreen, navbarContainer}
   
     setColor(showNavbar ? '#6d6d6d' : color);
     }
-    
   return (
     <StyledDiv>
     <NavLink to='/' 

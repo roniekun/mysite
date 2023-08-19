@@ -3,6 +3,7 @@ import { ThemeContext } from '../context/ThemeContext';
 import SocialLinks from './pages/assets/icons/Socials';
 import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
+import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
 import { transform } from 'framer-motion';
 
@@ -46,7 +47,7 @@ const Navbar = ({ showNavbar,
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
-          
+           <SiteLogo/>
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}

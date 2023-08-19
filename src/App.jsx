@@ -11,7 +11,7 @@ import NotFound from './components/pages/NotFound';
 import Policy from './components/pages/Policy';
 import Menu from './components/pages/assets/icons/menu/Menu';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
-import PageModal from './assets/PageModal'
+import PageModal from './assets/Page-modal'
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
 import NavbarLinks from './components/pages/Navlinks';
 // import Lenis from '@studio-freight/lenis'
@@ -135,10 +135,11 @@ const App = () => {
                   transform:  isScroll ? 'translateY(-100%)': '',
                   width: '100%',
                   height: '50px',
-                  paddingInline: '10%'}}
+                  paddingInline: '10%',
+                  paddingBlock: '0%',
+                  justifyContent: 'center'}}
                   
                   HomeNavbarLink={{textTransform: 'uppercase',
-                                  color: 'gray',
                                   fontWeight: '500',
                                   fontSize: '14px',
                                   fontFamily: 'sans-serif'}}

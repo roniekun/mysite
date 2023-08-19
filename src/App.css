@@ -36,7 +36,7 @@
       align-items: center;
       height: 60px;
       width: 60px;
-      background-color: red;
+      background-color:var(--red);
       border-radius: 50%;
       position: fixed;
       top:50px;
