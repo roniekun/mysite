@@ -40,13 +40,13 @@ const NavbarLinks = ({
       navbarlinkRefs.forEach((navbarlinkRef, index) => {
         gsap.fromTo(
           navbarlinkRef.current,
-          { y: '100%', opacity: 0 },
+          { y: '50%', opacity: 0 },
           {
             x: '0',
             y: '0',
             opacity: 1,
             duration: 0.3,
-            delay: index * 0.3,
+            delay:  0.3,
             skewY: 0,
           }
         );
@@ -67,6 +67,7 @@ const NavbarLinks = ({
                 ...NavbarLinksContainer}}
     className='links_container'
           ref={navbarContainerRef}>
+      
       {links.map((link, index) => (
         <div style={NavbarLinksWrapper} className="link_wrapper" key={link.to}>
           <NavLink

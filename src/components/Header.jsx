@@ -1,25 +1,20 @@
+import React from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import './styles/Header.css';
 import SiteLogo from './SiteLogo';
 
-
-
-function Header({ showNavbar, isSmallScreen, isDesktop, setShowNavbar }) {
+function Header({ isScroll }) {
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-          <div id={`component-${theme}`}  className='header_container'>
-          {isSmallScreen && <SiteLogo 
-          isSmallScreen={isSmallScreen} 
-          headerContainer={{color: '#f5f5f5',
-                            transform:'translateX(10%)',
-                            fontFamily: 'Clash Display,sans serif',
-                            fontSize: '18px'}}/> 
-          
-          }
+        
+          <div id={`component-${theme}`} className= {`header_container ${ isScroll ?'hide-header' : ''}`}>
+            <div className='logo_container'>
+              <SiteLogo />
             </div>
-
-      )}
+          </div>
+        )
+      }
     </ThemeContext.Consumer>
   );
 }

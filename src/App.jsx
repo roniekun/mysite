@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
@@ -79,9 +80,7 @@ const App = () => {
     };
 
     window.addEventListener('resize', handleResizeEvent);
-    if (isDesktop) {
-      window.addEventListener('scroll', handleScrollEvent);
-    }
+    window.addEventListener('scroll', handleScrollEvent);
 
     return () => {
       window.removeEventListener('resize', handleResizeEvent);
@@ -96,10 +95,11 @@ const App = () => {
           {({ theme }) => {
             return (
               <div className='app_container' id={`component-${theme}`}>
-
+              <Header 
+              isScroll={isScroll}/>
               <PageModal showNavbar={showNavbar}/>
 
-             {isScroll && !isSmallScreen &&
+             {isScroll && 
               <MagneticEffect>
               <div className='floating_menu'>
               <Menu
@@ -114,17 +114,6 @@ const App = () => {
             
             </div>
             </MagneticEffect>} 
-             <div>                 
-             { isSmallScreen &&  <Menu
-              showNavbar={showNavbar}
-              isSmallScreen={isSmallScreen}
-              setShowNavbar={setShowNavbar}
-              MenuContainer={{position: 'fixed',
-                              margin: '10px',
-                              marginRight: '15px'
-                              }}/>}
-               </div>  
-
 
                 {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{
                   top:'0', 

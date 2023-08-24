@@ -47,7 +47,7 @@ const Navbar = ({ showNavbar,
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
-           <SiteLogo/>
+         { !isSmallScreen && <SiteLogo/>}
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}

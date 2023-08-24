@@ -26,6 +26,7 @@
   justify-content: center;
   height: 100%;
   align-items: center;
+
   
   
 }
@@ -69,8 +70,9 @@
  
   .floating_menu{
 
-    right: 20px;
-    top:70px;
+    right: 30px;
+    top: 50px;
+    margin: 5px;
     
     
 

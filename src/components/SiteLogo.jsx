@@ -38,6 +38,7 @@ const StyledDiv = styled.div`
     @media (max-width:600px){
 
       .site_logo_container{
+        
         position: relative;
         margin-block: 20px;  
         color: white;
@@ -55,7 +56,7 @@ const SiteLogo = ({headerContainer, showNavbar , isSmallScreen, navbarContainer}
 
   const [color, setColor] = useState('#6d6d6d');
   const handleHover = () => {
-    setColor('black');}
+    setColor('gray');}
 
   const handleMouseLeave = () => {
   

@@ -1,6 +1,5 @@
 .links_container {
   display: flex;
-  position: relative;
   justify-content: space-evenly;
   align-items: center;
   height: auto;
@@ -72,6 +71,7 @@
       align-items: center;
       margin: 0;
       row-gap: 5px;
+      margin-top:50px;
       height: auto;
 
     }
