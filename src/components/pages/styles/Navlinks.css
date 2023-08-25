@@ -69,7 +69,6 @@
       align-items: center;
       margin: 0;
       row-gap: 5px;
-      margin-top:50px;
       height: auto;
 
     }
@@ -102,7 +101,7 @@
     }
     .navbar_link{
 
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 400;
       color: gray
     }

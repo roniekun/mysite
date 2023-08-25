@@ -31,11 +31,11 @@
 
     text-transform: capitalize;
 }
-.about-us > h2{
+.about-us > p{
 
     font-weight: 400;
-    font-size: 24px;
-    line-height: 50px;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 
@@ -44,6 +44,10 @@
     .about_container{
 
         margin-top: 55px;
+    }
+    .about-us{
+
+        width: 100%;
     }
         
     }

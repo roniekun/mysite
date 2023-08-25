@@ -19,7 +19,7 @@ const Home = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Temporibus veniam quasi sequi! Reiciendis omnis explicabo eius nemo numquam dolores vitae repudiandae exercitationem facere accusantium. 
           Ut nemo praesentium quae temporibus iste.</p>
-       <img className='hero_img' src="" alt="hero image" />
+       <img className='hero_img' src="" alt="image" />
        <img src="" alt="" />
       </div>
       <div className='two'>

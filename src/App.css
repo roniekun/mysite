@@ -31,19 +31,19 @@
   
 }
 
-    .floating_menu{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 60px;
-      width: 60px;
-      background-color:var(--red);
-      border-radius: 50%;
-      position: fixed;
-      top:50px;
-      right: 5%;
-      z-index: 99999;
-      } 
+.floating_menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color:var(--red);
+  border-radius: 50%;
+  position: fixed;
+  top:50px;
+  right: 5%;
+  z-index: 99999;
+  } 
 
 /* DARKMODECONTEXT */
 /* Global */
@@ -68,12 +68,12 @@
   margin-bottom: 2em;
 }
  
-  .floating_menu{
+.floating_menu{
 
-    right: 2%;
-    top:2%;
-    margin: 5px;
-    
+  right: 2%;
+  top:2%;
+  margin: 5px;
+  
     
 
 

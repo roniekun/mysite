@@ -35,6 +35,8 @@
 .hero_container > p{
 
     width: 50%;
+    font-size: 24px;
+    line-height: 32px;
 
 }
 .one{
@@ -58,6 +60,8 @@
 .one > p{
     align-self: flex-start;
     padding-inline: 5%;
+    font-size: 16px;
+    line-height: 32px;
 }
 .hero_img{
 
@@ -96,7 +100,6 @@
 
 .home_container{
     margin-top: 55px;
-    background-color: var(--red)
 }
 
 .one{

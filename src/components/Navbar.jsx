@@ -47,9 +47,12 @@ const Navbar = ({ showNavbar,
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
-         <div>
-          <SiteLogo setShowNavbar={setShowNavbar}/>
+          <div style={{visibility: isScroll? ''  : 'collapse'}}>
+           <SiteLogo setShowNavbar={setShowNavbar}/>
           </div>
+        
+          <div style={{   
+                       }}>
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
@@ -58,10 +61,12 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{fontSize: isSmallScreen? '14px' : '34px',
+          NavbarLinksLink={{fontSize: isSmallScreen? '16px' : '32px',
                             textTransform: 'capitalize'}}/>
+          </div>
 
-            <> 
+
+            <div> 
           <SocialLinks 
           navSocialLink={{
               display: 'flex',
@@ -73,7 +78,9 @@ const Navbar = ({ showNavbar,
               width: 'fit-content',}}
               displayIcons={true}
               showNavbar={showNavbar}/>
-            </>
+ 
+            </div>
+   
             <div>
             <h3 className='nav_footer'>pitiksouthcotabato.com</h3>
             </div>
