@@ -28,7 +28,7 @@
  
     display: flex;
     position: absolute;
-    left: 90%;
+    left: 100%;
      justify-content: center;
     opacity: .3;
     width:100%;
