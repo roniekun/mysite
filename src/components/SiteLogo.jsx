@@ -67,13 +67,15 @@ const SiteLogo = ({
   
     setColor(showNavbar ? '#6d6d6d' : color);
     }
+  
+    const handleClick = () => {
+      window.scrollTo({ top: 0 });
+      setShowNavbar(false);
+    };
   return (
     <StyledDiv>
     <NavLink to='/' 
-      onClick={() => {
-      window.scrollTo({ top: 0 });
-      setShowNavbar(false);
-          }}
+      onClick={handleClick}
     onMouseEnter={handleHover} // Set color to black on hover
     onMouseLeave={handleMouseLeave}
     style={{color: isSmallScreen ? '#fafafa' : color,...navbarContainer,...headerContainer}} 

@@ -4,11 +4,12 @@ import NavbarLinks from './pages/Navlinks';
 import Socials from './pages/assets/icons/Socials';
 import SiteLogo from './SiteLogo';
 
-const Footer = () => {
+const Footer = ({setShowNavbar}) => {
   return (
 
     <div className='footer_container'>
-       <SiteLogo/>
+       <SiteLogo 
+       setShowNavbar={setShowNavbar}/>
       <h1>Footer</h1>
       <Socials displayNames={true} 
       footerIconContainer={{marginInline: '7px'}}

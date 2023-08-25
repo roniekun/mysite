@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../Footer';
 import './styles/About.css';
 
-const About = () => {
+const About = ({setShowNavbar}) => {
   return (
     <div className='about_container'>
 
@@ -19,7 +19,7 @@ const About = () => {
         </p>
         </div>
         </div>
-      <Footer/>
+      <Footer setShowNavbar={setShowNavbar}/>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../Footer';
 import './styles/Contact.css';
 
-const Contact = () => {
+const Contact = ({setShowNavbar}) => {
   return (
     <div className='contact_container'>
       <div className='contact'>
@@ -12,12 +12,11 @@ const Contact = () => {
         Enim provident itaque iure alias pariatur recusandae accusamus, maxime tempore
          accusantium ipsa harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
          Optio labore tenetur sunt iste.</p>
-        <h2>Contact details</h2>
         <form action="">
           *contact info 
         </form>
     </div>
-    <Footer/>
+    <Footer setShowNavbar={setShowNavbar}/>
     </div>
   )
 }

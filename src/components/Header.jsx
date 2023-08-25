@@ -12,7 +12,8 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
         
           <div id={`component-${theme}`} className= {`header_container ${ isScroll ?'hide-header' : ''}`}>
             <div className='logo_wrapper'>
-              <SiteLogo />
+              <SiteLogo setShowNavbar={setShowNavbar}
+              showNavbar={showNavbar} />
             </div>
             {isSmallScreen &&
             <div className='menu_wrapper'>

@@ -26,8 +26,8 @@ const Navbar = ({ showNavbar,
       });
     } else {
       gsap.to(navbarContainerRef.current, {
-        y:isSmallScreen ? '-100%' : '0%',
-        x: isSmallScreen ? '0%' : '100%',
+        y:isSmallScreen ? '-200%' : '0%',
+        x: isSmallScreen ? '0%' : '200%',
         duration: 0.3,
         opacity: 1,
         ease: 'power2.in',
@@ -48,7 +48,7 @@ const Navbar = ({ showNavbar,
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
           <div style={{visibility: isScroll? ''  : 'collapse'}}>
-           <SiteLogo setShowNavbar={setShowNavbar}/>
+           <SiteLogo setShowNavbar={setShowNavbar} showNavbar={showNavbar}/>
           </div>
         
           <div style={{   
@@ -64,11 +64,15 @@ const Navbar = ({ showNavbar,
           NavbarLinksLink={{fontSize: isSmallScreen? '16px' : '32px',
                             textTransform: 'capitalize'}}/>
           </div>
-
-
-            <div> 
-          <SocialLinks 
-          navSocialLink={{
+            <div style={{ position: 'absolute', 
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          flexDirection: 'column',
+                          bottom: '0',
+                          marginBottom: '10%'}}>
+            <SocialLinks 
+             navSocialLink={{
               display: 'flex',
               justifyContent: 'center', 
               alignItems: 'center', 
@@ -78,10 +82,6 @@ const Navbar = ({ showNavbar,
               width: 'fit-content',}}
               displayIcons={true}
               showNavbar={showNavbar}/>
- 
-            </div>
-   
-            <div>
             <h3 className='nav_footer'>pitiksouthcotabato.com</h3>
             </div>
           </nav>
