@@ -12,7 +12,7 @@ const Navbar = ({ showNavbar,
                 isMediumScreen, 
                 setShowNavbar,  
                 isScroll, 
-              isDesktop }) => {
+                isDesktop }) => {
   const navbarContainerRef = useRef(null);
 
   useEffect(() => {
