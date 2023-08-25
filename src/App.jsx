@@ -96,7 +96,10 @@ const App = () => {
             return (
               <div className='app_container' id={`component-${theme}`}>
               <Header 
-              isScroll={isScroll}/>
+              isScroll={isScroll}
+                        showNavbar={showNavbar}
+                        setShowNavbar={setShowNavbar}
+                        isSmallScreen={isSmallScreen}/>
               <PageModal showNavbar={showNavbar}/>
 
              {isScroll && 

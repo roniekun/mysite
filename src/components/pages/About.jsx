@@ -11,12 +11,12 @@ const About = () => {
         <img src="" alt="" />
         <h1>About us</h1>
 
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Magni suscipit assumenda pariatur perferendis, culpa, minima quos eaque facere vero non animi consequuntur quasi commodi sunt aliquam ad? Quasi, veniam molestias.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium explicabo dolore nihil et ut ipsa adipisci atque, quia tempore eaque officia minus aspernatur ullam dolor,
         recusandae necessitatibus illum vero eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod repellat minus impedit quia aut ducimus doloremque pariatur deserunt sunt dignissimos,
          odit magnam rerum atque voluptas labore quo amet accusantium!
-        </h2>
+        </p>
         </div>
         </div>
       <Footer/>

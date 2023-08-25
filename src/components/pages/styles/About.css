@@ -41,6 +41,9 @@
 
  @media (max-width: 600px) {
  
-          
+    .about_container{
+
+        margin-top: 55px;
+    }
         
     }

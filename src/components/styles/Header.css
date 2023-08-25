@@ -10,6 +10,7 @@
   height: 70px;
   z-index: 99999;
   top: 45px;
+  
 }
 .hide-header{
 
@@ -20,7 +21,7 @@
 
 }
 
-.logo_container{
+.logo_wrapper{
 
   display: flex;
   justify-content: center;
@@ -28,7 +29,8 @@
   margin-inline-start: 5%;
   position: relative;
   width: fit-content;
-  height:70px;
+  padding-inline: 2%;
+  height: 55px;
   z-index: 99999;  
   transition: .3s;
   background-color: var(--red);
@@ -40,16 +42,24 @@
 @media (max-width: 600px) {
 
 .header_container{
+
+  justify-content: space-between;
   position: fixed;
   background-color: var(--primary-color);
   top:0;
   z-index: 9999;
   transition: .3s;
+  height: 60px;
+ 
 
 }  
-.logo_container{
-
+.logo_wrapper{
+  padding-inline: 0;
   background-color: transparent;
+}
+.menu_wrapper{
+
+  margin-right: 5%;
 }
 
 }

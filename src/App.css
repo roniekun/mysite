@@ -41,7 +41,7 @@
       border-radius: 50%;
       position: fixed;
       top:50px;
-      right: 50px;
+      right: 5%;
       z-index: 99999;
       } 
 
@@ -70,8 +70,8 @@
  
   .floating_menu{
 
-    right: 30px;
-    top: 50px;
+    right: 2%;
+    top:2%;
     margin: 5px;
     
     

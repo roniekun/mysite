@@ -9,5 +9,24 @@
   align-items: center; 
   
   }
+.footer_text_wrapper{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: gray;
+  gap:10px;
+}
+.footer_text_wrapper > h4{
+
+  font-weight: 400;
+
+}
+.footer_text_wrapper > h3{
+
+  font-weight: 500;
+  font-size: 16px;
+}
 
   

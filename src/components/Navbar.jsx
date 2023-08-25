@@ -47,7 +47,9 @@ const Navbar = ({ showNavbar,
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
-         { !isSmallScreen && <SiteLogo/>}
+         <div>
+          <SiteLogo setShowNavbar={setShowNavbar}/>
+          </div>
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
@@ -72,6 +74,9 @@ const Navbar = ({ showNavbar,
               displayIcons={true}
               showNavbar={showNavbar}/>
             </>
+            <div>
+            <h3 className='nav_footer'>pitiksouthcotabato.com</h3>
+            </div>
           </nav>
         )}
       </ThemeContext.Consumer>

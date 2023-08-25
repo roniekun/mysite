@@ -13,7 +13,11 @@
     justify-content: space-evenly;
     background-color: whitesmoke;
   }
+.nav_footer{
 
+  color:gray;
+  font-weight: 500;
+}
   .hide::after{
 
     content: '';
@@ -40,7 +44,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      height: 70vh;
+      height: 100vh;
       width: 100vw;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
       border: 1px solid rgba(11, 15, 25, 0.1);

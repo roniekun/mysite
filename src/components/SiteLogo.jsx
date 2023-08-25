@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size:14px;
-    width:200px;
+    width: auto;
     height: fit-content;
     font-size: 18px;
     top:0;
@@ -52,7 +52,12 @@ const StyledDiv = styled.div`
 
 `;
 
-const SiteLogo = ({headerContainer, showNavbar , isSmallScreen, navbarContainer}) => {
+const SiteLogo = ({
+  headerContainer, 
+  showNavbar , 
+  isSmallScreen, 
+  navbarContainer,
+  setShowNavbar}) => {
 
   const [color, setColor] = useState('#6d6d6d');
   const handleHover = () => {
@@ -65,7 +70,10 @@ const SiteLogo = ({headerContainer, showNavbar , isSmallScreen, navbarContainer}
   return (
     <StyledDiv>
     <NavLink to='/' 
-    onClick={() => window.scrollTo({ top: 0 })}
+      onClick={() => {
+      window.scrollTo({ top: 0 });
+      setShowNavbar(false);
+          }}
     onMouseEnter={handleHover} // Set color to black on hover
     onMouseLeave={handleMouseLeave}
     style={{color: isSmallScreen ? '#fafafa' : color,...navbarContainer,...headerContainer}} 

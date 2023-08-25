@@ -13,6 +13,10 @@ const Footer = () => {
       <Socials displayNames={true} 
       footerIconContainer={{marginInline: '7px'}}
       FooterContainer={{fill: '', }}/>
+      <div className='footer_text_wrapper'>
+      <h4>pitiksouthcotabato.com</h4>
+      <h3>All rights reserved 2013</h3>
+      </div>
     </div>
   )
 }
