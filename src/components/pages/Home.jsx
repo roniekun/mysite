@@ -32,19 +32,18 @@ const animate = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize = window.innerWidth /15;
+  const newFontSize = window.innerWidth / 20;
   setFontSize(newFontSize);
 
 };
 useEffect(() => {
   calculateFontSize();
-
   window.addEventListener('resize', calculateFontSize);
 
   return () => {
     window.removeEventListener('resize', calculateFontSize);
   };
-}, []);
+}, [window.innerWidth]);
 
   return (
     <div className='home_container'>
@@ -52,8 +51,8 @@ useEffect(() => {
       <div className='content'>
       <div className='hero_container'>
         <div   ref={slider} className='textslider_container'>
-          <div className='bg_text' ref={firstText}>
-          <h1  style={{ fontSize: `${fontSize}px` }}  >
+          <div  className='bg_text' ref={firstText}>
+          <h1  style={{ fontSize: `${fontSize}px`}}  >
             pitik south cotabato </h1>
           </div>
           <div className='bg_text' ref={secondText} >
