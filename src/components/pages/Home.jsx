@@ -32,7 +32,7 @@ const animate = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize =  window.innerWidth /20;
+  const newFontSize = window.innerWidth /15;
   setFontSize(newFontSize);
 
 };
