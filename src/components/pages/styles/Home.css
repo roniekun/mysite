@@ -1,3 +1,54 @@
+.textslider_container{
+    display: flex;
+    height: auto;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 10%;
+    left: 0;
+
+
+}
+.bg_text:nth-child(1){
+
+    justify-content: center;
+    display: flex;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 1;
+    color: black;
+    opacity: .3;
+    
+    
+}
+.bg_text:nth-child(2){
+
+ 
+    display: flex;
+    position: absolute;
+    left: 90%;
+     justify-content: center;
+    opacity: .3;
+    width:100%;
+    text-transform: uppercase;
+    color: gray;
+  
+}
+
+
+.cta_button{
+    height:50px;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid gray;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 16px;
+    color: gray;
+}
 .home_container{
     display: flex;
     overflow-x: hidden;
@@ -32,11 +83,18 @@
     height: 800px;
     background-color: #fff;
 }
+.hero_container > h1{
+
+    z-index: 2;
+    color: gray;
+}
 .hero_container > p{
 
     width: 70%;
     font-size: 24px;
     line-height: 32px;
+    z-index: 2;
+    color: gray;
 
 }
 .one{
