@@ -63,14 +63,15 @@ const Navbar = ({ showNavbar,
           NavbarLinksWrapper={{}}
           NavbarLinksLink={{fontSize: isSmallScreen? '16px' : '32px',
                             textTransform: 'capitalize'}}/>
-          </div>
+          </div >
             <div style={{ position: 'absolute', 
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
                           flexDirection: 'column',
                           bottom: '0',
-                          marginBottom: '10%'}}>
+                          marginBottom: '10%',
+                          gap: '10px'}}>
             <SocialLinks 
              navSocialLink={{
               display: 'flex',
