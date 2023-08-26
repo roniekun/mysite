@@ -20,17 +20,17 @@ const Navbar = ({ showNavbar,
       gsap.to(navbarContainerRef.current, {
         y:'0%',
         x: '0%',
-        duration: 0.2,
+        duration: 0.5,
         opacity: 1,
-        ease: 'power2.out',
+        ease: 'Power1.easeOut', 
       });
     } else {
       gsap.to(navbarContainerRef.current, {
         y:isSmallScreen ? '-200%' : '0%',
         x: isSmallScreen ? '0%' : '200%',
-        duration: 0.2,
+        duration: 0.5,
         opacity: 0,
-        ease: 'power2.in',
+        ease: 'Bounce.easeOut',
       });
     }
   }, [showNavbar, isSmallScreen]);
@@ -71,7 +71,7 @@ const Navbar = ({ showNavbar,
                           alignItems: 'center',
                           flexDirection: 'column',
                           bottom: '0',
-                          marginBottom: '10%',
+                          marginBottom: '20%',
                           gap: '10px'}}>
             <SocialLinks 
              navSocialLink={{
