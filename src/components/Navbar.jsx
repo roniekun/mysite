@@ -20,7 +20,7 @@ const Navbar = ({ showNavbar,
       gsap.to(navbarContainerRef.current, {
         y:'0%',
         x: '0%',
-        duration: 0.5,
+        duration: 0.2,
         opacity: 1,
         ease: 'power2.out',
       });
@@ -28,8 +28,8 @@ const Navbar = ({ showNavbar,
       gsap.to(navbarContainerRef.current, {
         y:isSmallScreen ? '-200%' : '0%',
         x: isSmallScreen ? '0%' : '200%',
-        duration: 0.3,
-        opacity: 1,
+        duration: 0.2,
+        opacity: 0,
         ease: 'power2.in',
       });
     }
@@ -42,6 +42,7 @@ const Navbar = ({ showNavbar,
           <nav 
           ref={navbarContainerRef}
           style={{
+            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '75vh'),
             width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
             transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)'
           }}

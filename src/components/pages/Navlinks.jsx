@@ -19,9 +19,7 @@ const NavbarLinks = ({
   ContactNavbarLink,
   AboutNavbarLink,
   GalleryNavbarLink,
-  PolicyNavbarLink,
-  displayAfter
-}) => {
+  PolicyNavbarLink}) => {
 
   const location = useLocation();
   const navbarContainerRef = useRef(null);
@@ -46,7 +44,7 @@ const NavbarLinks = ({
             y: '0',
             opacity: 1,
             duration: 0.3,
-            delay:  0.3,
+            delay: index * 0.1,
             skewY: 0,
           }
         );
@@ -65,7 +63,8 @@ const NavbarLinks = ({
                 ...ContactNavbarLinks,
                 ...AboutNavbarLinks,
                 ...NavbarLinksContainer}}
-    className='links_container'
+
+        className='links_container'
           ref={navbarContainerRef}>
       
       {links.map((link, index) => (

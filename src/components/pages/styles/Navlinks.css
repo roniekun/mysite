@@ -77,7 +77,7 @@
     }
     .link_wrapper {
       display: flex;
-      align-items: flex-start;
+      align-items: flex-end;
       justify-content: center;
       width: 80%;
       height: 50px;
@@ -92,7 +92,7 @@
       background-color:var(--red);
       position: absolute;
       opacity: .3;
-      bottom: 5px;
+      bottom: 0;
       padding-inline: 5%;
     }
     .link_wrapper:hover .navbar_link{
@@ -101,9 +101,13 @@
     }
     .navbar_link{
 
-      font-size: 16px;
-      font-weight: 400;
-      color: gray
+      font-size:32px;
+      font-weight: 500;
+      color: gray;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: -2.9px;
+      
     }
  
 }

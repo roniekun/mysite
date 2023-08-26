@@ -6,7 +6,7 @@ import { useRef, useEffect, useState} from 'react';
 
 
 
-const Home = ({setShowNavbar}) => {
+const Home = ({setShowNavbar, isSmallScreen}) => {
 
   const [fontSize, setFontSize] = useState(); 
   const firstText = useRef(null);
@@ -32,7 +32,7 @@ const animate = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize = window.innerWidth / 20;
+  const newFontSize = isSmallScreen ? '40' : window.innerWidth / 16;
   setFontSize(newFontSize);
 
 };
@@ -50,20 +50,22 @@ useEffect(() => {
  
       <div className='content'>
       <div className='hero_container'>
+        <div className='textslider_wrapper'>
         <div   ref={slider} className='textslider_container'>
-          <div  className='bg_text' ref={firstText}>
-          <h1  style={{ fontSize: `${fontSize}px`}}  >
+          <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
             pitik south cotabato </h1>
-          </div>
-          <div className='bg_text' ref={secondText} >
-          <h1 style={{ fontSize: `${fontSize}px` }} >
+           <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >
             pitik south cotabato</h1>
-          </div>
         </div>
+        </div>
+        <div className='hero_content'>
         <h1>Hero</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Aperiam dignissimos enim quod consequatur ad eius.</p>
           <button className='cta_button'>Call to action</button>
+        </div>
+   
+ 
       </div>
 
       <div className='one'>

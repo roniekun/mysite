@@ -47,8 +47,6 @@ const App = () => {
     setIsSmallScreen(screenWidth <= 600);
     setIsMediumScreen(screenWidth <= 1024 && screenWidth > 600)
 
-    console.log(`Navigation bar triggerd at useCallback handleresize: ${showNavbar}`)
-
   }, [isDesktop, isSmallScreen, showNavbar, isMediumScreen]);
 
     const handleScroll = useCallback(() => {
@@ -63,8 +61,6 @@ const App = () => {
       if (currentScroll<=600){
         setShowNavbar(false);
       }
-      console.log(`Navigation bar triggerd at useCallback handleScroll: ${showNavbar}`)
-
     }, [scrollPosition, isScroll]);
 
   useEffect(() => {
@@ -75,8 +71,6 @@ const App = () => {
     const handleScrollEvent = () => {
       handleScroll();
       setIsScroll(window.scrollY > window.innerWidth/2);
-      console.log(`scroll is ${isScroll}`);
-      console.log(`Navigation bar triggerd at useEffect: ${showNavbar}`)
     };
 
     window.addEventListener('resize', handleResizeEvent);
