@@ -19,7 +19,7 @@ const Menu = ({ showNavbar,
               <Hamburger onClick={handleClick} toggled={showNavbar} toggle={setShowNavbar} 
               color= {showNavbar? '#fafafa': '#fafafa' } 
               hideOutline={false}
-               distance='sm' duration={0.3} size={28} />
+               distance='sm' duration={0.3} size={16} />
         </div>
       )}
     </ThemeContext.Consumer>
