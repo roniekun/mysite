@@ -91,7 +91,7 @@
     .link_wrapper:after {
 
       content: '';
-      width: 100%;
+      width: 20%;
       height: 1px;
       background-color:var(--red);
       position: absolute;
@@ -109,7 +109,7 @@
       font-weight: 700;
       color: gray;
       text-align: left;
-      text-transform: uppercase;
+      text-transform: lowercase;
       letter-spacing: -2.9px;
       
     }
