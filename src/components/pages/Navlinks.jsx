@@ -39,12 +39,12 @@ const NavbarLinks = ({
       navbarlinkRefs.forEach((navbarlinkRef, index) => {
         gsap.fromTo(
           navbarlinkRef.current,
-          { y: '50%', opacity: 0 },
+          { x: '50%', opacity: 0 },
           {
             x: '0',
             y: '0',
             opacity: 1,
-            duration: 0.3,
+            duration: 0.7,
             delay: index * 0.1,
             skewY: 0,
           }

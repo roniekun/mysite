@@ -72,15 +72,19 @@
       height: auto;
 
     }
+    .links_container::before{
+      display: none;
+    }
     .links_container::after{
       display: none;
     }
     .link_wrapper {
+
       display: flex;
       align-items: flex-end;
       justify-content: center;
       width: 80%;
-      height: 50px;
+      height: 40px;
       position: relative;
       padding-inline: 3px;
     }
@@ -102,7 +106,7 @@
     .navbar_link{
 
       font-size:40px;
-      font-weight: 900;
+      font-weight: 700;
       color: gray;
       text-align: left;
       text-transform: uppercase;

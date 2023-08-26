@@ -42,7 +42,7 @@ const Navbar = ({ showNavbar,
           <nav 
           ref={navbarContainerRef}
           style={{
-            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '75vh'),
+            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '80vh'),
             width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
             transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)'
           }}
@@ -72,7 +72,9 @@ const Navbar = ({ showNavbar,
                           flexDirection: 'column',
                           bottom: '0',
                           marginBottom: '20%',
-                          gap: '10px'}}>
+                          gap: '5px'}}>
+             <h3 className='nav_footer' style={{textTransform: 'uppercase',
+                                              fontWeight: '600'}}>Socials</h3>
             <SocialLinks 
              navSocialLink={{
               display: 'flex',
