@@ -5,13 +5,28 @@
     display: flex;
     text-transform: capitalize;
     z-index: 1;
-    color: black;
-    opacity: .1;
-    padding-right: 1000px;
-   
+    color: gray;
+    opacity: .5;
+    padding-right: 10px;
     
 }
 .bg_text:nth-child(1){
+    position: absolute;
+    left: 100%;
+}
+
+.bg_text2{
+
+    justify-content: center;
+    display: flex;
+    text-transform: capitalize;
+    z-index: 1;
+    color: gray;
+    opacity: .5;
+    padding-right: 10px;
+    
+}
+.bg_text2:nth-child(1){
     position: absolute;
     left: 100%;
 }
@@ -141,7 +156,7 @@
 }
 .textslider_wrapper{
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     
 }
 .textslider_container{

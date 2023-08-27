@@ -94,5 +94,4 @@ const Navbar = ({ showNavbar,
     </>
   );
 };
-
 export default Navbar;

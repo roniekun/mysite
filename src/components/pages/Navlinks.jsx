@@ -24,7 +24,6 @@ const NavbarLinks = ({
   const location = useLocation();
   const navbarContainerRef = useRef(null);
 
-
   const links = [
     { to: '/', text: 'home ' },
     { to: '/contact', text: 'contact  ' },
