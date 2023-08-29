@@ -218,6 +218,9 @@
     .hero_container > p {
       width: 100%;
     }
+    .two > p{
+      font-size: 16px;
+    }
   }
   
   @media (max-width: 600px) {
@@ -273,8 +276,5 @@
       bottom: 0;
     }
 
-    .two > p{
-      font-size: 16px;
-    }
   }
   
