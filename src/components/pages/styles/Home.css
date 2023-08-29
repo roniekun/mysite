@@ -8,6 +8,7 @@
     color: gray;
     opacity: .5;
     padding-right: 10px;
+    font-weight: 500;
     
 }
 .bg_text:nth-child(1){
@@ -24,6 +25,7 @@
     color: gray;
     opacity: .5;
     padding-right: 10px;
+    font-weight: 500;
     
 }
 .bg_text2:nth-child(1){

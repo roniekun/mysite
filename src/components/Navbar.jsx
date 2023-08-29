@@ -44,7 +44,7 @@ const Navbar = ({ showNavbar,
           style={{
             height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '80vh'),
             width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
-            transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)'
+            transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)',
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
@@ -71,7 +71,7 @@ const Navbar = ({ showNavbar,
                           alignItems: 'center',
                           flexDirection: 'column',
                           bottom: '0',
-                          marginBottom: '20%',
+                          marginBottom: '10%',
                           gap: '5px'}}>
              <h3 className='nav_footer' style={{textTransform: 'uppercase',
                                               fontWeight: '600'}}>Socials</h3>

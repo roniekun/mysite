@@ -16,7 +16,7 @@ const Footer = ({setShowNavbar}) => {
       FooterContainer={{fill: '', }}/>
       <div className='footer_text_wrapper'>
       <h4>pitiksouthcotabato.com</h4>
-      <h3>All rights reserved 2013</h3>
+      <h3>All rights reserved 2023</h3>
       </div>
     </div>
   )
