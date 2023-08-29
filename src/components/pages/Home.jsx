@@ -95,7 +95,6 @@ useEffect(() => {
       </div>
 
       <div className='one'>
-        
       <h1 className='title'> *Website Content* </h1>
         <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Temporibus veniam quasi sequi!  

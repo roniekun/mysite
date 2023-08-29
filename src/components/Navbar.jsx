@@ -64,7 +64,7 @@ const Navbar = ({ showNavbar,
           NavbarLinksWrapper={{}}
           NavbarLinksLink={{textTransform: 'capitalize'}}/>
           </div >
-            <div style={{ position: 'absolute', 
+            <div style={{ position: isSmallScreen ? 'absolute' : 'relative', 
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
