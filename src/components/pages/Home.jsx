@@ -89,7 +89,7 @@ useEffect(() => {
         <h1>PSC HERO*</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Aperiam dignissimos enim quod consequatur ad eius.</p>
-          <button className='cta_button'>*Call to action</button>
+          <button className='cta_button'>*cta</button>
         </div>
  
       </div>
@@ -103,18 +103,8 @@ useEffect(() => {
        <img className='hero_img' src="" alt="image" />
        <img src="" alt="" />
        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad nihil corrupti, ut impedit expedita at, dolore doloremque quia molestiae, ipsam iure perspiciatis! Dolorem, omnis placeat similique vel nam eum autem.</p>
-  
       </div>
       <div className='two'>
-        
-      <h1></h1>
-        <h1></h1>
-        <h1>Pitik South Cotabato</h1>
-        <h1>Pitik South Cotabato</h1>
-        <h1>Pitik South Cotabato</h1>
-        <h1>Pitik South Cotabato</h1>
-        <h1></h1>
-        <h1></h1>
       </div>
       </div>
   

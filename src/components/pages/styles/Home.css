@@ -35,7 +35,7 @@
     height:55px;
     width: 160px;
     background-color: transparent;
-    border-radius: 3px;
+    border-radius: 30px;
     border: 1px solid gray;
     cursor: pointer;
     z-index: 2;
@@ -76,7 +76,6 @@
 .hero_container{
 
     display: flex;
-    gap:20px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -93,14 +92,16 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    gap:10px;
+    gap:20px;
     padding: 5%;
 }
 .hero_content > h1{
 
     z-index: 2;
     color: gray;
-    font-size: 100px;
+    font-size: 60px;
+    line-height: 100px;
+    font-weight: 400;
 }
 .hero_content > p{
 
@@ -157,7 +158,33 @@
 .textslider_wrapper{
     position: absolute;
     bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow: hidden;
     
+}
+
+.textslider_wrapper::before{
+    content: '';
+    height: 100%;
+    width: 100px;
+    background: linear-gradient(to right, white, transparent);
+    left: 0;
+    position: absolute;
+    z-index: 999;
+
+}
+.textslider_wrapper::after{
+    content: '';
+    height: 100%;
+    background: linear-gradient(to left, white, transparent);
+    width: 100px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 999;
+
 }
 .textslider_container{
     display: flex;
@@ -202,6 +229,14 @@
 }
     
 @media (max-width: 600px) {
+
+.bg_text{
+    font-weight: 400;
+}
+.bg_text2{
+
+    font-weight: 400;
+}
 .hero_container{
 
     height: 700px;
@@ -216,6 +251,7 @@
 }
 .hero_content > h1 {
     font-size: 50px;
+    line-height:50px;
 }
 .hero_content > p{
 
@@ -236,5 +272,10 @@
     width: 100%;
     align-self: flex-end;
 }
+.textslider_wrapper{
+    bottom: 0;
+}
+
+
     
 }
