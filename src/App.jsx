@@ -104,6 +104,8 @@ const App = () => {
               isSmallScreen={isSmallScreen}
               setShowNavbar={setShowNavbar}
               displayNames={false}
+              setIsScroll={setIsScroll}
+              isScroll={isScroll}
               AppMenuContainer={{position: 'relative',
                                 backgroundColor:'transparent',
                                 }}

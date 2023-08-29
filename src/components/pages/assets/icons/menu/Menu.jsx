@@ -6,11 +6,15 @@ import { ThemeContext } from '../../../../../context/ThemeContext';
 const Menu = ({ showNavbar,
                setShowNavbar,
                 AppMenuContainer,
-                  MenuContainer }) => {
+                  MenuContainer,
+                  setIsScroll,
+                  isScroll }) => {
   
   const handleClick = () => {
     setShowNavbar(!showNavbar);
+    setIsScroll(!isScroll);
     console.log("menu is clicked");
+    
   };
   return (
     <ThemeContext.Consumer>

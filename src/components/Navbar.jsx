@@ -62,8 +62,7 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{fontSize: isSmallScreen? '16px' : '32px',
-                            textTransform: 'capitalize'}}/>
+          NavbarLinksLink={{textTransform: 'capitalize'}}/>
           </div >
             <div style={{ position: 'absolute', 
                           display: 'flex',
@@ -74,7 +73,7 @@ const Navbar = ({ showNavbar,
                           marginBottom: '10%',
                           gap: '5px'}}>
              <h3 className='nav_footer' style={{textTransform: 'uppercase',
-                                              fontWeight: '600'}}>Socials</h3>
+                                              fontWeight: '400'}}>Socials</h3>
             <SocialLinks 
              navSocialLink={{
               display: 'flex',
