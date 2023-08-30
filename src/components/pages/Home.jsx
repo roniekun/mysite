@@ -7,16 +7,18 @@ import { useRef, useEffect, useState} from 'react';
 
 const Home = ({setShowNavbar, isSmallScreen}) => {
 
-  const [fontSize, setFontSize] = useState();
-  const homeContainer = useRef(); 
-  const heroContainer= useRef(); 
-  const heroContent = useRef();
-  const heroTitle = useRef(); 
-  const heroText = useRef();
-  const firstText = useRef();
-  const secondText = useRef();
-  const thirdText = useRef();
-  const forthText = useRef();
+    const heroTexts = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos enim quod consequatur ad eius."
+    const heroTextWords = heroTexts.split(' ');
+    const heroTextRefs = heroTextWords.map(() => useRef(null)); 
+    const [fontSize, setFontSize] = useState();
+    const homeContainer = useRef(null);
+    const heroContainer = useRef(null);
+    const heroContent = useRef(null);
+    const heroTitleRefs = useRef(null);
+    const firstText = useRef(null);
+    const secondText = useRef(null);
+    const thirdText = useRef(null);
+    const forthText = useRef(null);
 
   // useEffect(() => {
   //   gsap.registerPlugin(ScrollTrigger);
@@ -41,11 +43,11 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
 let xPercent = 0;
 let xPercent2 = 0;
 
+
 useEffect( () => {
 
+  const title = heroTitleRefs.current;
   const tl = gsap.timeline();
-  const title = heroTitle.current;
-  const text = heroText.current;
 
   tl.fromTo(
     title,
@@ -58,18 +60,28 @@ useEffect( () => {
       opacity: 1,
       duration: 1,
     }
-  ).fromTo(
-    text,
-    {
-      opacity: 0,
-      y: 100,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-    },
   );
+  
+  heroTextRefs.forEach((heroTextRef, index) => {
+    tl.fromTo(
+      heroTextRef.current,
+      {
+        y:100,
+        opacity: 0,
+        
+      },
+      {
+        y:0,
+        opacity:1,
+        duration: .05,
+        stagger: index * 0.1, // Adjust the stagger value as needed
+      },
+    );
+  });
+  
+  
+ 
+  
   
   gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate1);
@@ -115,6 +127,8 @@ useEffect(() => {
   };
 }, [window.innerWidth]);
 
+ 
+
   return (
     <div ref= {homeContainer} className='home_container'>
  
@@ -139,12 +153,15 @@ useEffect(() => {
         </div>
         <div ref={heroContent} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
-        <h1 ref={heroTitle} className='hero_title'> PSC HERO*</h1>
+        <h1 ref={heroTitleRefs} className='hero_title'> PSC HERO*</h1>
         </div>
-        <div style={{overflow: 'hidden'}}>
-        <p ref={heroText} className='hero_text' >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Aperiam dignissimos enim quod consequatur ad eius.</p>
-       
+        <div className='herotext_container'>
+        {heroTextWords.map((word, index) => (
+         <div key={index}  ref={heroTextRefs[index]} className="hero_text">
+          <p>{word}</p>
+         </div>
+      ))}
+    
         </div>
         <button className='cta_button'>*cta</button>
 
