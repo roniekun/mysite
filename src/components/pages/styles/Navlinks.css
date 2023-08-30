@@ -58,7 +58,9 @@
   .links_container::before {
     display: none;
   }
-
+  .active_link{
+  
+  color: black}
 }
 
 @media (max-width: 600px) {
@@ -113,4 +115,8 @@
     text-align: left;
     letter-spacing: -2.9px;
   }
+
+  .active_link{
+    color: black;
+}
 }

@@ -7,7 +7,7 @@
   z-index: 8888;
   display: flex;
   flex-direction: row;
-  height: 70px;
+  height: auto;
   z-index: 99999;
   top: 45px;
   
@@ -48,9 +48,8 @@
   top:0;
   z-index: 9999;
   transition: .3s;
-  height: 60px;
+  height: 55px;
  
-
 }  
 .logo_wrapper{
   padding-inline: 0;
