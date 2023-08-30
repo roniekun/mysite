@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
+import Menu from './components/pages/assets/buttons/Menu';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
@@ -10,7 +11,6 @@ import Portfolio from './components/pages/Portfolio';
 import Gallery from './components/pages/Gallery';
 import NotFound from './components/pages/NotFound';
 import Policy from './components/pages/Policy';
-import Menu from './components/pages/assets/icons/menu/Menu';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 import PageModal from './assets/Page-modal'
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
@@ -100,6 +100,7 @@ const App = () => {
               <MagneticEffect>
               <div className='floating_menu'>
               <Menu
+              displayIcon={true}
               showNavbar={showNavbar}
               isSmallScreen={isSmallScreen}
               setShowNavbar={setShowNavbar}
@@ -109,7 +110,7 @@ const App = () => {
               AppMenuContainer={{position: 'relative',
                                 backgroundColor:'transparent',
                                 }}
-             />
+              />
             
             </div>
             </MagneticEffect>} 

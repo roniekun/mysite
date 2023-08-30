@@ -2,14 +2,12 @@ import React from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import './styles/Header.css';
 import SiteLogo from './SiteLogo';
-import Menu from './pages/assets/icons/menu/Menu';
-
+import Menu from './pages/assets/buttons/Menu';
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-        
           <div id={`component-${theme}`} className= {`header_container ${ isScroll ?'hide-header' : ''}`}>
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
@@ -17,7 +15,9 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             </div>
             {isSmallScreen &&
             <div className='menu_wrapper'>
-            <Menu showNavbar={showNavbar} setShowNavbar={setShowNavbar}
+            <Menu showNavbar={showNavbar} 
+            setShowNavbar={setShowNavbar}
+            displayText={true}
             MenuContainer={{backgroundColor: 'transparent'}}/>
             </div>
              }
