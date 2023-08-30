@@ -38,6 +38,7 @@
     border: 1px solid gray;
     cursor: pointer;
     z-index: 2;
+    opacity: 0;
     font-size: 16px;
     text-transform: uppercase;
     color: gray;
@@ -126,8 +127,6 @@
     transform: translateY(100);
     overflow: hidden;
 
-    
-  
   }
   .one {
     display: flex;
@@ -169,18 +168,21 @@
   }
   
   .textslider_wrapper {
+
     position: absolute;
-    bottom: 5%;
+    width: auto;
+    bottom:0;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     overflow: hidden;
+
   }
   
   .textslider_wrapper::before {
     content: '';
     height: 100%;
-    width: 100px;
+    width: 250px;
     background: linear-gradient(to right, white, transparent);
     left: 0;
     position: absolute;
@@ -191,7 +193,7 @@
     content: '';
     height: 100%;
     background: linear-gradient(to left, white, transparent);
-    width: 100px;
+    width: 250px;
     right: 0;
     bottom: 0;
     position: absolute;

@@ -14,6 +14,7 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
     const homeContainer = useRef(null);
     const heroContainer = useRef(null);
     const heroContent = useRef(null);
+    const ctaBtnRef = useRef(null);
     const heroTitleRefs = useRef(null);
     const firstText = useRef(null);
     const secondText = useRef(null);
@@ -62,7 +63,7 @@ useEffect( () => {
     }
   );
   
-  heroTextRefs.forEach((heroTextRef, index) => {
+  heroTextRefs.forEach((heroTextRef) => {
     tl.fromTo(
       heroTextRef.current,
       {
@@ -74,13 +75,14 @@ useEffect( () => {
         y:0,
         opacity:1,
         duration: .7,
-      },
+      },"-=0.5"
     );
   });
-  
-  
- 
-  
+
+  tl.to
+     (ctaBtnRef.current,
+     {opacity: 1,} 
+     );
   
   gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate1);
@@ -113,7 +115,7 @@ const animate2 = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize = isSmallScreen ? '45' : window.innerWidth / 32;
+  const newFontSize = isSmallScreen ? '40' : window.innerWidth / 28;
   setFontSize(newFontSize);
 
 };
@@ -155,7 +157,6 @@ useEffect(() => {
         <h1 ref={heroTitleRefs} className='hero_title'> PSC HERO*</h1>
         </div>
         <div className='herotext_container'>
-
         {heroTextWords.map((word, index) => (
          <div key={index} ref={heroTextRefs[index]} className="hero_text">
           {word}
@@ -163,7 +164,7 @@ useEffect(() => {
       ))}
     
         </div>
-        <button className='cta_button'>*cta</button>
+        <button ref={ctaBtnRef}className='cta_button'>*cta</button>
 
         </div>
  

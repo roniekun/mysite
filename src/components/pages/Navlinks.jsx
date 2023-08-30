@@ -34,7 +34,7 @@ const NavbarLinks = ({
   const navbarlinkRefs = links.map(() => useRef(null));
 
   useEffect(() => {
-    if (showNavbar && isSmallScreen) {
+    if (showNavbar ) {
       navbarlinkRefs.forEach((navbarlinkRef, index) => {
         gsap.fromTo(
           navbarlinkRef.current,

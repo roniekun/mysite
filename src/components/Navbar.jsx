@@ -42,7 +42,7 @@ const Navbar = ({ showNavbar,
           <nav 
           ref={navbarContainerRef}
           style={{
-            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '80vh'),
+            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '70vh'),
             width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
             transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)',
           }}
