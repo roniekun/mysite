@@ -7,7 +7,7 @@ import { useRef, useEffect, useState} from 'react';
 
 const Home = ({setShowNavbar, isSmallScreen}) => {
 
-    const heroTexts = "Lorem ipsum dolor sit amet consectetur adipisicing elit.-Aperiam dignissimos enim quod consequatur ad eius."
+    const heroTexts = "Lorem ipsum dolor sit amet consectetur.-Aperiam dignissimos enim quod consequatur ad eius."
     const heroTextWords = heroTexts.split('-');
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
@@ -66,13 +66,11 @@ useEffect( () => {
     tl.fromTo(
       heroTextRef.current,
       {
-        y:100,
+        y:20,
         opacity: 0,
-        skew: 190,
         
       },
       {
-        skew: 0,
         y:0,
         opacity:1,
         duration: .7,
