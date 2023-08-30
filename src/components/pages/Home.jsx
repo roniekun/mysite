@@ -44,7 +44,6 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
 let xPercent = 0;
 let xPercent2 = 0;
 
-
 useEffect( () => {
 
   const title = heroTitleRefs.current;
@@ -127,9 +126,7 @@ useEffect(() => {
     window.removeEventListener('resize', calculateFontSize);
   };
 }, [window.innerWidth]);
-
  
-
   return (
     <div ref= {homeContainer} className='home_container'>
  
@@ -149,7 +146,6 @@ useEffect(() => {
            <h1 className='bg_text2' ref={forthText} style={{ fontSize: `${fontSize}px` }} >
             pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
         </div>
-
   
         </div>
         <div ref={heroContent} className='hero_content'>
