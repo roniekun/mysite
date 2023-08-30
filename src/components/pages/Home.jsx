@@ -7,8 +7,8 @@ import { useRef, useEffect, useState} from 'react';
 
 const Home = ({setShowNavbar, isSmallScreen}) => {
 
-    const heroTexts = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos enim quod consequatur ad eius."
-    const heroTextWords = heroTexts.split(' ');
+    const heroTexts = "Lorem ipsum dolor sit amet consectetur adipisicing elit.-Aperiam dignissimos enim quod consequatur ad eius."
+    const heroTextWords = heroTexts.split('-');
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
     const homeContainer = useRef(null);
@@ -68,13 +68,14 @@ useEffect( () => {
       {
         y:100,
         opacity: 0,
+        skew: 190,
         
       },
       {
+        skew: 0,
         y:0,
         opacity:1,
-        duration: .05,
-        stagger: index * 0.1, // Adjust the stagger value as needed
+        duration: .7,
       },
     );
   });
@@ -156,9 +157,10 @@ useEffect(() => {
         <h1 ref={heroTitleRefs} className='hero_title'> PSC HERO*</h1>
         </div>
         <div className='herotext_container'>
+
         {heroTextWords.map((word, index) => (
-         <div key={index}  ref={heroTextRefs[index]} className="hero_text">
-          <p>{word}</p>
+         <div key={index} ref={heroTextRefs[index]} className="hero_text">
+          {word}
          </div>
       ))}
     
