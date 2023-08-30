@@ -2,25 +2,77 @@ import React from 'react'
 import Footer from '../Footer';
 import './styles/Home.css';
 import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState} from 'react';
-
-
 
 const Home = ({setShowNavbar, isSmallScreen}) => {
 
-  const [fontSize, setFontSize] = useState(); 
+  const [fontSize, setFontSize] = useState();
+  const homeContainer = useRef(); 
+  const heroContainer= useRef(); 
+  const heroContent = useRef();
+  const heroTitle = useRef(); 
+  const heroText = useRef();
   const firstText = useRef();
   const secondText = useRef();
   const thirdText = useRef();
   const forthText = useRef();
 
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   const container = homeContainer.current;
+  //   const text = heroText.current;
+
+  //   gsap.to(text, {
+  //     opacity: 1,
+  //     x: 100,
+  //     scrollTrigger: {
+  //       trigger: container,
+  //       start: 'top center', // Adjust as needed
+  //       end: 'bottom center', // Adjust as needed
+  //       scrub: true,
+  //       markers: true,
+  //     },
+  //   });
+  // }, []);
+
+
 let xPercent = 0;
 let xPercent2 = 0;
 
 useEffect( () => {
+
+  const tl = gsap.timeline();
+  const title = heroTitle.current;
+  const text = heroText.current;
+
+  tl.fromTo(
+    title,
+    {
+      opacity: 0,
+      y: 100,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    }
+  ).fromTo(
+    text,
+    {
+      opacity: 0,
+      y: 100,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    },
+  );
+  
   gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate1);
-  
     gsap.set(forthText.current, {left: forthText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate2);
 }, [])
@@ -64,10 +116,10 @@ useEffect(() => {
 }, [window.innerWidth]);
 
   return (
-    <div className='home_container'>
+    <div ref= {homeContainer} className='home_container'>
  
       <div className='content'>
-      <div className='hero_container'>
+      <div ref={heroContainer} className='hero_container'>
         <div className='textslider_wrapper'>
 
         <div  className='textslider_container'>
@@ -85,11 +137,17 @@ useEffect(() => {
 
   
         </div>
-        <div className='hero_content'>
-        <h1>PSC HERO*</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <div ref={heroContent} className='hero_content'>
+        <div style={{overflow: 'hidden'}}>
+        <h1 ref={heroTitle} className='hero_title'> PSC HERO*</h1>
+        </div>
+        <div style={{overflow: 'hidden'}}>
+        <p ref={heroText} className='hero_text' >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Aperiam dignissimos enim quod consequatur ad eius.</p>
-          <button className='cta_button'>*cta</button>
+       
+        </div>
+        <button className='cta_button'>*cta</button>
+
         </div>
  
       </div>
