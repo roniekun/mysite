@@ -26,10 +26,10 @@ const NavbarLinks = ({
 
   const links = [
     { to: '/', text: 'home ' },
-    { to: '/', text: 'community  ' },
-    { to: '/contact', text: 'contact  ' },
     { to: '/about', text: 'about  ' },
-     
+    { to: '', text: 'community  ' },
+    { to: '/contact', text: 'contact  ' },
+    
   ];
 
   const navbarlinkRefs = links.map(() => useRef(null));
