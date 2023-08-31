@@ -111,12 +111,12 @@
 
   .navbar_link {
 
-    color: gray;
+    color:lightgray;
     text-align: left;
     letter-spacing: -2.9px;
   }
 
   .active_link{
-    color: black;
+    color: var(--red);
 }
 }

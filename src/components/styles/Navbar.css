@@ -15,9 +15,10 @@
 }
 
 .nav_footer {
-  color: gray;
+  color: lightgrey;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 11px;
+  margin-bottom: 10px;
 }
 
 .hide::after {
@@ -39,6 +40,7 @@
 }
 
 @media (max-width: 600px) {
+
   .navbar_container {
     display: flex;
     flex-direction: row;
@@ -49,7 +51,7 @@
     border: 1px solid rgba(11, 15, 25, 0.1);
     border-radius: 3px;
     padding-inline: 5%;
-    background-color: whitesmoke;
+    background-color: var(--primary-color);
     position: fixed;
     inset: 0;
     z-index: 8888;

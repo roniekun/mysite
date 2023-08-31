@@ -23,10 +23,11 @@ const Menu = ({ showNavbar,
       {theme => (
         <div style={{...AppMenuContainer,...MenuContainer}}
                      className='menu_container'
-                     onClick={handleClick}  >
+                      >
               {displayText && 
-              <span style={{color: 'gray',
-                            fontWeight: '500'}}>
+              <span onClick={handleClick} style={{color: 'gray',
+                            fontWeight: '500',
+                            fontFamily: 'Clash Display, sans-serif'}}>
               MENU</span>}
               {displayIcon &&  
               <Hamburger toggle={setShowNavbar} 
