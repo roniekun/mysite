@@ -1,0 +1,31 @@
+.site_logo_container{
+
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: auto;
+    height: fit-content;
+    top:0;
+}
+
+.logo{
+    cursor:pointer;
+    font-family: 'Clash Display', sans-serif;
+    font-size:14px;
+    font-weight:500;
+    text-transform: uppercase;
+    }
+@media (max-width:600px){
+
+    .site_logo_container{
+      
+      position: relative;
+      margin-block: 20px;  
+      color: white;
+      fill: white;
+      width:fit-content;
+      
+
+    }
+  }

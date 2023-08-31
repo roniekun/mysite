@@ -10,15 +10,17 @@ const Footer = ({setShowNavbar}) => {
     <div className='footer_container'>
        <SiteLogo 
        setShowNavbar={setShowNavbar}/>
-      <h1>Footer</h1>
+      <h2>Footer Section</h2>
       <Socials displayNames={true} 
       footerIconContainer={{marginInline: '7px'}}
       FooterContainer={{fill: '', }}/>
       <div className='footer_text_wrapper'>
-      <h4>pitiksouthcotabato.com</h4>
-      <h3 style={{textTransform: 'uppercase'}}>All rights reserved 2023</h3>
-       <h1>Version 1.0</h1>
+      <h3 style={{textTransform: 'uppercase',
+                  fontSize: '16px'}}>All rights reserved 2023</h3>
+       <h4>Version 1.1</h4>
        <a href="#">developed by roniekun</a>
+       <h4>pitiksouthcotabato.com</h4>
+
       </div>
     </div>
   )

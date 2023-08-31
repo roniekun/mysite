@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
+import Community from './components/pages/Community';
 import Portfolio from './components/pages/Portfolio';
 import Gallery from './components/pages/Gallery';
 import NotFound from './components/pages/NotFound';
@@ -163,8 +164,8 @@ const App = () => {
                   setShowNavbar={setShowNavbar} />}
                   />
 
-                  <Route path='/portfolio' 
-                  element={<Portfolio 
+                  <Route path='/community' 
+                  element={<Community
                   isSmallScreen={isSmallScreen}  
                   showNavbar={showNavbar}
                   setShowNavbar={setShowNavbar} />} />

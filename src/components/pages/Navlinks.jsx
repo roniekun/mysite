@@ -27,7 +27,7 @@ const NavbarLinks = ({
   const links = [
     { to: '/', text: 'home ' },
     { to: '/about', text: 'about  ' },
-    { to: '', text: 'community  ' },
+    { to: '/community', text: 'community  ' },
     { to: '/contact', text: 'contact  ' },
     
   ];
