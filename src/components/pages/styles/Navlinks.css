@@ -58,7 +58,7 @@
   }
   .active_link{
   
-  color: black}
+  color: var(--red)}
 }
 
 @media (max-width: 600px) {

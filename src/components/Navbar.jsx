@@ -4,7 +4,7 @@ import SocialLinks from './pages/assets/icons/Socials';
 import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
 import SiteLogo from './SiteLogo';
-import { gsap } from 'gsap';
+import { Power1, gsap } from 'gsap';
 
 const Navbar = ({ showNavbar,
                 isSmallScreen, 
@@ -23,12 +23,12 @@ const Navbar = ({ showNavbar,
     const itemAnim = {
       y: showNavbar ? 0 : isSmallScreen ? 1000 : 0,
       x: showNavbar ? 0 : isSmallScreen ? '0' : '-1000',
-      duration: 1,
+      duration: .8,
     };
     const containerAnim = {
       y: showNavbar ? 0 : isSmallScreen ? '-200%' : '0%',
       x: showNavbar ? 0 : isSmallScreen ? '0%' : '200%',
-      duration: 1,
+      duration:.8,
     };
   
     gsap.to(navbarContainerRef.current, containerAnim);
