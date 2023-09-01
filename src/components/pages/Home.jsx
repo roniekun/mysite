@@ -95,7 +95,7 @@ useEffect( () => {
 
   tl.to
      (ctaBtnRef.current,
-     {opacity: 1,} 
+     {visibility:'visible'} 
      );
   
   gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})

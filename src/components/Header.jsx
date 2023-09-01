@@ -13,12 +13,16 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
     gsap.to(containerRef.current,
       {opacity:1,
       duration:.3});
-  }, [])
+    
+    gsap.to(containerRef.current,
+      {y: isScroll ? -100 : 0,
+          duration: .3 })
+  }, [isScroll])
   
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-          <div ref={containerRef} id={`component-${theme}`} className= {`header_container ${ isScroll ?'hide-header' : ''}`}>
+          <div ref={containerRef} id={`component-${theme}`} className='header_container'>
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar} />

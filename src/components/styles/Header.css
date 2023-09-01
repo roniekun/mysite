@@ -13,12 +13,7 @@
   opacity: 0;
   
 }
-.hide-header{
 
-  transform: translateY(-200%);
-  transition: transform .3s;
-  opacity: 0;
-}
 
 .logo_wrapper{
 
