@@ -53,7 +53,7 @@ useEffect( () => {
   tl.to(container,
     {
       opacity:1,
-      duration: .2,
+      duration: 1,
     }
   );
 
