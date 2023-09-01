@@ -68,9 +68,10 @@
     flex-direction: row;
     width: 100vw;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin: 0;
     row-gap: 5px;
+    padding-inline: 10%;
     height: auto;
   }
 
@@ -86,22 +87,12 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 80%;
+    width: fit-content;
     height: 40px;
     position: relative;
     padding-inline: 3px;
   }
 
-  .link_wrapper:after {
-    content: '';
-    width: 20%;
-    height: 1px;
-    background-color: var(--red);
-    position: absolute;
-    opacity: .3;
-    bottom: 0;
-    padding-inline: 5%;
-  }
 
   .link_wrapper:hover .navbar_link {
     color: gray;

@@ -10,7 +10,6 @@ const PageModal = ({ showNavbar }) => {
       timer = setTimeout(() => {
         setIsVisible(true);
       }, 0); // 500 milliseconds (half second delay)
-
     }
     else{
       setIsVisible(false);
@@ -27,7 +26,6 @@ const PageModal = ({ showNavbar }) => {
         position:'fixed',
         zIndex: '7777',
         backgroundColor: 'rgba( 0 , 0 , 0 , 0.3)',
-        transitionDuration: '.3s'   
       }}
     ></div>
   ) : null;

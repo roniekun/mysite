@@ -32,15 +32,16 @@
   
   .cta_button {
     height: 55px;
-    width: 160px;
+    width:fit-content;
+    padding-inline: 5%;
+    font-weight: 500;
     background-color: transparent;
     border-radius: 30px;
     border: 1px solid gray;
     cursor: pointer;
     z-index: 2;
     visibility: hidden;
-    font-size: 16px;
-    text-transform: uppercase;
+    font-size:24px;
     color: gray;
 
   }
@@ -64,7 +65,7 @@
     position: relative;
     overflow: hidden;
     height: auto;
-    background-color: lightgray;
+    background-color: transparent;
   }
   
   .title {
@@ -91,7 +92,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     height: auto;
     gap: 20px;
@@ -104,9 +105,9 @@
     z-index: 2;
     color: gray;
     font-size: 60px;
-    line-height: 60px;
     font-weight: 400;
     opacity: 0;
+    line-height: 1em;
     transform: translateY(100);
   }
   .herotext_container{
@@ -117,12 +118,16 @@
     flex-wrap: wrap;
     height: auto;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .hero_text {
    
-    width: 70%;
+    width: 100%;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 1.5em;
+
     width: fit-content;
     height: fit-content;
     z-index: 2;
@@ -145,11 +150,7 @@
     padding: 5%;
     row-gap: 20px;
   }
-  
-  .one > h1 {
-    padding-inline: 5%;
-  }
-  
+
   .one > p {
     align-self: flex-start;
     font-size: 16px;

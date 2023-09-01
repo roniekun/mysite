@@ -6,7 +6,7 @@ const Community = () => {
   return (
     <div className='community_container'>
     <div className='community_content'>
-      <h1>
+      <h1 className='title'>
         Blank Page
       </h1>
     </div>

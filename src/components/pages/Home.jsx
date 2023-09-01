@@ -148,6 +148,7 @@ useEffect(() => {
   return (
 
     <div ref= {containerRef} className='home_container'>
+
  
       <div className='content'>
       <div ref={heroContainer} className='hero_container'>
@@ -169,7 +170,7 @@ useEffect(() => {
         </div>
         <div ref={heroContent} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
-        <h1 ref={heroTitleRefs} className='hero_title'> PSC HERO*</h1>
+        <h1 ref={heroTitleRefs} className='hero_title'> Hero Text*</h1>
         </div>
         <div className='herotext_container'>
         {heroTextWords.map((word, index) => (
@@ -179,21 +180,16 @@ useEffect(() => {
       ))}
     
         </div>
-        <button ref={ctaBtnRef}className='cta_button'>*cta</button>
+        <button ref={ctaBtnRef}className='cta_button'>Get in touch</button>
 
         </div>
  
       </div>
 
       <div className='one'>
-      <h1 className='title'> *Website Content* </h1>
-        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Temporibus veniam quasi sequi!  
-        </p >
-       <img className='hero_img' src="" alt="image" />
-       <img src="" alt="" />
-       <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad nihil corrupti, ut impedit expedita at, dolore doloremque quia molestiae, ipsam iure perspiciatis! Dolorem, omnis placeat similique vel nam eum autem.</p>
+          
       </div>
+
       <div className='two'>
        
       </div>

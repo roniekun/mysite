@@ -5,7 +5,6 @@ import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
 import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
-import { transform } from 'framer-motion';
 
 const Navbar = ({ showNavbar,
                 isSmallScreen, 
@@ -13,27 +12,31 @@ const Navbar = ({ showNavbar,
                 setShowNavbar,  
                 isScroll, 
                 isDesktop }) => {
+
   const navbarContainerRef = useRef(null);
+  const navItemsRef = useRef(null);
+  const footerRef = useRef(null);
+  const logoRef = useRef(null);
+  
 
   useEffect(() => {
-    if (showNavbar) {
-      gsap.to(navbarContainerRef.current, {
-        y:'0%',
-        x: '0%',
-        duration: 0.5,
-        opacity: 1,
-        ease: 'Power1.easeOut', 
-      });
-    } else {
-      gsap.to(navbarContainerRef.current, {
-        y:isSmallScreen ? '-200%' : '0%',
-        x: isSmallScreen ? '0%' : '200%',
-        duration: 0.5,
-        opacity: 0,
-        ease: 'Bounce.easeOut',
-      });
-    }
+    const itemAnim = {
+      y: showNavbar ? 0 : isSmallScreen ? 1000 : 0,
+      x: showNavbar ? 0 : isSmallScreen ? '0' : '-1000',
+      duration: 1,
+    };
+    const containerAnim = {
+      y: showNavbar ? 0 : isSmallScreen ? '-200%' : '0%',
+      x: showNavbar ? 0 : isSmallScreen ? '0%' : '200%',
+      duration: 1,
+    };
+  
+    gsap.to(navbarContainerRef.current, containerAnim);
+    gsap.to(navItemsRef.current,itemAnim);
+    gsap.to(footerRef.current, itemAnim);
+    gsap.to(logoRef.current, itemAnim);
   }, [showNavbar, isSmallScreen]);
+  
 
   return (
     <>
@@ -48,16 +51,16 @@ const Navbar = ({ showNavbar,
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
-          <div style={{visibility: isScroll? ''  : 'collapse'}}>
-          
+            
+
+          <div ref={logoRef} style={{visibility: isScroll? ''  : 'collapse'}}>
            <SiteLogo setShowNavbar={setShowNavbar}
             showNavbar={showNavbar}
             navbarContainer={{color: 'gray',
                             fill: 'gray'}}/>
           </div>
         
-          <div style={{   
-                       }}>
+          <div ref={navItemsRef}>
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
@@ -69,7 +72,8 @@ const Navbar = ({ showNavbar,
           NavbarLinksLink={{textTransform: 'uppercase',
                             }}/>
           </div >
-            <div style={{ position: isSmallScreen ? 'absolute' : 'relative', 
+         <div ref={footerRef} 
+         style={{ position: isSmallScreen ? 'absolute' : 'relative', 
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',
