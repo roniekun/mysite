@@ -66,7 +66,8 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{textTransform: 'uppercase'}}/>
+          NavbarLinksLink={{textTransform: 'uppercase',
+                            }}/>
           </div >
             <div style={{ position: isSmallScreen ? 'absolute' : 'relative', 
                           display: 'flex',
@@ -74,11 +75,12 @@ const Navbar = ({ showNavbar,
                           alignItems: 'center',
                           flexDirection: 'column',
                           bottom: '0',
-                          marginBottom: '5%',
+                          marginBottom: '10%',
                            }}>
              <h3 className='nav_footer' style={{textTransform: 'uppercase',
                                               fontWeight: '700',
-                                              }}>Socials</h3>
+                                             }}>Socials</h3>
+            <div style={{marginBlock: '10px'}}>
             <SocialLinks 
              navSocialLink={{
               display: 'flex',
@@ -87,9 +89,12 @@ const Navbar = ({ showNavbar,
               height: '20px',
               fill: isSmallScreen  ? 'lightgray' :'gray',
               margin: '7px',
-              width: 'fit-content',}}
+              width: 'fit-content',
+             }}
               displayIcons={true}
               showNavbar={showNavbar}/>
+            </div>
+           
             <h3 className='nav_footer'>pitiksouthcotabato.com</h3>
             </div>
           </nav>

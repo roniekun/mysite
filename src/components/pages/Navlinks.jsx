@@ -57,7 +57,6 @@ const NavbarLinks = ({
     window.scrollTo({ top: 0 });
     setShowNavbar(false);
   };
-
   return (
     <div style={{...HomeNavbarLinks,
                 ...PortfolioNavbarLinks,

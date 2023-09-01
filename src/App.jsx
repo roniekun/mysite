@@ -10,7 +10,6 @@ import Home from './components/pages/Home';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
 import Menu from './components/pages/assets/buttons/Menu';
 import Navbar from './components/Navbar';
-import NavbarLinks from './components/pages/Navlinks';
 import NotFound from './components/pages/NotFound';
 import PageModal from './assets/Page-modal';
 import Policy from './components/pages/Policy';
@@ -127,26 +126,6 @@ const App = () => {
             </div>
             </MagneticEffect>} 
 
-                {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{
-                  top:'0', 
-                  zIndex: '9999',
-                  backgroundColor: isScroll ? 'transparent' : 'rgba(255,255,255,.9)',
-                  position: 'fixed',
-                  transition: '.5s',
-                  transform:  isScroll ? 'translateY(-100%)': '',
-                  width: '100%',
-                  height: '50px',
-                  paddingInline: '10%',
-                  paddingBlock: '0%',
-                  justifyContent: 'center'}}
-                  
-                  HomeNavbarLink={{textTransform: 'uppercase',
-                                  fontWeight: '500',
-                                  fontSize: '14px',
-                                  fontFamily: 'sans-serif'}}
-
-                  setShowNavbar={setShowNavbar}
-                  isSmallScreen={isSmallScreen}/>}
                 
                 <Navbar
                   showNavbar={showNavbar}

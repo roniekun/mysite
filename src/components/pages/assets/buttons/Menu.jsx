@@ -25,12 +25,8 @@ const Menu = ({ showNavbar,
                      className='menu_container'
                       >
               {displayText && 
-              <span onClick={handleClick} style={{color: 'lightgray',
-                            fontWeight: '500',
-                            fontFamily: 'Clash Display, sans-serif',
-                            userSelect:'none',
-                            cursor: 'pointer'}}>
-              MENU</span>}
+             <span onClick={handleClick} className={`menu_span ${showNavbar ? 'open' : ''}`}>
+              {showNavbar? 'CLOSE' : 'MENU'}</span>}
               {displayIcon &&  
               <Hamburger toggle={setShowNavbar} 
               color= {showNavbar? '#fafafa': '#fafafa' }

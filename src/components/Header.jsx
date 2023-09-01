@@ -4,6 +4,7 @@ import './styles/Header.css';
 import SiteLogo from './SiteLogo';
 import Menu from './pages/assets/buttons/Menu';
 import { gsap } from 'gsap';
+import NavbarLinks from './pages/Navlinks';
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   
@@ -27,6 +28,18 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar} />
             </div>
+
+            <div className='navlinks_wrapper'>
+            {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{}}
+                  HomeNavbarLink={{
+                    textTransform: 'uppercase',
+                    fontSize: '16px',
+                    fontWeight:'500'
+                  }}
+                  setShowNavbar={setShowNavbar}
+                  isSmallScreen={isSmallScreen}/>}
+            </div>
+            
             {isSmallScreen &&
             <div className='menu_wrapper'>
             <Menu showNavbar={showNavbar} 
