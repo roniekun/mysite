@@ -23,12 +23,12 @@ const Preloader = () => {
       tl.to(container, {
         y: -initialPosition.height,
         delay: 1.5,
-        duration: .8,
+        duration: 1,
 
       });
         gsap.to (logo, 
         {y:initialPosition.height,
-         duration: .8},"-=.8");
+         duration: 1},"-=1");
 
   }, []);
 

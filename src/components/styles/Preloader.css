@@ -4,11 +4,12 @@
     display: flex;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-color: var(--primary-color);
     justify-content: center;
     overflow: hidden;
+    z-index: 99999999;
 }
 .preloader_logo{
 

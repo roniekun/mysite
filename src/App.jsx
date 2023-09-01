@@ -98,8 +98,10 @@ const App = () => {
         <ThemeContext.Consumer>
           {({ theme }) => {
             return (
-              isloading ?  <Preloader/> :
+              
+              isloading ? <Preloader/>  :
               <div className='app_container' id={`component-${theme}`}>
+               
               <Header 
               isScroll={isScroll}
                         showNavbar={showNavbar}
@@ -136,7 +138,6 @@ const App = () => {
                   isScroll={isScroll}
                 />
   
-
                 <Routes>
                   <Route path='/' 
                   element={<Home 
