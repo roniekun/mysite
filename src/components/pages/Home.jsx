@@ -53,7 +53,7 @@ useEffect( () => {
   tl.to(container,
     {
       opacity:1,
-      duration: .3,
+      duration: .2,
     }
   );
 
@@ -93,8 +93,9 @@ useEffect( () => {
   
   gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate1);
-    gsap.set(forthText.current, {left: forthText.current.getBoundingClientRect().width})
+  gsap.set(forthText.current, {left: forthText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate2);
+
 }, [])
 
 const animate1 = () => {
