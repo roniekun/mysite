@@ -12,7 +12,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   useEffect(() => {
     gsap.to(containerRef.current,
       {opacity:1,
-      duration:1});
+      duration:.3});
   }, [])
   
   return (

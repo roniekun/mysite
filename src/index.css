@@ -31,6 +31,9 @@ body {
    position: relative;
    min-height: 100vh; 
    overflow-x: hidden;
+   background-color: var(--red);
+   transition-duration: .3s;
+
 }
 
 code {
