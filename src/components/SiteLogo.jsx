@@ -29,9 +29,9 @@ const SiteLogo = ({
     onClick={handleClick}
     onMouseEnter={handleHover} // Set color to black on hover
     onMouseLeave={handleMouseLeave}
-    style={{textDecoration: 'none', color: isSmallScreen ? '#fafafa' : color,...navbarContainer,...headerContainer}} 
+    style={{textDecoration: 'none', color: isSmallScreen ? '#fafafa' : color,...headerContainer}} 
     className='site_logo_container'>
-      <p className='logo'>Psclogo</p>
+      <p style={{...navbarContainer}} className='logo'>Psclogo</p>
     </NavLink> 
   )
 }

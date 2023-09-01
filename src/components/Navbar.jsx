@@ -42,7 +42,7 @@ const Navbar = ({ showNavbar,
           <nav 
           ref={navbarContainerRef}
           style={{
-            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '70vh'),
+            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '75vh'),
             width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
             transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)',
           }}
@@ -50,7 +50,10 @@ const Navbar = ({ showNavbar,
           id={`component-${themeContext.theme}`}>
           <div style={{visibility: isScroll? ''  : 'collapse'}}>
           
-           <SiteLogo setShowNavbar={setShowNavbar} showNavbar={showNavbar}/>
+           <SiteLogo setShowNavbar={setShowNavbar}
+            showNavbar={showNavbar}
+            navbarContainer={{color: 'gray',
+                            fill: 'gray'}}/>
           </div>
         
           <div style={{   
@@ -63,7 +66,7 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{textTransform: 'capitalize'}}/>
+          NavbarLinksLink={{textTransform: 'uppercase'}}/>
           </div >
             <div style={{ position: isSmallScreen ? 'absolute' : 'relative', 
                           display: 'flex',
