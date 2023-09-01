@@ -10,7 +10,7 @@ const Footer = ({setShowNavbar}) => {
     <div className='footer_container'>
        <SiteLogo 
        setShowNavbar={setShowNavbar}/>
-      <h2>Footer Section</h2>
+      <h2 style={{color: 'gray'}}>Footer Section</h2>
       <Socials displayNames={true} 
       footerIconContainer={{marginInline: '7px'}}
       FooterContainer={{fill: '', }}/>

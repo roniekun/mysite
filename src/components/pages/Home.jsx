@@ -193,9 +193,7 @@ useEffect(() => {
        <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad nihil corrupti, ut impedit expedita at, dolore doloremque quia molestiae, ipsam iure perspiciatis! Dolorem, omnis placeat similique vel nam eum autem.</p>
       </div>
       <div className='two'>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dictum, libero vel tincidunt fringilla, justo felis tempus libero, ut vulputate neque risus ut velit. Vivamus scelerisque semper nisi, at lacinia erat lobortis in. Cras interdum ante vel dolor fringilla, at commodo ligula laoreet. Nulla facilisi. Nullam non justo vitae lorem fringilla suscipit.
-          Suspendisse potenti. Sed at ultricies nibh, at hendrerit justo. Ut ultrices neque eget metus rhoncus, ut pharetra risus egestas. Suspendisse vel purus eu neque dictum gravida. Sed auctor diam sed lectus tristique, ut interdum eros auctor. Fusce malesuada aliquet tincidunt. Sed vel cursus odio. Integer in diam at purus sollicitudin feugiat. Duis ac ante lacinia, laoreet turpis eu, blandit mauris.
-          Pellentesque a arcu a erat tristique malesuada. Nam eu quam ut orci hendrerit euismod. Curabitur non libero a tellus cursus tristique. Aenean vel nibh odio. Fusce ut mi euismod, sagittis ante in, laoreet quam. Sed id justo nulla. Nullam non sapien nec nulla hendrerit imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat.</p>
+       
       </div>
       </div>
   

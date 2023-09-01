@@ -106,7 +106,7 @@
   }
 
   .link_wrapper:hover .navbar_link {
-    color: black;
+    color: gray;
   }
 
   .navbar_link {
@@ -115,7 +115,7 @@
     text-align: left;
     letter-spacing: -2.9px;
   }
-
+ 
   .active_link{
     color: var(--red);
 }

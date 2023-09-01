@@ -15,10 +15,10 @@
 }
 
 .nav_footer {
-  color: lightgrey;
   font-weight: 400;
   font-size: 11px;
   margin-bottom: 10px;
+  color: gray;
 }
 
 .hide::after {
@@ -100,5 +100,9 @@
     height: 1px;
     width: 100%;
     transform: translate(0, 500%);
+  }
+  .nav_footer{
+    color:lightgray;
+
   }
 }

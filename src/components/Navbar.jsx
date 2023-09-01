@@ -82,7 +82,7 @@ const Navbar = ({ showNavbar,
               justifyContent: 'center', 
               alignItems: 'center', 
               height: '20px',
-              fill: 'lightgray',
+              fill: isSmallScreen  ? 'lightgray' :'gray',
               margin: '7px',
               width: 'fit-content',}}
               displayIcons={true}
