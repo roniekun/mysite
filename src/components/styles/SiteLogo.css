@@ -12,9 +12,11 @@
 .logo{
     cursor:pointer;
     font-family: 'Clash Display', sans-serif;
-    font-size:14px;
+    font-size:16px;
     font-weight:500;
     text-transform: uppercase;
+    color: lightgray;
+    user-select: none;
     }
 @media (max-width:600px){
 
