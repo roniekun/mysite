@@ -12,6 +12,7 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
     const containerRef = useRef(null);
+    const sliderRef = useRef(null);
     const heroContainer = useRef(null);
     const heroContent = useRef(null);
     const ctaBtnRef = useRef(null);
@@ -48,14 +49,20 @@ useEffect( () => {
   const tl = gsap.timeline();
   const title = heroTitleRefs.current;
   const container = containerRef.current;
+  const slider = sliderRef.current;
   const initialPosition = container.getBoundingClientRect();
 
   tl.to(container,
     {
       opacity:1,
-      duration: 1,
+      duration: .3,
     }
   );
+
+  tl.to(slider, 
+    {opacity:1,
+    duration: .3}
+    )
 
   tl.fromTo(
     title,
@@ -142,9 +149,9 @@ useEffect(() => {
  
       <div className='content'>
       <div ref={heroContainer} className='hero_container'>
-        <div className='textslider_wrapper'>
+        <div ref={sliderRef}  className='textslider_wrapper'>
 
-        <div  className='textslider_container'>
+        <div className='textslider_container'>
           <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
             pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
            <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >
