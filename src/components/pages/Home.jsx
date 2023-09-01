@@ -11,7 +11,7 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
     const heroTextWords = heroTexts.split('-');
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
-    const homeContainer = useRef(null);
+    const containerRef = useRef(null);
     const heroContainer = useRef(null);
     const heroContent = useRef(null);
     const ctaBtnRef = useRef(null);
@@ -45,9 +45,17 @@ let xPercent = 0;
 let xPercent2 = 0;
 
 useEffect( () => {
-
-  const title = heroTitleRefs.current;
   const tl = gsap.timeline();
+  const title = heroTitleRefs.current;
+  const container = containerRef.current;
+  const initialPosition = container.getBoundingClientRect();
+
+  tl.to(container,
+    {
+      opacity:1,
+      duration: .3,
+    }
+  );
 
   tl.fromTo(
     title,
@@ -128,7 +136,8 @@ useEffect(() => {
 }, [window.innerWidth]);
  
   return (
-    <div ref= {homeContainer} className='home_container'>
+
+    <div ref= {containerRef} className='home_container'>
  
       <div className='content'>
       <div ref={heroContainer} className='hero_container'>

@@ -50,6 +50,7 @@
   }
   
   .home_container {
+    opacity: 0;
     display: flex;
     overflow-x: hidden;
     width: 100vw;

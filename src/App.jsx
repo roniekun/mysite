@@ -1,30 +1,40 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Menu from './components/pages/assets/buttons/Menu';
-import Navbar from './components/Navbar';
-import Home from './components/pages/Home';
-import Contact from './components/pages/Contact';
 import About from './components/pages/About';
 import Community from './components/pages/Community';
-import Portfolio from './components/pages/Portfolio';
+import Contact from './components/pages/Contact';
 import Gallery from './components/pages/Gallery';
-import NotFound from './components/pages/NotFound';
-import Policy from './components/pages/Policy';
-import { ThemeProvider, ThemeContext } from './context/ThemeContext';
-import PageModal from './assets/Page-modal'
+import Header from './components/Header';
+import Home from './components/pages/Home';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
+import Menu from './components/pages/assets/buttons/Menu';
+import Navbar from './components/Navbar';
 import NavbarLinks from './components/pages/Navlinks';
+import NotFound from './components/pages/NotFound';
+import PageModal from './assets/Page-modal';
+import Policy from './components/pages/Policy';
+import Portfolio from './components/pages/Portfolio';
+import Preloader from './components/Preloader';
+import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 // import Lenis from '@studio-freight/lenis'
 
 const App = () => {
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScroll, setIsScroll] = useState();
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
   const [isMediumScreen, setIsMediumScreen] = useState (window.innerWidth <= 1024 && window.innerWidth > 600)
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
   const [showNavbar, setShowNavbar] = useState();
+  const [isloading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); 
+
+  }, []);
 
         // const lenis = new Lenis()
 
@@ -89,6 +99,7 @@ const App = () => {
         <ThemeContext.Consumer>
           {({ theme }) => {
             return (
+              isloading ?  <Preloader/> :
               <div className='app_container' id={`component-${theme}`}>
               <Header 
               isScroll={isScroll}
@@ -96,7 +107,7 @@ const App = () => {
                         setShowNavbar={setShowNavbar}
                         isSmallScreen={isSmallScreen}/>
               <PageModal showNavbar={showNavbar}/>
-
+             
              {isScroll && 
               <MagneticEffect>
               <div className='floating_menu'>
