@@ -61,7 +61,7 @@ useEffect( () => {
 
   tl.to(slider, 
     {opacity:1,
-    duration: .3}
+  }
     )
 
   tl.fromTo(

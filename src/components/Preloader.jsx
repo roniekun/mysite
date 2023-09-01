@@ -20,11 +20,10 @@ const Preloader = () => {
       gsap.to(container, {
         y: -initialPosition.height,
         delay: 2,
-        opacity: 1,
-        duration: 1,
+        duration: .8,
 
-        onComplete: () => { 
-        },
+        // onComplete: () => { 
+        // },
       });
    
   }, []);
