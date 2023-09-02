@@ -179,8 +179,9 @@ useEffect(() => {
       ))}
     
         </div>
-        <button ref={ctaBtnRef}className='cta_button'>Get in touch</button>
 
+        <button ref={ctaBtnRef}className='cta_button'>Get in touch</button>
+    
         </div>
  
       </div>

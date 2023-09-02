@@ -35,6 +35,7 @@
   width: fit-content;
   padding: 5px;
   margin-inline: 6px;
+  overflow:hidden;
 }
 
 .link_wrapper:hover .navbar_link {

@@ -39,13 +39,13 @@ const NavbarLinks = ({
       navbarlinkRefs.forEach((navbarlinkRef, index) => {
         gsap.fromTo(
           navbarlinkRef.current,
-          { y: '20', opacity: 0, },
+          { y: '100',},
           {
             x: '0',
             y: '0',
             opacity: 1,
-            duration: 1.2,
-            delay: index * .2 ,
+            duration: .9,
+            delay: index * .1 ,
           }
         );
       });

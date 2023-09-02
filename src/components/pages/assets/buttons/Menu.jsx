@@ -30,7 +30,8 @@ const Menu = ({ showNavbar,
               {displayIcon &&  
               <Hamburger toggle={setShowNavbar} 
               color= {showNavbar? '#fafafa': '#fafafa' }
-              toggled={showNavbar} 
+              
+              toggled={showNavbar}
               hideOutline={false}
               distance='sm' duration={0.3} size={16} />}
         </div>

@@ -17,7 +17,7 @@ import Policy from './components/pages/Policy';
 import Portfolio from './components/pages/Portfolio';
 import Preloader from './components/Preloader';
 import { ThemeProvider, ThemeContext } from './context/ThemeContext';
-// import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis'
 
 const App = () => {
 
@@ -37,20 +37,18 @@ const App = () => {
 
   }, []);
 
+  const lenis = new Lenis()
 
+  lenis.on('scroll', (e) => {
+    console.log(e)
+  })
 
-        // const lenis = new Lenis()
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
 
-        // lenis.on('scroll', (e) => {
-        //   console.log(e)
-        // })
-
-        // function raf(time) {
-        //   lenis.raf(time)
-        //   requestAnimationFrame(raf)
-        // }
-
-        // requestAnimationFrame(raf)
+  requestAnimationFrame(raf)
 
   
   const handleResize = useCallback(() => {
@@ -130,7 +128,7 @@ const App = () => {
                         isSmallScreen={isSmallScreen}/>
               <PageModal showNavbar={showNavbar}/>
 
-              <div ref={menuRef}  className='menu_wrapper'>
+              <div ref={menuRef}  className='floating_menu_wrapper'>
               <MagneticEffect>
               <div>
               <div className='floating_menu'>

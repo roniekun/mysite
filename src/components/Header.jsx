@@ -6,6 +6,7 @@ import Menu from './pages/assets/buttons/Menu';
 import { gsap } from 'gsap';
 import NavbarLinks from './pages/Navlinks';
 
+
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   
   const containerRef = useRef(null);
@@ -27,14 +28,14 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
-               headerLogo={{color: 'gray'}} />
+               headerLogo={{color: isSmallScreen ? 'whitesmoke' : 'gray'}} />
             </div>
 
             <div className='navlinks_wrapper'>
             {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{}}
                   HomeNavbarLink={{
-                    textTransform: 'uppercase',
-                    fontSize: '16px',
+                    textTransform: 'capitalize',
+                    fontSize: '18px',
                     fontWeight:'500'
                   }}
                   setShowNavbar={setShowNavbar}
