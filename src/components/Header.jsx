@@ -26,7 +26,8 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
           <div ref={containerRef} id={`component-${theme}`} className='header_container'>
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
-              showNavbar={showNavbar} />
+              showNavbar={showNavbar}
+               headerLogo={{color: 'gray'}} />
             </div>
 
             <div className='navlinks_wrapper'>

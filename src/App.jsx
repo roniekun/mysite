@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useLayoutEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/pages/About';
 import Community from './components/pages/Community';
 import Contact from './components/pages/Contact';
 import Gallery from './components/pages/Gallery';
+import { gsap } from 'gsap';
 import Header from './components/Header';
 import Home from './components/pages/Home';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
@@ -27,6 +28,7 @@ const App = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
   const [showNavbar, setShowNavbar] = useState();
   const [isloading, setIsLoading] = useState(true);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
@@ -34,6 +36,8 @@ const App = () => {
     }, 2900); 
 
   }, []);
+
+
 
         // const lenis = new Lenis()
 
@@ -92,6 +96,23 @@ const App = () => {
     };
   }, [handleResize, handleScroll]);
 
+
+  useEffect(() => {
+    if (isScroll) {
+      gsap.to(menuRef.current, {
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+      });
+    } else {
+      gsap.to(menuRef.current, {
+        scale: 0,
+        opacity: 0,
+        duration: 0.5,
+      });
+    }
+  }, [isScroll]);
+
   return (
     <ThemeProvider>
       <BrowserRouter>
@@ -108,10 +129,13 @@ const App = () => {
                         setShowNavbar={setShowNavbar}
                         isSmallScreen={isSmallScreen}/>
               <PageModal showNavbar={showNavbar}/>
-             
-             {isScroll && 
+
+              <div ref={menuRef}  className='menu_wrapper'>
               <MagneticEffect>
+              <div>
               <div className='floating_menu'>
+              <MagneticEffect>
+              <div>
               <Menu
               displayIcon={true}
               showNavbar={showNavbar}
@@ -124,9 +148,12 @@ const App = () => {
                                 backgroundColor:'transparent',
                                 }}
               />
-            
             </div>
-            </MagneticEffect>} 
+            </MagneticEffect>                            
+            </div>
+            </div>
+            </MagneticEffect>
+            </div>
 
                 
                 <Navbar

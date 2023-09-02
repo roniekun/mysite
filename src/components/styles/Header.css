@@ -45,7 +45,6 @@
   height: 55px;
   z-index: 99999;  
   transition: .3s;
-  background-color: var(--red);
   border-radius: 30px;
 
 }

@@ -5,7 +5,8 @@ import './styles/SiteLogo.css';
 // import { ReactComponent as MyLogo } from './sitelogo.svg' ;
 
 const SiteLogo = ({
-  headerContainer, 
+  headerContainer,
+  headerLogo, 
   showNavbar , 
   isSmallScreen, 
   navbarContainer,
@@ -31,7 +32,7 @@ const SiteLogo = ({
     onMouseLeave={handleMouseLeave}
     style={{textDecoration: 'none', color: isSmallScreen ? '#fafafa' : color,...headerContainer}} 
     className='site_logo_container'>
-      <p style={{...navbarContainer}} className='logo'>Psclogo</p>
+      <p style={{...navbarContainer,...headerLogo}} className='logo'>Psclogo</p>
     </NavLink> 
   )
 }

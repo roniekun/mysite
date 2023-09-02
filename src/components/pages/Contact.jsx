@@ -6,7 +6,7 @@ const Contact = ({setShowNavbar}) => {
   return (
     <div className='contact_container'>
       <div className='contact'>
-      <h1>contact us</h1>
+      <h1>Contact us</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
          Obcaecati officia beatae quaerat dolore corrupti autem laboriosam animi.
         Enim provident itaque iure alias pariatur recusandae accusamus, maxime tempore
