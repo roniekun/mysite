@@ -134,7 +134,7 @@ const App = () => {
               <MagneticEffect>
               <div>
               <div className='floating_menu'>
-              {!isSmallScreen ? (
+              { isDesktop ? (
               <MagneticEffect>
                 <div>
                   <Menu
