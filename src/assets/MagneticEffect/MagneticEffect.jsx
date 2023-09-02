@@ -19,8 +19,8 @@ export default function MagneticEffect({ children }) {
 
     const mouseLeave = () => {
       gsap.to(magnetic.current, { x: 0, y: 0, duration: 0.3 });
-      xTo(0);
-      yTo(0);
+      xTo(0.5);
+      yTo(0.5);
     };
 
     magnetic.current.addEventListener('mousemove', mouseMove);
