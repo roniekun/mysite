@@ -76,8 +76,7 @@ const NavbarLinks = ({
             className={`navbar_link ${
               location.pathname === link.to ? 'active_link' : ''
             }`}
-            to={link.to}
-          >
+            to={link.to}>
             {link.text}
           </NavLink>
         </div>

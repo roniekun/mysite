@@ -4,8 +4,8 @@ import gsap from 'gsap';
 export default function MagneticEffect({ children }) {
   const magnetic = useRef(null);
 
-  const xTo = (x) => gsap.to(magnetic.current, { x, duration: 0.3, ease: 'elastic.out(1, 0.3, false)' });
-  const yTo = (y) => gsap.to(magnetic.current, { y, duration: 0.3, ease: 'elastic.out(1, 0.3, false)' });
+  const xTo = (x) => gsap.to(magnetic.current, { x, duration: 0.3,  });
+  const yTo = (y) => gsap.to(magnetic.current, { y, duration: 0.3,  });
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -18,7 +18,7 @@ export default function MagneticEffect({ children }) {
     };
 
     const mouseLeave = () => {
-      gsap.to(magnetic.current, { x: 0, y: 0, duration: 0.3 });
+      gsap.to(magnetic.current, { x: 0, y: 0, duration: .3 });
       xTo(0.5);
       yTo(0.5);
     };
