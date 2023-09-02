@@ -134,22 +134,42 @@ const App = () => {
               <MagneticEffect>
               <div>
               <div className='floating_menu'>
+              {!isSmallScreen ? (
               <MagneticEffect>
+                <div>
+                  <Menu
+                    displayIcon={true}
+                    showNavbar={showNavbar}
+                    isSmallScreen={isSmallScreen}
+                    setShowNavbar={setShowNavbar}
+                    displayNames={false}
+                    setIsScroll={setIsScroll}
+                    isScroll={isScroll}
+                    AppMenuContainer={{
+                    position: 'relative',
+                    backgroundColor: 'transparent',
+                    }}
+                  />
+                </div>
+              </MagneticEffect>
+            ) : (
               <div>
-              <Menu
-              displayIcon={true}
-              showNavbar={showNavbar}
-              isSmallScreen={isSmallScreen}
-              setShowNavbar={setShowNavbar}
-              displayNames={false}
-              setIsScroll={setIsScroll}
-              isScroll={isScroll}
-              AppMenuContainer={{position: 'relative',
-                                backgroundColor:'transparent',
-                                }}
-              />
-            </div>
-            </MagneticEffect>                            
+                <Menu
+                  displayIcon={true}
+                  showNavbar={showNavbar}
+                  isSmallScreen={isSmallScreen}
+                  setShowNavbar={setShowNavbar}
+                  displayNames={false}
+                  setIsScroll={setIsScroll}
+                  isScroll={isScroll}
+                  AppMenuContainer={{
+                  position: 'relative',
+                  backgroundColor: 'transparent',
+                  }}
+                />
+              </div>
+            )}
+                      
             </div>
             </div>
             </MagneticEffect>
