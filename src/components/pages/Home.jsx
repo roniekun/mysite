@@ -131,7 +131,7 @@ const animate2 = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize = isSmallScreen ? '40' : window.innerWidth / 28;
+  const newFontSize = isSmallScreen ? '12' : window.innerWidth / 28;
   setFontSize(newFontSize);
 
 };
