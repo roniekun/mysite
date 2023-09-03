@@ -141,22 +141,7 @@ useEffect(() => {
  
       <div className='content'>
       <div  className='hero_container'>
-        <div ref={sliderRef}  className='textslider_wrapper'>
 
-        <div className='textslider_container'>
-          <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
-            pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-           <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >
-            pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-        </div>
-          <div className='textslider_container'>
-          <h1   className='bg_text2' ref={thirdText}  style={{ fontSize: `${fontSize}px`}}  >
-            pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-           <h1 className='bg_text2' ref={forthText} style={{ fontSize: `${fontSize}px` }} >
-            pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-        </div>
-  
-        </div>
         <div ref={heroContent} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
         <h1 ref={heroTitleRefs} className='hero_title'> Hero Text*</h1>
@@ -171,10 +156,25 @@ useEffect(() => {
         </div>
 
         <button ref={ctaBtnRef}className='cta_button'>Get in touch</button>
-    
         </div>
- 
+        </div>
+
+        <div ref={sliderRef}  className='textslider_wrapper'>
+
+      <div className='textslider_container'>
+        <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
+          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
+        <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >
+          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
+      </div >
+        <div className='textslider_container'>
+        <h1   className='bg_text2' ref={thirdText}  style={{ fontSize: `${fontSize}px`}}  >
+          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
+        <h1 className='bg_text2' ref={forthText} style={{ fontSize: `${fontSize}px` }} >
+          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
       </div>
+      </div>
+   
 
       <div className='one'>
           
