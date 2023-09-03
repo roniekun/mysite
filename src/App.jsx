@@ -27,7 +27,7 @@ const App = () => {
   const [isMediumScreen, setIsMediumScreen] = useState (window.innerWidth <= 1024 && window.innerWidth > 600)
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
   const [showNavbar, setShowNavbar] = useState();
-  const [isloading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const menuRef = useRef(null);
 
   useEffect(() => {
@@ -121,9 +121,8 @@ const App = () => {
           {({ theme }) => {
             return (
               
-             
               <div className='app_container' id={`component-${theme}`}>
-               {isloading && <Preloader/> }
+               {isLoading && <Preloader/> }
               <Header 
               isScroll={isScroll}
                         showNavbar={showNavbar}

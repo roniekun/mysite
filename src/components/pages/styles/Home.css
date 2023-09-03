@@ -58,7 +58,6 @@
   }
   
   .home_container {
-    opacity: 0;
     display: flex;
     width: 100vw;
     justify-content: space-between;

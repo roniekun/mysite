@@ -11,9 +11,7 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
     const heroTextWords = heroTexts.split('-');
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
-    const containerRef = useRef(null);
     const sliderRef = useRef(null);
-    const heroContainer = useRef(null);
     const heroContent = useRef(null);
     const ctaBtnRef = useRef(null);
     const heroTitleRefs = useRef(null);
@@ -48,15 +46,7 @@ let xPercent2 = 0;
 useEffect( () => {
   const tl = gsap.timeline();
   const title = heroTitleRefs.current;
-  const container = containerRef.current;
   const slider = sliderRef.current;
-  const initialPosition = container.getBoundingClientRect();
-
-  tl.to(container,
-    {
-      opacity:1,
-    }
-  );
 
   tl.to(slider, 
     {opacity:1,
@@ -131,7 +121,7 @@ const animate2 = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize = isSmallScreen ? '12' : window.innerWidth / 28;
+  const newFontSize = isSmallScreen ? '12' : window.innerWidth / 32;
   setFontSize(newFontSize);
 
 };
@@ -146,11 +136,11 @@ useEffect(() => {
  
   return (
 
-    <div ref= {containerRef} className='home_container'>
+    <div className='home_container'>
 
  
       <div className='content'>
-      <div ref={heroContainer} className='hero_container'>
+      <div  className='hero_container'>
         <div ref={sliderRef}  className='textslider_wrapper'>
 
         <div className='textslider_container'>
