@@ -66,6 +66,7 @@
     position: relative;
     overflow: hidden;
     height: auto;
+    background-color: white;
   }
   
   .title {
@@ -144,7 +145,6 @@
     align-items: center;
     height: 800px;
     width: 95%;
-    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     padding: 5%;
@@ -189,8 +189,8 @@
   .textslider_wrapper::before {
     content: '';
     height: 100%;
-    width: 100px;
-    background: linear-gradient(to right, whitesmoke, white, transparent);
+    width: 10vw;
+    background: linear-gradient(to right, white, white, transparent);
     left: 0;
     position: absolute;
     z-index: 999;
@@ -199,8 +199,8 @@
   .textslider_wrapper::after {
     content: '';
     height: 100%;
-    background: linear-gradient(to left, whitesmoke, white, transparent);
-    width: 100px;
+    background: linear-gradient(to left, white, white, transparent);
+    width: 10vw;
     right: 0;
     bottom: 0;
     position: absolute;
@@ -260,6 +260,11 @@
     .bg_text2 {
       font-weight: 400;
     }
+
+
+  .cta_button {
+      padding-inline: 5%;
+  }
   
     .hero_container {
      height: 90vh;
@@ -299,6 +304,6 @@
     .textslider_wrapper {
       bottom: 0;
     }
-
+   
   }
   
