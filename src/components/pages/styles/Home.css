@@ -39,6 +39,7 @@
     border-radius: 30px;
     border: 1px solid gray;
     cursor: pointer;
+    font-family: 'Ranade', sans-serif;
     z-index: 2;
     letter-spacing: -1px;
     visibility: hidden;

@@ -12,8 +12,10 @@ const Footer = ({setShowNavbar}) => {
        setShowNavbar={setShowNavbar}/>
       <h2 style={{color: 'gray'}}>Footer Section</h2>
       <Socials displayNames={true} 
-      footerIconContainer={{marginInline: '7px'}}
-      FooterContainer={{fill: '', }}/>
+      footerIconContainer={{marginInline: '7px',
+                            }}
+      footerSocialLink={{fill: 'gray', textDecoration: 'none'}}
+      footerContainer={{ }}/>
       <div className='footer_text_wrapper'>
       <h3 style={{textTransform: 'uppercase',
                   fontSize: '16px'}}>All rights reserved 2023</h3>

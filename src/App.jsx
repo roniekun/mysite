@@ -31,23 +31,25 @@ const App = () => {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
+    const delay = 2900; // 2 seconds
+    const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 2900); 
+    }, delay);
 
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const lenis = new Lenis()
-
+  //smooth scroll
   lenis.on('scroll', (e) => {
     console.log(e)
   })
-
   function raf(time) {
     lenis.raf(time)
     requestAnimationFrame(raf)
   }
-
   requestAnimationFrame(raf)
 
   
@@ -96,6 +98,7 @@ const App = () => {
 
 
   useEffect(() => {
+
     if (isScroll) {
       gsap.to(menuRef.current, {
         scale: 1,
@@ -118,9 +121,9 @@ const App = () => {
           {({ theme }) => {
             return (
               
-              isloading ? <Preloader/>  :
+             
               <div className='app_container' id={`component-${theme}`}>
-               
+               {isloading && <Preloader/> }
               <Header 
               isScroll={isScroll}
                         showNavbar={showNavbar}
