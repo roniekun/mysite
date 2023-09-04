@@ -10,8 +10,13 @@
 
 .cta_container > h1{
 
-  color: var(--yellow);
+  color: whitesmoke;
   text-align: center;
+  font-size: 36px;
+}
+.cta_container h1 span{
+
+  color: gray;
 }
 
 .footer_cta_button{

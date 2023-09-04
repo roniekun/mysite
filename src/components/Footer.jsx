@@ -12,7 +12,7 @@ const Footer = ({setShowNavbar}) => {
        setShowNavbar={setShowNavbar}/>
       <div className='cta_container'>
         <h1 className='footer_cta'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        exercitationem nesciunt. Odit nihil assumenda ab modi itaque reiciendis veritatis!</h1>
+        exercitationem nesciunt. <span> Odit nihil assumenda ab modi itaque reiciendis veritatis!</span></h1>
         <button className='footer_cta_button'> Call to action</button>
       </div>
       
@@ -21,7 +21,7 @@ const Footer = ({setShowNavbar}) => {
       displayNames={true} 
       footerIconContainer={{marginInline: '7px',
                             }}
-      footerSocialLink={{fill: 'gray', textDecoration: 'none'}}
+      footerSocialLink={{fill: 'gray', textDecoration: 'none', color: 'lightgray'}}
       footerContainer={{ }}/>
       <h3 style={{textTransform: 'uppercase',
                   fontSize: '16px'}}>All rights reserved 2023</h3>
