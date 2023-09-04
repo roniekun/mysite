@@ -24,6 +24,7 @@
 .social_link{
    font-size: 18px;
    color: lightgray;
+   transition: .3s;
   
 }
 
@@ -31,7 +32,7 @@
     width: 25px;
     height: 25px;
     opacity: 1;
-    transition: .5s;
+    transition: .3s;
     margin: 0;
   }
 
@@ -39,6 +40,7 @@
 
     fill: var(--red);
     color: var(--orange);
+    transition: .3s;
 }
   
 

@@ -82,7 +82,7 @@
 @media(max-width: 600px){
   .cta_container{
 
-    padding-block: 5em;
+    padding-block: 3em;
     gap: 2em;
   }
   .cta_container > h1{
