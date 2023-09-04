@@ -99,7 +99,7 @@ const Navbar = ({ showNavbar,
               showNavbar={showNavbar}/>
             </div>
            
-            <h3 className='nav_footer'>pitiksouthcotabato.com</h3>
+            <h3 className='nav_footer'>www.pitiksouthcotabato.com</h3>
             </div>
           </nav>
         )}

@@ -1,3 +1,32 @@
+.cta_container{
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  gap: 20px;
+}
+
+.cta_container > h1{
+
+  color: gray;
+  text-align: center;
+}
+
+.footer_cta_button{
+
+  height: fit-content;
+  width: fit-content;
+  padding: 1em;
+  border: 2px grey solid;
+  border-radius: 30px;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'Ranade', sans-serif;
+  color: gray;
+  cursor: pointer;
+}
 .footer_container {
     
   display: flex;
@@ -29,4 +58,11 @@
   font-size: 16px;
 }
 
+@media(max-width: 600px){
+
+  .cta_container > h1{
+
+    font-size: 24px;
+  }
+}
   
