@@ -23,8 +23,8 @@
 
 .social_link{
    font-size: 18px;
+   color: lightgray;
   
-
 }
 
 .icon_container svg {
@@ -33,11 +33,13 @@
     opacity: 1;
     transition: .5s;
     margin: 0;
-   
-
-
   }
-  
+
+.icon_container svg:hover, .social_link:hover{
+
+    fill: var(--red);
+    color: var(--orange);
+}
   
 
 

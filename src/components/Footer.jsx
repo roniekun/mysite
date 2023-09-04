@@ -20,15 +20,16 @@ const Footer = ({setShowNavbar}) => {
       displayNames={true} 
       footerIconContainer={{marginInline: '7px',
                             }}
-      footerSocialLink={{fill: 'gray', textDecoration: 'none', color: 'lightgray'}}
+      footerSocialLink={{fill: 'gray', textDecoration: 'none',
+       textTransform: 'uppercase'}}
       footerContainer={{ }}/>
-      <h3 style={{textTransform: 'uppercase',
+       <h3 style={{
                   fontSize: '16px'}}>All rights reserved 2023</h3>
-       <h4>version 1.1</h4>
-       <a style={{textDecoration: 'none', color: 'gray'}} href="#">developed by roniekun</a>
        <h4>www.pitiksouthcotabato.com</h4>
        <SiteLogo 
        setShowNavbar={setShowNavbar}/>
+       <h4>version 1.1</h4>
+       <a style={{textDecoration: 'none', color: 'gray'}} href="#">developed by roniekun</a>
       </div>
     </div>
   )

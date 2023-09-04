@@ -47,7 +47,7 @@
   
   .cta_button:hover {
     /* background-color: #f7b226; */
-    background-color: var(--red);
+    background-color: var(--orange);
     color: lightgray;
     box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
     border:none;
