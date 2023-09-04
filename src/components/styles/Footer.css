@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   padding: 5%;
-  gap: 20px;
+  gap: 2em;
 }
 
 .cta_container > h1{
 
-  color: gray;
+  color: var(--yellow);
   text-align: center;
 }
 
@@ -18,22 +18,34 @@
 
   height: fit-content;
   width: fit-content;
-  padding: 1em;
-  border: 2px grey solid;
+  padding: 1.2em;
+  background-color: var(--yellow);
+  color: black;
   border-radius: 30px;
-  background-color: transparent;
   font-size: 16px;
+  filter: brightness(100%) saturate(125%);
   font-family: 'Ranade', sans-serif;
-  color: gray;
   cursor: pointer;
+  border: none;
+  transition: .3s;
 }
+
+.footer_cta_button:hover{
+  
+  transition: .3s;
+  scale: 1.025;
+  filter: brightness(90%);
+  
+}
+
+
 .footer_container {
     
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 800px;
-  background-color: var(--primary-color);
+  background-color: #1C1D20;
   justify-content: space-evenly;
   align-items: center; 
   
