@@ -18,16 +18,11 @@
     font-family: sans-serif;
     font-size: 75px;
     font-weight: 900;
-    font-style: italic;
+    padding: 1em;
+    border: 1px solid whitesmoke;
     
 }
-.preloader_logo span{
-    
-    font-weight: 900;
-    font-style: normal;
-    
-    
-}
+
 @media (max-width: 600px){
 
     .preloader_logo{

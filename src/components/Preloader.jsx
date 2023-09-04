@@ -26,7 +26,7 @@ const Preloader = () => {
     tl.fromTo(
       logo,
       { opacity: 0, y: 20 },
-      { opacity: 1, y: 0 }
+      { opacity: 1, y: 0}
     );
 
     tl.to(container, {
@@ -35,7 +35,7 @@ const Preloader = () => {
       duration: 1,
     });
 
-    gsap.to(logo, { y: initialPosition.height, duration: 1 }, '-=1');
+    gsap.to(logo, { y: initialPosition.height, duration: 1, scale :3 }, '-=1');
 
         return () => {
       // Enable scroll in case the component is unmounted before the animation completes
