@@ -5,6 +5,7 @@ import SiteLogo from './SiteLogo';
 import Menu from './pages/assets/buttons/Menu';
 import { gsap } from 'gsap';
 import NavbarLinks from './pages/Navlinks';
+import { Tween } from 'gsap/gsap-core';
 
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
@@ -14,12 +15,14 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   useEffect(() => {
     gsap.to(containerRef.current,
       {opacity:1,
-      duration:.3});
+      duration:.5});
     
     gsap.to(containerRef.current,
       {y: isScroll ? -100 : 0,
-          duration: .3 })
-  }, [isScroll])
+          duration: .5,
+          opacity: 1,
+                    })
+      }, [isScroll])
   
   return (
     <ThemeContext.Consumer>

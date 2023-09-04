@@ -40,6 +40,8 @@
 
 .link_wrapper:hover .navbar_link {
   color: var(--red);
+  scale: 1.025;
+  transition: .3s;
 }
 
 .navbar_link {
