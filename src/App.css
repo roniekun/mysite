@@ -59,7 +59,15 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
-  } 
+  }
+
+.header_wrapper{
+  position: absolute;
+  visibility: collapse;
+  opacity: 0;
+  top: 0;
+  left: 0;
+} 
 
 /* DARKMODECONTEXT */
 /* Global */

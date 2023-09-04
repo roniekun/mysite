@@ -12,18 +12,17 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   
   const containerRef = useRef(null);
 
+
   useEffect(() => {
-    gsap.to(containerRef.current,
-      {opacity:1,
-      duration:.5});
-    
-    gsap.to(containerRef.current,
-      {y: isScroll ? -100 : 0,
-          duration: .5,
-          opacity: 1,
-                    })
-      }, [isScroll])
+    // The second animation
+    gsap.to(containerRef.current, {
+      y: isScroll ? -100 : 0,
+      duration: 0.5,
+      opacity: 1,
+    });
+  }, [isScroll]);
   
+ 
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
