@@ -8,8 +8,7 @@ const Footer = ({setShowNavbar}) => {
   return (
 
     <div className='footer_container'>
-       <SiteLogo 
-       setShowNavbar={setShowNavbar}/>
+
       <div className='cta_container'>
         <h1 className='footer_cta'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         exercitationem nesciunt. <span> Odit nihil assumenda ab modi itaque reiciendis veritatis!</span></h1>
@@ -28,7 +27,8 @@ const Footer = ({setShowNavbar}) => {
        <h4>version 1.1</h4>
        <a style={{textDecoration: 'none', color: 'gray'}} href="#">developed by roniekun</a>
        <h4>www.pitiksouthcotabato.com</h4>
-
+       <SiteLogo 
+       setShowNavbar={setShowNavbar}/>
       </div>
     </div>
   )
