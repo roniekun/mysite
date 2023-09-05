@@ -63,8 +63,6 @@
 
 .header_wrapper{
   position: absolute;
-  visibility: collapse;
-  opacity: 0;
   top: 0;
   left: 0;
 } 

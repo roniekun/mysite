@@ -29,22 +29,6 @@ const App = () => {
   const [showNavbar, setShowNavbar] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const menuRef = useRef(null);
-  const headerRef =useRef(null)
-
-
-  useEffect(() => {
-   gsap.fromTo(headerRef.current, {
-      opacity: 0,
-   
-    },{
-      duration: 1,
-      delay:1.5,
-      visibility: 'visible',
-      opacity: 1
-    });
-
-  }, []);
-
 
   useEffect(() => {
     const delay = 2900; // 2 seconds
@@ -139,7 +123,7 @@ const App = () => {
               
               <div className='app_container' id={`component-${theme}`}>
                {isLoading && <Preloader/> }
-              <div ref={headerRef} className='header_wrapper'>
+              <div  className='header_wrapper'>
               <Header 
                   isScroll={isScroll}
                   showNavbar={showNavbar}
