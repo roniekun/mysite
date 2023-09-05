@@ -85,7 +85,7 @@
   background-color: var(--primary-color);
   top:0;
   z-index: 9999;
-  height: 55px;
+  height: 40px;
  
 }  
 .header_container::before{
@@ -95,6 +95,7 @@
 .logo_wrapper{
   padding-inline: 0;
   background-color: transparent;
+  border: none;
 }
 .menu_wrapper{
 
