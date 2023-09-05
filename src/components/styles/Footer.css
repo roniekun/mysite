@@ -26,9 +26,9 @@
   height: fit-content;
   width: fit-content;
   padding: 1.5em;
-  background-color: var(--orange);
+  background-color: transparent;
   color: whitesmoke;
-  border-radius: 30px;
+  border-radius: 7px;
   font-size: 16px;
   filter: brightness(100%) saturate(125%);
   font-family: 'Ranade', sans-serif;
@@ -39,6 +39,7 @@
 
 .footer_cta_button:hover{
   
+  background-color: var(--orange);
   transition: .3s;
   scale: 1.025;
   filter: brightness(90%);
