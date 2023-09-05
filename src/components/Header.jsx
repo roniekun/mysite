@@ -23,9 +23,13 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
 
 
   useEffect(() => {
-    // The second animation
-    gsap.to(linksRef.current, {
-      opacity: isOpen ? 1 : 0,
+ 
+    gsap.fromTo(linksRef.current, {
+      visibility: 'none', 
+      opacity: 0,         
+    }, {
+      visibility: isOpen ? 'visible' : 'hidden', 
+      opacity: isOpen ? 1 : 0,                   
       duration: 0.5,
     });
 
