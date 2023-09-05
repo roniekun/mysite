@@ -24,9 +24,10 @@ const Menu = ({ showNavbar,
         <div style={{...AppMenuContainer,...MenuContainer}}
                      className='menu_container'
                       >
+              
               {displayText && 
-             <button onClick={handleClick} className={`menu_span ${showNavbar ? 'open' : ''}`}>
-              {showNavbar? 'CLOSE' : 'MENU'}</button>}
+             <button onClick={handleClick} className={`menu_span ${showNavbar ? 'open' : ''}`}> 
+              {showNavbar? 'Close' : 'Menu'}</button>}
               {displayIcon &&  
               <Hamburger toggle={setShowNavbar} 
               color= {showNavbar? '#fafafa': '#fafafa' }

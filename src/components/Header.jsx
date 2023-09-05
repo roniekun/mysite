@@ -25,12 +25,15 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   useEffect(() => {
  
     gsap.fromTo(linksRef.current, {
-      visibility: 'none', 
+      visibility: 'hidden', 
       opacity: 0,         
     }, {
       visibility: isOpen ? 'visible' : 'hidden', 
       opacity: isOpen ? 1 : 0,                   
       duration: 0.5,
+    });
+    gsap.to(linksRef.current, {
+      visibility: isScroll? 'hidden' : 'visible'
     });
 
     gsap.to(containerRef.current, {
@@ -52,10 +55,10 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             </div> 
 
             <div ref= {linksRef} className='navlinks_wrapper'>
-            {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{}}
+            {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{flexDirection: 'row'}}
                   HomeNavbarLink={{
-                    textTransform: 'capitalize',
-                    fontSize: '18px',
+                    textTransform: 'uppercase',
+                    fontSize: '16px',
                     fontWeight:'500'
                   }}
                   setShowNavbar={setShowNavbar}

@@ -53,6 +53,7 @@
   text-transform: lowercase;
   letter-spacing: -1px;
 }
+
 @media (max-width: 1024px) {
 
   .links_container::before {
