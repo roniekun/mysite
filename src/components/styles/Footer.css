@@ -33,8 +33,8 @@
   filter: brightness(100%) saturate(125%);
   font-family: 'Ranade', sans-serif;
   cursor: pointer;
-  border: none;
   transition: .3s;
+  border: rgba(128, 128, 128, .3) 1px solid ;
 }
 
 .footer_cta_button:hover{

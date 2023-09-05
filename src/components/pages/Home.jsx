@@ -185,7 +185,8 @@ useEffect(() => {
       </div>
       </div>
   
-      <Footer setShowNavbar={setShowNavbar}/>
+      <Footer isSmallScreen={isSmallScreen}
+              setShowNavbar={setShowNavbar}/>
       </div>
   )
 }

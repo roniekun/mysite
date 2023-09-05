@@ -40,7 +40,7 @@
     filter: brightness(100%) saturate(125%);
     font-family: 'Ranade', sans-serif;
     cursor: pointer;
-    border: none;
+    border: rgba(128, 128, 128, .3) 1px solid ;
     opacity: 0;
     transition: .3s;
   }
@@ -50,7 +50,6 @@
     background-color: var(--orange);
     color: lightgray;
     box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
-    border:none;
     transition: .3s linear;
     scale: 1.025;
   }

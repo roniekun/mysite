@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../Footer'
 import './styles/Community.css'
 
-const Community = () => {
+const Community = ({isSmallScreen, setShowNavbar}) => {
   return (
     <div className='community_container'>
     <div className='community_content'>
@@ -10,7 +10,8 @@ const Community = () => {
         Blank Page
       </h1>
     </div>
-    <Footer/>
+    <Footer isSmallScreen={isSmallScreen}
+              setShowNavbar={setShowNavbar}/>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../Footer';
 import './styles/About.css';
 
-const About = ({setShowNavbar}) => {
+const About = ({setShowNavbar, isSmallScreen}) => {
   return (
     <div className='about_container'>
 
@@ -19,7 +19,8 @@ const About = ({setShowNavbar}) => {
         </p>
         
         </div>
-      <Footer setShowNavbar={setShowNavbar}/>
+        <Footer isSmallScreen={isSmallScreen}
+              setShowNavbar={setShowNavbar}/>
     </div>
   )
 }
