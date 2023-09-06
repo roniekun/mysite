@@ -188,6 +188,11 @@
     width: 100%;
   }
 
+  .footer_nav_container > h2{
+
+    align-self: flex-start;
+  }
+
   .footer_social_container{
     width: 100%;
   }
