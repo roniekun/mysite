@@ -63,10 +63,9 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
       footerContainer={{ flexDirection: 'column', 
                           alignItems: 'flex-end',
                          }}/></div>
-       <div className='footer_text_wrapper'>
-      
-      <h3 style={{
-                 fontSize: '16px'}}>All rights reserved 2023</h3>
+      <div className='footer_text_wrapper'>
+      <h3 style={{color: 'whitesmoke',
+                 fontSize: '18px'}}>All RIGHTS RESERVED 2023</h3>
       <h4>www.buildbyrk.com</h4>
       {/* <SiteLogo 
       setShowNavbar={setShowNavbar}/> */}
