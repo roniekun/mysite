@@ -39,7 +39,7 @@
 
 .icon_container svg:hover{
 
-    fill: var(--red);
+    fill: white;
     transition: .3s;
     
 }

@@ -71,7 +71,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
       {/* <SiteLogo 
       setShowNavbar={setShowNavbar}/> */}
       <h4>version 1.1</h4>
-      <a style={{textDecoration: 'none', color: 'gray'}} href="#">developed by roniekun</a>
+      <a style={{textDecoration: 'none', color: 'gray'}} href="#">developed by roniekun </a>
      </div>
       </div>
      

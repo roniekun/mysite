@@ -2,13 +2,14 @@ import React from 'react'
 import Footer from '../Footer';
 import './styles/Home.css';
 import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef, useEffect, useState} from 'react';
 
 const Home = ({setShowNavbar, isSmallScreen}) => {
 
     const heroTexts = " Transforming Visions into- Digital Masterpiece"
     const heroTextWords = heroTexts.split('-');
+    const heroContainerRef = useRef(null);
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
     const sliderRef = useRef(null);
@@ -20,24 +21,25 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
     const thirdText = useRef(null);
     const forthText = useRef(null);
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
 
-  //   const container = homeContainer.current;
-  //   const text = heroText.current;
+    const container = heroContainerRef.current;
+    const slider = sliderRef.current;
 
-  //   gsap.to(text, {
-  //     opacity: 1,
-  //     x: 100,
-  //     scrollTrigger: {
-  //       trigger: container,
-  //       start: 'top center', // Adjust as needed
-  //       end: 'bottom center', // Adjust as needed
-  //       scrub: true,
-  //       markers: true,
-  //     },
-  //   });
-  // }, []);
+    gsap.to(slider, {
+      y: 50,
+
+      scrollTrigger: {
+        trigger: container,
+        start: 'top top', // Adjust as needed
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
+        // markers: true,
+       
+      },
+    });
+  }, []);
 
 
 let xPercent = 0;
@@ -131,14 +133,25 @@ useEffect(() => {
   return () => {
     window.removeEventListener('resize', calculateFontSize);
   };
-}, [window.innerWidth]);
+  }, [window.innerWidth]);
+
+
+  const email = 'roniebenitez01@gmail.com';
+  const subject = 'Project Request';
+
+  const handleClick = () => {
+
+  const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+  window.location.href = mailtoUrl;
+
+  };
  
   return (
 
     <div className='home_container'>
 
       <div className='content'>
-      <div  className='hero_container'>
+      <div ref={heroContainerRef}  className='hero_container'>
 
         <div ref={heroContent} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
@@ -151,12 +164,13 @@ useEffect(() => {
          </div>))}
     
         </div>
-        <button ref={ctaBtnRef}className='cta_button'>Get in touch</button>
+        
+         <a onClick={handleClick} className='email'> Start a project request</a>
        
         </div>
         <div ref={sliderRef}  className='textslider_wrapper'>
 
-<div className='textslider_container'>
+<div ref={sliderRef} className='textslider_container'>
   <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
   - Freelance Web Development & Photography - Freelance Web Development & Photography </h1>
   <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >

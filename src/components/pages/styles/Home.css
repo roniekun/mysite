@@ -30,28 +30,16 @@
     left: 100%;
   }
   
-  .cta_button {
-    height: fit-content;
-    width: fit-content;
-    padding: 1.2em;
-    color:black;
-    border-radius: 7px;
-    font-size: 16px;
-    filter: brightness(100%) saturate(125%);
-    font-family: 'Ranade', sans-serif;
+  .email{
+
     cursor: pointer;
-    border: rgba(128, 128, 128, .3) 1px solid ;
-    opacity: 0;
-    transition: .3s;
+    font-size: 24px;
+    font-weight: 500;
   }
-  
-  .cta_button:hover {
-    /* background-color: #f7b226; */
-    background-color: var(--primary-color);
-    color: lightgray;
-    box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
-    transition: .3s linear;
-    scale: 1.025;
+
+  .email:hover{
+
+    text-decoration: underline;
   }
   
   .home_container {
@@ -262,12 +250,6 @@
     }
 
 
-    .cta_button {
-        padding-inline: 1em;
-        z-index: 2;
-        padding: 1em;
-    }
-  
     .hero_container {
      height: 90vh;
     }
