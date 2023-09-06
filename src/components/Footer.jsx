@@ -65,7 +65,8 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
                          }}/></div>
       <div className='footer_text_wrapper'>
       <h3 style={{color: 'whitesmoke',
-                 fontSize: '18px'}}>All RIGHTS RESERVED 2023</h3>
+                 fontSize: '18px',
+                 fontWeight: '700'}}>ALL RIGHTS RESERVED 2023</h3>
       <h4>www.buildbyrk.com</h4>
       {/* <SiteLogo 
       setShowNavbar={setShowNavbar}/> */}
