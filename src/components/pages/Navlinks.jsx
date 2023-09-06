@@ -7,19 +7,14 @@ const NavbarLinks = ({
   showNavbar,
   isSmallScreen,
   setShowNavbar,
-  PortfolioNavbarLinks,
-  HomeNavbarLinks,
+  footerContainer,
+  footerNavbarLink,
+  footerNavbarWrapper,
   ContactNavbarLinks,
-  AboutNavbarLinks,
   NavbarLinksContainer,
   NavbarLinksWrapper,
   NavbarLinksLink,
-  HomeNavbarLink,
-  PortfolioNavbarLink,
-  ContactNavbarLink,
-  AboutNavbarLink,
-  GalleryNavbarLink,
-  PolicyNavbarLink}) => {
+  }) => {
 
   const location = useLocation();
   const navbarContainerRef = useRef(null);
@@ -27,7 +22,6 @@ const NavbarLinks = ({
   const links = [
     { to: '/', text: 'home ' },
     { to: '/about', text: 'about  ' },
-    { to: '/community', text: 'community  ' },
     { to: '/contact', text: 'contact  ' },
     
   ];
@@ -57,20 +51,21 @@ const NavbarLinks = ({
     setShowNavbar(false);
   };
   return (
-    <div style={{...HomeNavbarLinks,
-                ...PortfolioNavbarLinks,
+    <div style={{
                 ...ContactNavbarLinks,
-                ...AboutNavbarLinks,
-                ...NavbarLinksContainer}}
+                ...NavbarLinksContainer,
+                ...footerContainer
+                }}
 
-        className='links_container'
+           className='links_container'
           ref={navbarContainerRef}>
       
-      {links.map((link, index) => (
-        <div style={NavbarLinksWrapper} className="link_wrapper" key={link.to}>
+          {links.map((link, index) => (
+          <div style={{...NavbarLinksWrapper,...footerNavbarWrapper}} 
+          className="link_wrapper" key={link.to}>
           <NavLink
-            style={{...NavbarLinksLink,...HomeNavbarLink,...PortfolioNavbarLink,
-            ...ContactNavbarLink,...AboutNavbarLink,...GalleryNavbarLink,...PolicyNavbarLink}}
+            style={{...NavbarLinksLink,
+                    ...footerNavbarLink}}
             ref={navbarlinkRefs[index]}
             onClick={() => handleLinkClick()}
             className={`navbar_link ${

@@ -1,47 +1,22 @@
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import './styles/Header.css';
 import SiteLogo from './SiteLogo';
-import Menu from './pages/assets/buttons/Menu';
 import { gsap } from 'gsap';
-import NavbarLinks from './pages/Navlinks';
-import { Cross as Hamburger } from 'hamburger-react'; //https://hamburger-react.netlify.app/
-
+import Menu from './pages/assets/buttons/Menu';
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   
   const containerRef = useRef(null);
-  const linksRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
-
-
-  const handleClick = () => {
-
-      setIsOpen(!isOpen);
-      console.log(isOpen);
-  }
-
 
   useEffect(() => {
  
-    gsap.fromTo(linksRef.current, {
-      visibility: 'hidden', 
-      opacity: 0,         
-    }, {
-      visibility: isOpen ? 'visible' : 'hidden', 
-      opacity: isOpen ? 1 : 0,                   
-      duration: 0.5,
-    });
-    gsap.to(linksRef.current, {
-      visibility: isScroll? 'hidden' : 'visible'
-    });
-
     gsap.to(containerRef.current, {
       y: isScroll ? -100 : 0,
       duration: 0.5,
       opacity: 1,
     });
-  }, [isScroll, isOpen]);
+  }, [isScroll]);
   
  
   return (
@@ -53,30 +28,14 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
               showNavbar={showNavbar}
                headerLogo={{color: isSmallScreen ? 'whitesmoke' : 'gray'}} />
             </div> 
-
-            <div ref= {linksRef} className='navlinks_wrapper'>
-            {!isSmallScreen && <NavbarLinks HomeNavbarLinks={{flexDirection: 'row'}}
-                  HomeNavbarLink={{
-                    textTransform: 'uppercase',
-                    fontSize: '16px',
-                    fontWeight:'500'
-                  }}
-                  setShowNavbar={setShowNavbar}
-                  isSmallScreen={isSmallScreen}/>}
-            </div>
-            {isSmallScreen &&
-            <div className='menu_wrapper'>
-            <Menu showNavbar={showNavbar} 
-            setShowNavbar={setShowNavbar}
-            displayText={true}
-            MenuContainer={{backgroundColor: 'transparent'}}/>
-            </div>
-             }
-            {!isSmallScreen && <div className='toggle_wrapper' onClick={handleClick}> 
-            <Hamburger hideOutline={false}
-              distance='sm' duration={0.3} 
-              color='gray'
-              size={16}/> </div>}
+              {isSmallScreen &&
+              <div className='menu_wrapper'>
+              <Menu showNavbar={showNavbar} 
+              setShowNavbar={setShowNavbar}
+              displayText={true}
+              MenuContainer={{backgroundColor: 'transparent'}}/>
+              </div>
+              }
           </div>
         )
       }

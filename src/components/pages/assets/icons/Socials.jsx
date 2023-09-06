@@ -3,8 +3,8 @@ import './Socials.css';
 import { ReactComponent as FacebookIcon } from './svg/facebook.svg';
 import { ReactComponent as InstagramIcon } from './svg/instagram.svg';
 import { ReactComponent as TiktokIcon } from './svg/tiktok.svg';
-// import { ReactComponent as GithubIcon } from './svg/github.svg';
-// import { ReactComponent as LinkedinIcon } from './svg/linkedin.svg';
+import { ReactComponent as GithubIcon } from './svg/github.svg';
+import { ReactComponent as LinkedinIcon } from './svg/linkedin.svg';
 import { ThemeContext } from '../../../../context/ThemeContext';
 
 const Socials = ({ 
@@ -24,10 +24,11 @@ const Socials = ({
   const [hoveredLink, setHoveredLink] = useState(null); 
 
   const socialMediaLinks = [
-    
-    { name: 'Facebook', fill: '#1877F2', icon: <FacebookIcon />, url: 'https://www.facebook.com/', userhandle: '' },
-    { name: 'Tiktok', fill: '#000000', icon: <TiktokIcon/>, url: 'https://www.tiktok.com/', userhandle: '' },
-    { name: 'Instagram', fill: '#E4405F', icon: <InstagramIcon />, url: 'https://www.instagram.com/', userhandle: '' },
+    { name: 'Github', fill: '#E4405F', icon: <GithubIcon />, url: 'https://www.github.com/roniekun', userhandle: '' },
+    { name: 'Facebook', fill: '#1877F2', icon: <FacebookIcon />, url: 'https://www.facebook.com/ronieuxjpg', userhandle: '' },
+    { name: 'Tiktok', fill: '#000000', icon: <TiktokIcon/>, url: 'https://www.tiktok.com/ronieuxjpg', userhandle: '' },
+    { name: 'Instagram', fill: '#E4405F', icon: <InstagramIcon />, url: 'https://www.instagram.com/ronieuxjpg', userhandle: '' },
+    { name: 'LinkedIn', fill: '#E4405F', icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/roniebenitez', userhandle: '' },
   ];
 
   return (

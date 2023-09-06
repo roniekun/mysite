@@ -7,7 +7,7 @@ import { useRef, useEffect, useState} from 'react';
 
 const Home = ({setShowNavbar, isSmallScreen}) => {
 
-    const heroTexts = "Lorem ipsum dolor sit amet consectetur.-Aperiam dignissimos enim quod consequatur ad eius."
+    const heroTexts = " Transforming Visions into- Digital Masterpiece"
     const heroTextWords = heroTexts.split('-');
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
@@ -57,10 +57,9 @@ useEffect( () => {
     title,
     {
       opacity: 0,
-      y: 100,
+      
     },
     {
-      y: 0,
       opacity: 1,
       duration: 1,
     }
@@ -104,7 +103,7 @@ const animate1 = () => {
   gsap.set(firstText.current, {xPercent: xPercent})
   gsap.set(secondText.current, {xPercent: xPercent})
   requestAnimationFrame(animate1);
-  xPercent += 0.1;
+  xPercent += 0.03;
 }
 
 const animate2 = () => {
@@ -121,7 +120,7 @@ const animate2 = () => {
 
 const calculateFontSize = () => {
 
-  const newFontSize = isSmallScreen ? '12' : window.innerWidth / 32;
+  const newFontSize = isSmallScreen ? '56' : window.innerWidth / 12;
   setFontSize(newFontSize);
 
 };
@@ -138,43 +137,40 @@ useEffect(() => {
 
     <div className='home_container'>
 
- 
       <div className='content'>
       <div  className='hero_container'>
 
         <div ref={heroContent} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
-        <h1 ref={heroTitleRefs} className='hero_title'> Hero Text*</h1>
+        <h1 ref={heroTitleRefs} className='hero_title'>UNLOCK YOUR <br /> <span>VISUAL STORY</span></h1>
         </div>
         <div className='herotext_container'>
         {heroTextWords.map((word, index) => (
          <div key={index} ref={heroTextRefs[index]} className="hero_text">
           {word}
-         </div>
-      ))}
+         </div>))}
     
         </div>
-
         <button ref={ctaBtnRef}className='cta_button'>Get in touch</button>
+       
         </div>
-        </div>
-
         <div ref={sliderRef}  className='textslider_wrapper'>
 
-      <div className='textslider_container'>
-        <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
-          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-        <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >
-          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-      </div >
-        <div className='textslider_container'>
-        <h1   className='bg_text2' ref={thirdText}  style={{ fontSize: `${fontSize}px`}}  >
-          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-        <h1 className='bg_text2' ref={forthText} style={{ fontSize: `${fontSize}px` }} >
-          pitik south cotabato  pitik south cotabato  pitik south cotabato </h1>
-      </div>
-      </div>
-   
+<div className='textslider_container'>
+  <h1   className='bg_text' ref={firstText}  style={{ fontSize: `${fontSize}px`}}  >
+  - Freelance Web Development & Photography - Freelance Web Development & Photography </h1>
+  <h1 className='bg_text' ref={secondText} style={{ fontSize: `${fontSize}px` }} >
+- Freelance Web Development & Photography - Freelance Web Development & Photography </h1>
+</div >
+  <div className='textslider_container'>
+  <h1   className='bg_text2' ref={thirdText}  style={{ fontSize: `${fontSize}px`}}  >
+  - Freelance Web Developer - Freelance Web Developer - Freelance Web Developer </h1>
+  <h1 className='bg_text2' ref={forthText} style={{ fontSize: `${fontSize}px` }} >
+    </h1>
+</div>
+</div>
+        </div>
+
 
       <div className='one'>
           

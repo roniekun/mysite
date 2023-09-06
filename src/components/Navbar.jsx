@@ -46,7 +46,7 @@ const Navbar = ({ showNavbar,
           ref={navbarContainerRef}
           style={{
             height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '75vh'),
-            width: isSmallScreen || isMediumScreen ? '100vw' : '50vw',
+            width: isSmallScreen || isMediumScreen ? '100vw' : '40vw',
             transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)',
           }}
           className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
@@ -60,7 +60,8 @@ const Navbar = ({ showNavbar,
                             fill: 'gray'}}/>
           </div>
         
-          <div ref={navItemsRef}>
+          <div ref={navItemsRef}
+              className='navbar_wrapper'>
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
@@ -69,7 +70,8 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{textTransform: 'uppercase',
+          NavbarLinksLink={{textTransform: 'capitalize',
+                            fontWeight: '500',
                             }}/>
           </div >
          <div ref={footerRef} 
@@ -99,7 +101,7 @@ const Navbar = ({ showNavbar,
               showNavbar={showNavbar}/>
             </div>
            
-            <h3 className='nav_footer'>www.pitiksouthcotabato.com</h3>
+            <h3 className='nav_footer'>www.buildbyrk.com</h3>
             </div>
           </nav>
         )}

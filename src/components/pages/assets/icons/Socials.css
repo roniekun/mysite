@@ -23,8 +23,9 @@
 
 .social_link{
    font-size: 18px;
-   color: lightgray;
+   color: gray;
    transition: .3s;
+   text-decoration: none;
   
 }
 
@@ -36,14 +37,18 @@
     margin: 0;
   }
 
-.icon_container svg:hover, .social_link:hover{
+.icon_container svg:hover{
 
     fill: var(--red);
-    color: var(--orange);
     transition: .3s;
+    
+}
+
+.social_link:hover{
+  text-decoration: underline;
+  color: whitesmoke;
 }
   
-
 
 @media (max-width: 600px) {
 
