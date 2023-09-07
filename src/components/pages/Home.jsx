@@ -9,12 +9,13 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
 
     const heroTexts = " Transforming Visions into- Digital Masterpiece"
     const heroTextWords = heroTexts.split('-');
+
+    const bgHeroRef = useRef(null);
     const heroContainerRef = useRef(null);
     const heroTextRefs = heroTextWords.map(() => useRef(null)); 
     const [fontSize, setFontSize] = useState();
     const sliderRef = useRef(null);
-    const heroContent = useRef(null);
-    const ctaBtnRef = useRef(null);
+    const heroContentRef = useRef(null);
     const heroTitleRefs = useRef(null);
     const firstText = useRef(null);
     const secondText = useRef(null);
@@ -26,9 +27,20 @@ const Home = ({setShowNavbar, isSmallScreen}) => {
 
     const container = heroContainerRef.current;
     const slider = sliderRef.current;
+    const bg = bgHeroRef.current;
 
     gsap.to(slider, {
       y: 50,
+      scrollTrigger: {
+        trigger: container,
+        start: 'top top', // Adjust as needed
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
+        // markers: true,
+      },
+    });
+    gsap.to(bg, {
+      y: 100,
 
       scrollTrigger: {
         trigger: container,
@@ -83,13 +95,7 @@ useEffect( () => {
     );
   });
 
-  tl.fromTo
-     (ctaBtnRef.current,
-    {opacity:0},
-     {visibility:'visible',
-      opacity: 1} 
-     );
-  
+ 
   gsap.set(secondText.current, {left: secondText.current.getBoundingClientRect().width})
   requestAnimationFrame(animate1);
   gsap.set(forthText.current, {left: forthText.current.getBoundingClientRect().width})
@@ -152,8 +158,8 @@ useEffect(() => {
 
       <div className='content'>
       <div ref={heroContainerRef}  className='hero_container'>
-
-        <div ref={heroContent} className='hero_content'>
+        <img ref={bgHeroRef} className='hero_image' src="public/images/bg-container.jpg"/> 
+        <div ref={heroContentRef} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
         <h1 ref={heroTitleRefs} className='hero_title'>UNLOCK YOUR <br /> <span>VISUAL STORY</span></h1>
         </div>
