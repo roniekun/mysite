@@ -10,6 +10,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const heroTexts = ' Transforming Visions into Digital Masterpiece-';
   const heroTextWords = heroTexts.split('-');
 
+  const aboutRef = useRef(null);
   const bgHeroRef = useRef(null);
   const heroContainerRef = useRef(null);
   const heroTextRefs = heroTextWords.map(() => useRef(null));
@@ -58,8 +59,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const title = heroTitleRefs.current;
     const slider = sliderRef.current;
     const bg = bgHeroRef.current;
+    const about= aboutRef.current;
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
+    tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
+      { scale:1, opacity:1});
+    
     tl.to(slider, { opacity: 1 });
 
     tl.fromTo(
@@ -72,6 +77,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         duration: 1,
       }
     );
+   
 
     heroTextRefs.forEach((heroTextRef) => {
       tl.fromTo(
@@ -142,9 +148,15 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     <div className="home_container">
       <div className="content">
         <div ref={heroContainerRef} className="hero_container">
-        <MagneticEffect>
-          <NavLink to={'/about'} className='about_shortcut'> <h3>About me</h3> </NavLink>
-        </MagneticEffect>
+
+          <div className='about_shortcut_container' >
+          <MagneticEffect>
+          <div style={{position: 'relative'}} >
+          <NavLink  ref={aboutRef}  to={'/about'} className='about_shortcut'> <h3>About me</h3> </NavLink>
+          </div>
+          </MagneticEffect>
+          </div>
+          
           <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" />
           {!isSmallScreen && 
           <div ref={heroContentRef} className="hero_content">
