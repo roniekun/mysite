@@ -32,7 +32,7 @@ const SiteLogo = ({
     onMouseLeave={handleMouseLeave}
     style={{textDecoration: 'none', color: isSmallScreen ? '#fafafa' : color,...headerContainer}} 
     className='site_logo_container'>
-      <p style={{...navbarContainer,...headerLogo}} className='logo'>roniekun</p>
+      <p style={{...navbarContainer,...headerLogo}} className='logo'>R <span>k</span></p>
     </NavLink> 
   )
 }

@@ -14,10 +14,13 @@
     font-family: 'Clash Display', sans-serif;
     font-size:16px;
     font-weight:500;
-    text-transform: uppercase;
     color: lightgray;
     user-select: none;
+    letter-spacing: -1px;
     }
+.logo span{
+     font-style: italic;
+}
 @media (max-width:600px){
 
     .site_logo_container{

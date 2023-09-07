@@ -32,7 +32,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
               <div className='menu_wrapper'>
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
-              displayText={true}
+              displayIcon={true}
               MenuContainer={{backgroundColor: 'transparent'}}/>
               </div>
               }

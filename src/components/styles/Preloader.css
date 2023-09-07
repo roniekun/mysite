@@ -22,6 +22,10 @@
     
 }
 
+.preloader_logo span{
+    font-style: italic;
+}
+
 @media (max-width: 600px){
 
     .preloader_logo{

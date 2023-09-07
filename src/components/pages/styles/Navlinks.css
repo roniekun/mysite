@@ -114,6 +114,6 @@
   }
  
   .active_link{
-    color: var(--red);
+    color: red;
 }
 }

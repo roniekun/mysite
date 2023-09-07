@@ -3,9 +3,11 @@ import Footer from '../Footer';
 import './styles/Home.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { NavLink } from 'react-router-dom';
+import MagneticEffect from '../../assets/MagneticEffect/MagneticEffect';
 
 const Home = ({ setShowNavbar, isSmallScreen }) => {
-  const heroTexts = ' Transforming Visions into- Digital Masterpiece';
+  const heroTexts = ' Transforming Visions into Digital Masterpiece-';
   const heroTextWords = heroTexts.split('-');
 
   const bgHeroRef = useRef(null);
@@ -75,8 +77,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       tl.fromTo(
         heroTextRef.current,
         {
-          y: 20,
-          opacity: 0,
+          y: 10,
         },
         {
           y: 0,
@@ -141,16 +142,20 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     <div className="home_container">
       <div className="content">
         <div ref={heroContainerRef} className="hero_container">
+        <MagneticEffect>
+          <NavLink to={'/about'} className='about_shortcut'> <h3>About me</h3> </NavLink>
+        </MagneticEffect>
           <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" />
+          {!isSmallScreen && 
           <div ref={heroContentRef} className="hero_content">
             <div style={{ overflow: 'hidden' }}>
               <h1 ref={heroTitleRefs} className="hero_title">
                 UNLOCK YOUR <br /> <span>VISUAL STORY</span>
               </h1>
             </div>
-            <div className="herotext_container">
+            <div style={{overflow: 'hidden'}} className="herotext_container">
               {heroTextWords.map((word, index) => (
-                <div key={index} ref={heroTextRefs[index]} className="hero_text">
+                <div style={{overflow: 'hidden'}} key={index} ref={heroTextRefs[index]} className="hero_text">
                   {word}
                 </div>
               ))}
@@ -158,7 +163,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
             <a onClick={handleClick} className="email">
               Start a project request
             </a>
-          </div>
+          </div>}
           <div ref={sliderRef} className="textslider_wrapper">
             <div ref={sliderRef} className="textslider_container">
               <h1 className="bg_text" ref={firstText} style={{ fontSize: `${fontSize}px` }}>

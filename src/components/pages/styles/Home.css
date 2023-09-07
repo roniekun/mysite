@@ -1,3 +1,30 @@
+.about_shortcut{
+  height: 145px;
+  width: 145px;
+  background-color: red;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1em;
+  position: absolute;
+  font-weight: 400;
+  text-align: center;
+  color:lightgray;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  right: 15%;
+  bottom: 25%;
+  justify-self: flex-end;
+  z-index: 99;
+  text-decoration: none;
+  box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
+
+}
+  .about_shortcut:hover{
+
+  filter:brightness(97%) saturate(90%);
+  }
 .bg_text {
     justify-content: center;
     display: flex;
@@ -50,7 +77,6 @@
   
   .home_container {
 
-    font-family: 'Work Sans', sans-serif;
     display: flex;
     width: 100vw;
     justify-content: space-between;
@@ -73,7 +99,7 @@
   
   .hero_container {
     display: flex;
-    background-color: #272727;
+    background-color: var(--primary-color);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -258,6 +284,13 @@
   }
   
   @media (max-width: 600px) {
+    .about_shortcut{
+      font-size: 14px;
+      height: 100px;
+      width: 100px;
+      bottom: 20%;
+      right: 17%;
+    }
     .bg_text {
       font-weight: 500;
     }

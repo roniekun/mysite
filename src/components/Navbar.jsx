@@ -53,7 +53,7 @@ const Navbar = ({ showNavbar,
           id={`component-${themeContext.theme}`}>
             
 
-          <div ref={logoRef} style={{visibility: isScroll? ''  : 'collapse'}}>
+          <div className= 'navlogo_wrapper' ref={logoRef} style={{visibility: isScroll? ''  : 'collapse'}}>
            <SiteLogo setShowNavbar={setShowNavbar}
             showNavbar={showNavbar}
             navbarContainer={{color: 'gray',

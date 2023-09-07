@@ -20,7 +20,6 @@ import { ThemeProvider, ThemeContext } from './context/ThemeContext';
 import Lenis from '@studio-freight/lenis'
 
 const App = () => {
-
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScroll, setIsScroll] = useState();
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
@@ -72,7 +71,7 @@ const App = () => {
     //   setScrollPosition(currentScroll);
     // }
 
-      if (currentScroll<=600){
+      if (currentScroll<=700){
         setShowNavbar(false);
       }
     }, [scrollPosition, isScroll]);
