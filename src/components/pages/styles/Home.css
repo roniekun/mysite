@@ -135,6 +135,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    filter: brightness(90%) ;
   }
   
   .hero_title {
@@ -217,7 +218,6 @@
     height: auto;
     white-space: nowrap;
     overflow: hidden;
-    bottom: 25%;
 
   }
 /*   

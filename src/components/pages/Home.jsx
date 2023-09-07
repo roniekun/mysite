@@ -61,7 +61,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const bg = bgHeroRef.current;
     const about= aboutRef.current;
 
-    // gsap.set(slider,{ rotate:270 })
+    gsap.set(slider,{ rotate:270, x: isSmallScreen ? -580 : 100 })
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
@@ -121,7 +121,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.set(thirdText.current, { xPercent: xPercent2 });
     gsap.set(forthText.current, { xPercent: xPercent2 });
     requestAnimationFrame(animate2);
-    xPercent2 -= 0.1;
+    xPercent2 -= 0.01;
   };
 
   const calculateFontSize = () => {
@@ -192,7 +192,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
               - Freelance Web Development & Photography - Freelance Web Development & Photography
               </h1>
               <h1 className="bg_text2" ref={forthText} style={{ fontSize: `${fontSize}px` }}>
-              - Freelance Web Development & Photography - Freelance Web Development & Photography
+              - Freelance Web Development & Photography - Freelance Web Development & Photography 
               </h1>
             </div>
           </div>
