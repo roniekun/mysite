@@ -197,6 +197,7 @@ useEffect(() => {
       </div>
 
       <div className='two'>
+          <img  src="public/images/bg-container.jpg"/>
        
       </div>
       </div>
