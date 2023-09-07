@@ -26,6 +26,7 @@
    color: gray;
    transition: .3s;
    text-decoration: none;
+   user-select: none;
   
 }
 

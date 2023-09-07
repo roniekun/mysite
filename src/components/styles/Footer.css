@@ -145,6 +145,7 @@
   text-decoration: none;
   color: gray;
   font-size: 16px;
+  user-select: none;
 }
 
 .link a:hover{

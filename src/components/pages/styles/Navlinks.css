@@ -51,6 +51,7 @@
   font-weight: 700;
   text-transform: lowercase;
   letter-spacing: -1px;
+  user-select: none;
 }
 
  .navbar_link:hover{

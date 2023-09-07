@@ -7,6 +7,7 @@
 }
 .about_shortcut{
   
+  user-select: none;
   height: 145px;
   width: 145px;
   background-color: red;
@@ -68,6 +69,7 @@
     font-size: 22px;
     font-weight: 500;
     color: black;
+    user-select: none;
     background-color: lightgray;
     padding: 1em;
     border-radius: 3px;
