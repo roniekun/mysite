@@ -158,7 +158,7 @@ useEffect(() => {
 
       <div className='content'>
       <div ref={heroContainerRef}  className='hero_container'>
-        <img ref={bgHeroRef} className='hero_image'  src="images/bg-container.jpg"/> 
+        <img ref={bgHeroRef} className='hero_image'  src="images/bg-container.webp"/> 
         <div ref={heroContentRef} className='hero_content'>
         <div style={{overflow: 'hidden'}}>
         <h1 ref={heroTitleRefs} className='hero_title'>UNLOCK YOUR <br /> <span>VISUAL STORY</span></h1>
@@ -197,7 +197,6 @@ useEffect(() => {
       </div>
 
       <div className='two'>
-          <img  src="/images/bg-container.jpg"/>
        
       </div>
       </div>
