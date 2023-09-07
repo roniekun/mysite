@@ -52,8 +52,7 @@
     display: flex;
     text-transform: capitalize;
     z-index: 1;
-    color: gray;
-    opacity: .5;
+    color: lightgray;
     padding-right: 10px;
     font-weight: 500;
   }
@@ -215,10 +214,10 @@
     position: absolute;
     opacity: 0;
     width: auto;
-    bottom:5%;
     height: auto;
     white-space: nowrap;
     overflow: hidden;
+    bottom: 25%;
 
   }
 /*   
@@ -367,10 +366,6 @@
       align-self: flex-end;
     }
   
-    .textslider_wrapper {
-      bottom: 5%;
-
-    }
    
   }
   

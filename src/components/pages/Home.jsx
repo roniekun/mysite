@@ -61,6 +61,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const bg = bgHeroRef.current;
     const about= aboutRef.current;
 
+    // gsap.set(slider,{ rotate:270 })
+
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
       { scale:1, opacity:1});
@@ -123,7 +125,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   };
 
   const calculateFontSize = () => {
-    const newFontSize = isSmallScreen ? '126' : window.innerWidth / 32;
+    const newFontSize = isSmallScreen ? '32' : window.innerWidth / 32;
     setFontSize(newFontSize);
   };
 
@@ -179,17 +181,19 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           <div ref={sliderRef} className="textslider_wrapper">
             <div ref={sliderRef} className="textslider_container">
               <h1 className="bg_text" ref={firstText} style={{ fontSize: `${fontSize}px` }}>
-                - Freelance Web Development & Photography - Freelance Web Development & Photography
+               
               </h1>
               <h1 className="bg_text" ref={secondText} style={{ fontSize: `${fontSize}px` }}>
-                - Freelance Web Development & Photography - Freelance Web Development & Photography
+                
               </h1>
             </div>
             <div className="textslider_container">
               <h1 className="bg_text2" ref={thirdText} style={{ fontSize: `${fontSize}px` }}>
-                - Freelance Web Developer - Freelance Web Developer - Freelance Web Developer
+              - Freelance Web Development & Photography - Freelance Web Development & Photography
               </h1>
-              <h1 className="bg_text2" ref={forthText} style={{ fontSize: `${fontSize}px` }}></h1>
+              <h1 className="bg_text2" ref={forthText} style={{ fontSize: `${fontSize}px` }}>
+              - Freelance Web Development & Photography - Freelance Web Development & Photography
+              </h1>
             </div>
           </div>
         </div>
