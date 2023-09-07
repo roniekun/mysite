@@ -1,6 +1,7 @@
 .bg_text {
     justify-content: center;
     display: flex;
+    font-family: sans-serif;
     text-transform: capitalize;
     z-index: 1;
     color: white;
@@ -87,6 +88,7 @@
     padding: 5%;
     transform: translateY(20%);
     z-index: 2;
+    mix-blend-mode: difference;
     
   }
 
@@ -103,7 +105,7 @@
     position: relative;
     z-index: 2;
     color: white;
-    font-size: 60px;
+    font-size: 75px;
     font-weight: bold;
     opacity: 0;
     line-height: 1em;
@@ -177,11 +179,10 @@
     position: absolute;
     opacity: 0;
     width: auto;
-    bottom:0;
+    bottom:5%;
     height: auto;
     white-space: nowrap;
     overflow: hidden;
-    z-index: 9999;
     mix-blend-mode: difference;
 
   }
@@ -271,7 +272,7 @@
     }
   
     .hero_title {
-      font-size: 16px;
+      font-size: 22px;
     }
 
     .hero_title span{
@@ -310,7 +311,7 @@
     }
   
     .textslider_wrapper {
-      bottom:10%;
+      bottom: 15%;
 
     }
    
