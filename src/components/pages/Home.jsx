@@ -55,7 +55,9 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const tl = gsap.timeline();
     const title = heroTitleRefs.current;
     const slider = sliderRef.current;
+    const bg = bgHeroRef.current;
 
+    tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.to(slider, { opacity: 1 });
 
     tl.fromTo(
@@ -99,7 +101,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.set(firstText.current, { xPercent: xPercent });
     gsap.set(secondText.current, { xPercent: xPercent });
     requestAnimationFrame(animate1);
-    xPercent += 0.03;
+    xPercent += 0.01;
   };
 
   const animate2 = () => {

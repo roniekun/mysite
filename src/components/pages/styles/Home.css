@@ -1,13 +1,13 @@
 .bg_text {
     justify-content: center;
     display: flex;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     text-transform: capitalize;
     z-index: 1;
     opacity: .7;
     color: white;
     padding-right: 10px;
-    font-weight: 900;
+    font-weight: 400;
   }
   
   .bg_text:nth-child(1) {
@@ -34,9 +34,13 @@
   .email{
 
     cursor: pointer;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
-    color: whitesmoke;
+    color: black;
+    background-color: lightgray;
+    padding: 1em;
+    border-radius: 3px;
+    padding-inline: 2em;
   }
 
   .email:hover{
@@ -45,6 +49,8 @@
   }
   
   .home_container {
+
+    font-family: 'Work Sans', sans-serif;
     display: flex;
     width: 100vw;
     justify-content: space-between;
@@ -67,6 +73,7 @@
   
   .hero_container {
     display: flex;
+    background-color: #272727;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -75,19 +82,17 @@
     height: 800px;
     overflow: hidden;
     object-fit: cover;
-    background-color: black;
+    
   }
   
   .hero_content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    align-items: flex-start;
+    width: 50%;
     height: auto;
     gap: 10px;
     padding: 5%;
-    transform: translateY(20%);
     z-index: 2;
     mix-blend-mode: difference;
     
@@ -105,9 +110,10 @@
 
     position: relative;
     z-index: 2;
+    font-size: 50px;
+    font-weight: 500;
     color: white;
-    font-size: 75px;
-    font-weight: bold;
+    letter-spacing:-1px;
     opacity: 0;
     line-height: 1em;
     text-align: center;
@@ -116,29 +122,26 @@
   
   .herotext_container{
 
-    width: 80%;
+    width: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
     overflow: hidden;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
   }
   .hero_text {
    
     font-size: 24px;
     line-height: 1.5em;
     font-weight: 500;
-    width: fit-content;
     height: fit-content;
     z-index: 2;
     color: whitesmoke;  
-    margin-right: 5px;
     opacity: 0;
-    transform: translateY(100);
     overflow: hidden;
+    margin-right: 5px; 
 
   }
   .one {
@@ -159,7 +162,6 @@
     font-size: 24px;
     line-height: 1.5em;
     padding: 1.5em;
-    font-weight: 500;
     margin-inline-start: 1em;
     width: auto;
   }
@@ -257,16 +259,23 @@
   
   @media (max-width: 600px) {
     .bg_text {
-      font-weight: 900;
+      font-weight: 500;
     }
   
     .bg_text2 {
       font-weight: 400;
     }
 
+  .email{
+    text-align: center;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    }
 
     .hero_container {
-     height: 90vh;
+     height: 100vh;
     }
   
     .hero_container > p {
@@ -287,7 +296,11 @@
     }
 
     .hero_content{
-      transform: translateY(50%)
+
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      transform: translateY(40%);
     }
  
     .hero_text {

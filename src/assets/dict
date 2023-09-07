@@ -6,7 +6,6 @@ display: -webkit-box;
 -webkit-line-clamp: 7;
 overflow: hidden;
 
-
 /* fonts */
 font-family: 'Inter', sans-serif;
 font-family: 'Futura PT', sans-serif;                                      
