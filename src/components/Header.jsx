@@ -26,7 +26,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
-               headerLogo={{color: isSmallScreen ? 'whitesmoke' : 'gray'}} />
+               headerLogo={{color: isSmallScreen ? 'whitesmoke' : 'gray', fontSize: '12px'}} />
             </div> 
               {isSmallScreen &&
               <div className='menu_wrapper'>
