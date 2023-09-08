@@ -65,23 +65,22 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.set(slider,{ y: 300 })
     gsap.set(about,{ y:  -220  })
 
-    tl.fromTo(bg, {scale: 1.1}, {scale: 1});
-    tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
-      { scale:1, opacity:1});
-    
+    tl.fromTo(bg, {scale: 1.1}, {scale: 1},);
+ 
+    tl.fromTo(
+        title,
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 1,
+        }, '-=.2'
+      );
+  
     tl.to(slider, { opacity: 1 });
 
-    tl.fromTo(
-      title,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1,
-      }
-    );
-
+   
     heroTextRefs.forEach((heroTextRef) => {
       tl.fromTo(
         heroTextRef.current,
