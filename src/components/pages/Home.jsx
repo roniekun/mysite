@@ -31,7 +31,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const bg = bgHeroRef.current;
 
     gsap.to(slider, {
-      y: 10,
       scrollTrigger: {
         trigger: container,
         start: 'top top', // Adjust as needed
@@ -61,7 +60,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const bg = bgHeroRef.current;
     const about= aboutRef.current;
 
-    // gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0 })
+    gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0, y: 300 })
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
