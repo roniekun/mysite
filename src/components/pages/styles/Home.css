@@ -40,6 +40,7 @@
     color: white;
     padding-right: 10px;
     font-weight: 400;
+    user-select: none;
   }
   
   .bg_text:nth-child(1) {
@@ -55,6 +56,7 @@
     color: lightgray;
     padding-right: 10px;
     font-weight: 500;
+    user-select: none;
   }
   
   .bg_text2:nth-child(1) {
@@ -218,6 +220,11 @@
     height: auto;
     white-space: nowrap;
     overflow: hidden;
+    bottom: 7%;
+    /* background-color: #FAD320; */
+    padding-block: 1em;
+    background-color: rgba(121, 121, 121, .1);
+    mix-blend-mode: difference;
 
   }
 /*   
@@ -247,7 +254,6 @@
     height: auto;
     z-index: 1;
     white-space: nowrap;
-    background-color: rgba(121, 121, 121, .1);
   }
   
   .two {

@@ -61,7 +61,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const bg = bgHeroRef.current;
     const about= aboutRef.current;
 
-    gsap.set(slider,{ rotate:270, x: isSmallScreen ? -600 : 100 })
+    gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0})
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
