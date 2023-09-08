@@ -59,9 +59,10 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const slider = sliderRef.current;
     const bg = bgHeroRef.current;
     const about= aboutRef.current;
+    const container= heroContainerRef.current;
 
-    gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0, y: isSmallScreen ? 0 : 300,
-                      x: isSmallScreen ? -180 : 0 })
+    gsap.set(slider,{ y: 300 })
+    gsap.set(about,{ y:  isSmallScreen ? container.getBoundingClientRect().height - 200  : 50  })
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
@@ -125,7 +126,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   };
 
   const calculateFontSize = () => {
-    const newFontSize = isSmallScreen ? '24' : window.innerWidth / 40;
+    const newFontSize = isSmallScreen ? '17' : window.innerWidth / 40;
     setFontSize(newFontSize);
   };
 

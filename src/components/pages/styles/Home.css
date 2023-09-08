@@ -1,6 +1,5 @@
 .about_shortcut_container{
   right: 15%;
-  bottom: 25%;
   position: absolute;
   z-index: 99;
 
@@ -296,8 +295,7 @@
   @media (max-width: 600px) {
 
     .about_shortcut_container{
-      bottom: 10%;
-      right: 7%;
+      right: 10%;
     }
 
     .about_shortcut{
