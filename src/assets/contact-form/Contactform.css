@@ -1,0 +1,73 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1em;
+    width: 100%;
+    height: auto;
+}
+.form_firstname, .form_email, .form_message{
+    font-size: 24px;
+    margin-bottom: 1em;
+    font-weight: 500;
+
+}
+.form_submit_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 4em;
+    text-align: center;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    /* align-self: center; */
+    margin: 2em;
+}
+
+.form_submit_button:hover{
+    background: black;;
+
+}
+.text_input, .email_input, .text_area{
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    font-size: 24px;
+    width: 50%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1em;
+    color: gray;
+    font-family: 'Cabinet Grotesk', sans-serif;
+}
+.text_input:focus, .email_input:focus, .text_area:focus{
+    outline: none;
+}
+
+.text_area{
+    height: 100px;
+}
+
+@media (max-width: 600px){
+
+    .form{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .form_submit_button{
+        padding: 2em;
+    }
+    .text_input, .email_input, .text_area{
+        width: 100%;
+    }
+
+}

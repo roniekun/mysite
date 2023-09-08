@@ -12,7 +12,8 @@
   gap: 10%;
   padding-top: 10%;
   overflow: hidden;
-  background-color: var(--primary-color);
+  background-color: black;
+  filter: brightness(125%);
 }
 
 .navlogo_wrapper{

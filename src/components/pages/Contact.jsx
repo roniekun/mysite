@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../Footer';
 import './styles/Contact.css';
+import ContactForm from '../../assets/contact-form/Contactform';
 
 const Contact = ({isSmallScreen, setShowNavbar}) => {
   return (
@@ -8,7 +9,7 @@ const Contact = ({isSmallScreen, setShowNavbar}) => {
       <div className='contact'>
 
         <div className='contact_title_wrapper'>
-        <h1>Contact us</h1>
+        <h1>Let's Talk</h1>
         </div>
 
         <div className='contact_text_wrapper'>
@@ -20,10 +21,8 @@ const Contact = ({isSmallScreen, setShowNavbar}) => {
         </div>
      
          <div className='form_container'>
-        <div className='logo_contact'></div>
-         <form action="">
-          *contact info 
-        </form>
+          <h1 className='form_title'>Lets start a <br /> project together</h1>
+         <ContactForm isSmallScreen={isSmallScreen}/>
          </div>
         
     </div>
