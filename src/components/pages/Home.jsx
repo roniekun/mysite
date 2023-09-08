@@ -61,7 +61,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const bg = bgHeroRef.current;
     const about= aboutRef.current;
 
-    gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0})
+    // gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0 })
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
@@ -125,7 +125,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   };
 
   const calculateFontSize = () => {
-    const newFontSize = isSmallScreen ? '32' : window.innerWidth / 32;
+    const newFontSize = isSmallScreen ? '16' : window.innerWidth / 40;
     setFontSize(newFontSize);
   };
 
