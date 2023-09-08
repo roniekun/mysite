@@ -390,5 +390,11 @@
       align-self: flex-end;
     }
 
+    .textslider_wrapper{
+
+      bottom: auto;
+      left: 5%;
+    }
+
   }
   
