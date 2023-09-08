@@ -289,12 +289,17 @@
   }
   
   @media (max-width: 600px) {
+
+    .about_shortcut_container{
+      bottom: 5%;
+      right: 10%;
+    }
+
     .about_shortcut{
       font-size: 14px;
       height: 100px;
       width: 100px;
-      bottom: 20%;
-      right: 17%;
+     
     }
     .bg_text {
       font-weight: 600;
@@ -306,14 +311,18 @@
 
   .email{
     text-align: center;
-    padding: 0;
-    background-color: transparent;
+    padding: .5em;
+    margin-block: .5em;
     color: white;
+    background-color: transparent;
     font-size: 20px;
+    border: 1px solid rgba(128, 128, 128, .7);
     }
 
     .hero_container {
      height: 100vh;
+     align-items: center;
+
     }
   
     .hero_container > p {
@@ -322,28 +331,37 @@
   
     .hero_title {
       font-size: 22px;
+      text-align: right;
+      text-transform: capitalize;
     }
 
     .hero_title span{
       font-size: 32px;
       line-height: 1em;
+      text-transform: uppercase;
+      font-weight: bold;
 
     }
     .herotext_container{
-      width: 90vw;
+      width: auto;
+      
     }
 
     .hero_content{
-
-      justify-content: center;
-      align-items: center;
+      position: absolute;
+      bottom: 17%;
+      justify-content: flex-end;
+      align-items: flex-end;
       width: 100%;
-      transform: translateY(40%);
+      gap: 0;
+    
     }
  
     .hero_text {
       font-size: 16px;
       line-height: 16px;
+      text-align: right;
+      margin-right: 0;
     
     }
     
@@ -365,7 +383,6 @@
       width: 100%;
       align-self: flex-end;
     }
-  
-   
+
   }
   

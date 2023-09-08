@@ -160,11 +160,11 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
           
           <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" />
-          {!isSmallScreen && 
+        
           <div ref={heroContentRef} className="hero_content">
             <div style={{ overflow: 'hidden' }}>
               <h1 ref={heroTitleRefs} className="hero_title">
-                UNLOCK YOUR <br /> <span>VISUAL STORY</span>
+                unlock your <br /> <span> visual story</span>
               </h1>
             </div>
             <div style={{overflow: 'hidden'}} className="herotext_container">
@@ -177,7 +177,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
             <a onClick={handleClick} className="email">
               Start a project request
             </a>
-          </div>}
+          </div>
           <div ref={sliderRef} className="textslider_wrapper">
             <div ref={sliderRef} className="textslider_container">
               <h1 className="bg_text" ref={firstText} style={{ fontSize: `${fontSize}px` }}>
