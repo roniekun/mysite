@@ -61,7 +61,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const about= aboutRef.current;
 
     gsap.set(slider,{ rotate: isSmallScreen ? 270 : 0, y: isSmallScreen ? 0 : 300,
-                      x: isSmallScreen ? -300 : 0 })
+                      x: isSmallScreen ? -90 : 0 })
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
