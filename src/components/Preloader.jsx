@@ -47,7 +47,7 @@ const Preloader = () => {
   return (
     <div ref={containerRef} className='preloader_container'>
       <h1 className='preloader_logo' ref={logoRef}>
-        R<span>k</span>.
+        R<span>k</span>
       </h1>
     </div>
   );
