@@ -220,7 +220,7 @@
     height: auto;
     white-space: nowrap;
     overflow: hidden;
-    bottom: 7%;
+    bottom: 13%;
     /* background-color: #FAD320; */
     padding-block: 1em;
     background-color: rgba(121, 121, 121, .1);
@@ -297,8 +297,8 @@
   @media (max-width: 600px) {
 
     .about_shortcut_container{
-      bottom: 5%;
-      right: 10%;
+      bottom: 11%;
+      right: 7%;
     }
 
     .about_shortcut{
@@ -355,7 +355,7 @@
 
     .hero_content{
       position: absolute;
-      bottom: 17%;
+      bottom: 25%;
       justify-content: flex-end;
       align-items: flex-end;
       width: 100%;
@@ -388,12 +388,6 @@
     .one > p:nth-last-child(1) {
       width: 100%;
       align-self: flex-end;
-    }
-
-    .textslider_wrapper{
-
-      bottom: auto;
-      right: 30%;
     }
 
   }
