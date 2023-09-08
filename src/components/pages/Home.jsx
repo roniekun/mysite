@@ -11,6 +11,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const heroTextWords = heroTexts.split('-');
 
   const aboutRef = useRef(null);
+  const emailRef = useRef(null);
   const bgHeroRef = useRef(null);
   const heroContainerRef = useRef(null);
   const heroTextRefs = heroTextWords.map(() => useRef(null));
@@ -62,7 +63,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const container= heroContainerRef.current;
 
     gsap.set(slider,{ y: 300 })
-    gsap.set(about,{ y:  isSmallScreen ? container.getBoundingClientRect().height - 200  : 50  })
+    gsap.set(about,{ y:  -220  })
 
     tl.fromTo(bg, {scale: 1.1}, {scale: 1});
     tl.fromTo(about,{scale: 0, opacity: 1, duration: .3}, 
@@ -80,7 +81,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         duration: 1,
       }
     );
-   
 
     heroTextRefs.forEach((heroTextRef) => {
       tl.fromTo(
@@ -96,6 +96,13 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         '-=0.5'
       );
     });
+
+        tl.fromTo(emailRef.current, {
+          opacity: 0,
+          duration: .1,
+        },
+        {opacity: 1});
+   
 
     gsap.set(secondText.current, { left: secondText.current.getBoundingClientRect().width });
     requestAnimationFrame(animate1);
@@ -122,11 +129,11 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.set(thirdText.current, { xPercent: xPercent2 });
     gsap.set(forthText.current, { xPercent: xPercent2 });
     requestAnimationFrame(animate2);
-    xPercent2 -= 0.01;
+    xPercent2 -= 0.03;
   };
 
   const calculateFontSize = () => {
-    const newFontSize = isSmallScreen ? '17' : window.innerWidth / 40;
+    const newFontSize = isSmallScreen ? '17' : window.innerWidth / 32;
     setFontSize(newFontSize);
   };
 
@@ -151,14 +158,14 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     <div className="home_container">
       <div className="content">
         <div ref={heroContainerRef} className="hero_container">
-
-          <div className='about_shortcut_container' >
+        {!isSmallScreen &&
+          <div  ref={aboutRef}  className='about_shortcut_container' >
           <MagneticEffect>
           <div style={{position: 'relative'}} >
-          <NavLink  ref={aboutRef}  to={'/about'} className='about_shortcut'> <h3>About me</h3> </NavLink>
+          <NavLink  to={'/about'} className='about_shortcut'> <h3>About me</h3> </NavLink>
           </div>
           </MagneticEffect>
-          </div>
+          </div>}
           
           <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" />
         
@@ -175,7 +182,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
                 </div>
               ))}
             </div>
-            <a onClick={handleClick} className="email">
+            <a ref={emailRef} onClick={handleClick} className="email">
               Start a project request
             </a>
           </div>
@@ -190,10 +197,10 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
             </div>
             <div className="textslider_container">
               <h1 className="bg_text2" ref={thirdText} style={{ fontSize: `${fontSize}px` }}>
-              - Freelance Web Development & Photography - Freelance Web Development & Photography
+              - rk - Web Development & Photography - rk - Web Development & Photography - rk - Web Development & Photography
               </h1>
               <h1 className="bg_text2" ref={forthText} style={{ fontSize: `${fontSize}px` }}>
-              - Freelance Web Development & Photography - Freelance Web Development & Photography 
+              - rk - Web Development & Photography - rk - Web Development & Photography - rk - Web Development & Photography
               </h1>
             </div>
           </div>

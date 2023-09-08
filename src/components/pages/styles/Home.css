@@ -1,18 +1,19 @@
 .about_shortcut_container{
-  right: 15%;
+  right: 12%;
   position: absolute;
   z-index: 99;
+  display: none;
 
 }
 .about_shortcut{
   
   user-select: none;
-  height: 145px;
-  width: 145px;
-  background-color: red;
+  height: 120px;
+  width: 120px;
   cursor: pointer;
   border-radius: 50%;
   padding: 1em;
+  white-space: nowrap;
   font-weight: 400;
   text-align: center;
   color:lightgray;
@@ -23,10 +24,11 @@
   justify-self: flex-end;
   text-decoration: none;
   box-shadow: 0px 4px 15px -3px rgba(0,0,0,0.1);
-
+  background-color: gray;
+  filter: brightness(85%);
 }
   .about_shortcut:hover{
-
+  background-color: red;
   filter:brightness(97%) saturate(90%);
   }
 .bg_text {
@@ -51,6 +53,7 @@
     justify-content: center;
     display: flex;
     text-transform: capitalize;
+    font-family: 'Handjet';
     z-index: 1;
     color: lightgray;
     padding-right: 10px;
@@ -94,15 +97,6 @@
     background-color: white;
   }
   
-  .title {
-    padding: 2%;
-    width: 100%;
-    text-align: center;
-    align-self: center;
-    font: 24px;
-    font-weight: 400;
-  }
-  
   .hero_container {
     display: flex;
     background-color: var(--primary-color);
@@ -142,17 +136,22 @@
   .hero_title {
 
     position: relative;
+    font-family: 'Handjet', sans-serif;
+    text-transform: capitalize;
     z-index: 2;
     font-size: 50px;
     font-weight: 500;
     color: white;
     letter-spacing:-1px;
     opacity: 0;
-    line-height: 1em;
-    text-align: center;
+    line-height: 1.2em;
+    text-align: left;
 
   }
-  
+  .hero_title span{
+    font-size: 100px;
+  }
+
   .herotext_container{
 
     width: auto;
@@ -221,8 +220,7 @@
     overflow: hidden;
     /* background-color: #FAD320; */
     padding-block: 1em;
-    background-color: rgba(121, 121, 121, .1);
-    mix-blend-mode: difference;
+    background-color: rgba(255, 0, 0, 0.7);
 
   }
 /*   
@@ -317,6 +315,7 @@
     padding: .5em;
     margin-block: .5em;
     color: white;
+    font-family: 'Handjet';
     background-color: transparent;
     font-size: 20px;
     border: 1px solid rgba(128, 128, 128, .7);
@@ -333,13 +332,14 @@
     }
   
     .hero_title {
-      font-size: 22px;
+      font-size: 28px;
       text-align: right;
       text-transform: capitalize;
+      letter-spacing: 1px;
     }
 
     .hero_title span{
-      font-size: 32px;
+      font-size: 40px;
       line-height: 1em;
       text-transform: uppercase;
       font-weight: bold;
