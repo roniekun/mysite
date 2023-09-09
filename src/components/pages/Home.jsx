@@ -47,7 +47,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(typing, {
-      x:-200,
+      x: -10,
       scrollTrigger: {
         trigger: container,
         start: 'center center', // Adjust as needed
@@ -57,12 +57,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(p, {
-      y: isSmallScreen ? -20 : -100,
-    
+      opacity:1,
+      duration: 1,
       scrollTrigger: {
         trigger:  one,
-        start: 'top center', // Adjust as needed
-        end: 'center top', // Adjust as needed
+        start: 'top top', // Adjust as needed
+        end: 'top top', // Adjust as needed
         scrub: true,
       },
     });
@@ -233,13 +233,15 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         </div>
 
         <div ref={oneRef} className="one">
-          <div ref={pContainerRef} className='p_container'>
           <h2>Web Development</h2>
+          <div ref={pContainerRef} className='p_container'>
           <p >
-            Specialize in creating stunning website landing pages and portfolios that showcase your unique brand and
-            captivate your audience. With my expertise in web development and content creation, I help businesses and
-            individuals establish a strong online presence that leaves a lasting impression.
+            Specialize in creating stunning website landing pages and portfolios that showcase your 
+            <strong> unique brand </strong> and captivate your audience. 
           </p>
+
+          <p>With my expertise in web development and content creation, I help businesses and
+            individuals establish a strong online presence that leaves a lasting impression.</p>
           </div>
           
           <img ref={typingRef} className='gif_typing'src="images/typing.gif" alt="GIF" />

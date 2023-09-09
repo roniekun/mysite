@@ -91,12 +91,12 @@
   }
 
   .gif_typing{
-    height: 500px;
+    height: 400px;
     width: auto;
     aspect-ratio: 3/2;
     object-fit: cover;
-    position: absolute;
-    right: -10%;
+    position:relative;
+    transform: translate(200%, 20%)
 
   }
   
@@ -204,36 +204,46 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    place-content: center;
     padding: 1em;
-
   }
 
   .p_container{
-
     width: 60%;
+    opacity: 0;
     position: relative;
     z-index: 2;
-    mix-blend-mode: difference;
     display: flex;
-    transform: translateY(50%);
-    color: lightgray;
     flex-direction: column;
     padding: 1em;
-
+    padding-block: 2.5em;
   }
-  .p_container > h2 {
+  .one > h2 {
+    position: absolute;
+    font-family: 'Handjet';
     border: gray 1px solid;
-    padding: 1em;
+    padding: .5em;
     font-size: 32px;
     width: fit-content;
+    align-self: center;
     border-radius: 30px;
     font-weight: 400;
+    top:10%
   }
   .p_container > p {
-    font-size: 28px;
+    font-size: 18px;
     padding-block: 1em;
-    
     width: 100%;
+  }
+
+  .p_container > p:nth-child(1){
+    font-size: 36px;
+  }
+  .p_container > p:nth-child(2){
+    width: 50%;
+    align-self: flex-end;
+    text-align: right;
+    margin-inline: 5%;
   }
   
   .hero_img {
@@ -355,12 +365,11 @@
     border: 1px solid rgba(128, 128, 128, .7);
     }
   .gif_typing{
-    width: auto;
-    height: 400px;
-    padding: 1em;
+    position: absolute;
+    width: 95%;
+    height:400px;
     aspect-ratio: 1/1;
-    right: -50%;
-    top: 5%;
+    transform: translateY(0%)
   }
     .hero_container {
      height: 100vh;
@@ -416,27 +425,22 @@
     .one {
       display: flex;
       padding: 0;
-      flex-direction: column;
+      flex-direction: column-reverse;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding: .5em;
     }
   
     .p_container{
       width: 100%;
       padding: .5em;
-      
     }
-    .p_container > h2{
+    .one > h2{
       font-size: 24px;
+      top: 5%;
     }
     .p_container > p{
       font-size: 18px;
-    }
-
-    .one > p:nth-last-child(1) {
-      width: 100%;
-      align-self: flex-end;
     }
 
   }

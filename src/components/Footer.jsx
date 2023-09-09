@@ -10,7 +10,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
     <div className='footer_container'>
       <div  className='footer_cta_container'>
       <h2>Your website, your brand's canvas – Let's paint your online masterpiece today!</h2>
-      <h1>Say <span> Hey! </span></h1>
+      <h1>Email</h1>
       </div>
       <div className='footer_links_wrapper'>
  
@@ -23,6 +23,9 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
           <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a>
         </li>
         <li className='link' >
+          <a href=" https://www.typewolf.com/" target="_blank" rel="noopener noreferrer">Typewolf</a>
+        </li>
+        <li className='link' >
           <a href="https://fonts.google.com" target="_blank" rel="noopener noreferrer">Google Fonts</a>
         </li>
         <li className='link' >
@@ -31,9 +34,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
         <li className='link' >
           <a href="https://realtimecolors.com" target="_blank" rel="noopener noreferrer">Realtime Colors</a>
         </li>
-        <li className='link' >
-          <a href=" https://www.typewolf.com/" target="_blank" rel="noopener noreferrer">Typewolf</a>
-        </li>
+       
     </div>
 
       <div className='footer_nav_container'>
