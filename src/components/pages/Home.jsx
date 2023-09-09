@@ -37,22 +37,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const one =oneRef.current;
     const p =pContainerRef.current;
 
-    gsap.to(slider, {
-      scrollTrigger: {
-        trigger: container,
-        start: 'top top', // Adjust as needed
-        end: 'bottom top', // Adjust as needed
-        scrub: true,
-      },
-    });
-
     gsap.to(typing, {
       x: -10,
       scrollTrigger: {
-        trigger: container,
+        trigger: one,
         start: 'center center', // Adjust as needed
         end: 'bottom top', // Adjust as needed
-        scrub: true,
       },
     });
 
@@ -61,9 +51,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       duration: 1,
       scrollTrigger: {
         trigger:  one,
-        start: 'top top', // Adjust as needed
+        start: 'center center', // Adjust as needed
         end: 'top top', // Adjust as needed
-        scrub: true,
       },
     });
 
@@ -247,7 +236,25 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           <img ref={typingRef} className='gif_typing'src="images/typing.gif" alt="GIF" />
         </div>
 
-        <div className="two"></div>
+        <div className="two">
+          <h2>Services</h2>
+          <div className='slides_services'>
+            <div className='p_container2'>
+            <h3>Website Landing Pages</h3>
+           <p>Crafts visually appealing and user-friendly landing pages that effectively communicate your message and drive conversions. 
+            Whether you're launching a new product, promoting a service, or running a campaign, our landing pages will capture your audience's attention and generate measurable results.</p>
+            </div>
+          <div className='p_container2'>  
+          <h3>Portfolio Creation</h3>
+          <p>Stand out from the competition with a professionally designed portfolio that showcases your skills, 
+            projects, and accomplishments. Tailor each portfolio to reflect your personal brand or company image,
+            ensuring it leaves a memorable impact on potential clients and employers.</p>
+          </div>
+          </div>
+         
+
+        </div>
+         <div className='three'></div>
       </div>
 
       <Footer isSmallScreen={isSmallScreen} setShowNavbar={setShowNavbar} />

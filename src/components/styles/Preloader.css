@@ -15,7 +15,7 @@
     opacity: 0;
     color:whitesmoke;
     align-self: center;
-    font-size: 75px;
+    font-size: 175px;
     padding: 1em;
     font-family: sans-serif;
     
@@ -24,7 +24,15 @@
 .preloader_logo span{
     font-style: italic;
 }
-
+.cover{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    bottom: 0;
+    z-index: 1;
+    transform: translateY(100%);
+}
 @media (max-width: 600px){
 
     .preloader_logo{

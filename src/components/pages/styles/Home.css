@@ -218,6 +218,22 @@
     padding: 1em;
     padding-block: 2.5em;
   }
+  .p_container2{
+    width: 100%;
+    padding: 1em;
+  }
+  .p_container2 > h3{
+    font-size: 32px;
+    font-family: 'Handjet';
+    font-weight: 400;
+    padding-block: 1em;
+
+
+  }
+  .p_container2 > p{
+    font-size: 28px;
+  
+  }
   .one > h2 {
     position: absolute;
     font-family: 'Handjet';
@@ -244,6 +260,15 @@
     align-self: flex-end;
     text-align: right;
     margin-inline: 5%;
+  }
+  .slides_services{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 80%;
+    width: 100%;
+    padding: 1em;
+    position: relative;
   }
   
   .hero_img {
@@ -298,20 +323,31 @@
   
   .two {
     display: flex;
-    height: auto;
-    min-height: 800px;
+    height: 800px;
     padding: 5%;
-    width: 95%;
-    background-color: whitesmoke;
+    width: 100%;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: flex-end;
+    position: sticky;
+    background-color:cream;
+    top:0;
   }
   
-  .two > p {
+  .two > h2 {
+    position: absolute;
+    font-family: 'Handjet';
+    border: gray 1px solid;
+    padding: .5em;
+    font-size: 32px;
+    top:10%;
+    z-index: 1;
+    color: black;
+    width: fit-content;
+    align-self: center;
+    border-radius: 30px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
-    align-self: flex-start;
   }
   
   .three {
@@ -319,8 +355,8 @@
     justify-content: space-evenly;
     align-items: center;
     height: 800px;
-    width: 95%;
-    background-color: whitesmoke;
+    width: 100%;
+    background-color: black;
     display: flex;
     flex-direction: column;
   }
@@ -370,7 +406,7 @@
     height:400px;
     bottom: 5%;
     aspect-ratio: 1/1;
-    transform: translateY(0%)
+    transform: translateY(20%)
   }
     .hero_container {
      height: 100vh;

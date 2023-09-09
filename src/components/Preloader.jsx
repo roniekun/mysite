@@ -1,14 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import './styles/Preloader.css';
 import { gsap } from 'gsap';
+import { delay } from 'framer-motion';
 
 const Preloader = () => {
-  const containerRef = useRef();
-  const logoRef = useRef();
+  const containerRef = useRef(null);
+  const coverRef = useRef(null);
+  const logoRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
     const logo = logoRef.current;
+    const cover = coverRef.current;
     document.body.style.overflow = 'hidden';
 
     const initialPosition = container.getBoundingClientRect();
@@ -29,9 +32,10 @@ const Preloader = () => {
       { opacity: 1, y: 0 }
     );
 
+    tl.to(cover,{y:0, delay: 1, ease: 'linear'});
+
     tl.to(container, {
       y: -initialPosition.height,
-      delay: 1,
       duration: 1,
     });
 
@@ -46,6 +50,7 @@ const Preloader = () => {
 
   return (
     <div ref={containerRef} className='preloader_container'>
+      <div ref={coverRef} className='cover'></div>
       <h1 className='preloader_logo' ref={logoRef}>
         R<span>k</span>
       </h1>

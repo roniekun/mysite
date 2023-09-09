@@ -58,16 +58,15 @@
 
   color: whitesmoke;
 }
+.active_link{
+  color: var(--gold);
+}
 
 @media (max-width: 1024px) {
 
   .links_container::before {
     display: none;
   }
-
-  .active_link{
-  
-  color: var(--red)}
 }
 
 @media (max-width: 600px) {
