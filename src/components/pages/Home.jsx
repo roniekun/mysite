@@ -20,8 +20,11 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const heroContentRef = useRef(null);
   const heroTitleRefs = useRef(null);
   const firstText = useRef(null);
+  const oneRef = useRef(null);
+  const pContainerRef = useRef(null);
   const secondText = useRef(null);
   const thirdText = useRef(null);
+  const typingRef = useRef(null);
   const forthText = useRef(null);
 
   useEffect(() => {
@@ -30,11 +33,35 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const container = heroContainerRef.current;
     const slider = sliderRef.current;
     const bg = bgHeroRef.current;
+    const typing =typingRef.current;
+    const one =oneRef.current;
+    const p =pContainerRef.current;
 
     gsap.to(slider, {
       scrollTrigger: {
         trigger: container,
         start: 'top top', // Adjust as needed
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
+      },
+    });
+
+    gsap.to(typing, {
+      x: isSmallScreen ? 100 : -200,
+      scrollTrigger: {
+        trigger: container,
+        start: 'center center', // Adjust as needed
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
+      },
+    });
+
+    gsap.to(p, {
+      y: isSmallScreen ? 0 : -100,
+      x: isSmallScreen ? 90 : 0,
+      scrollTrigger: {
+        trigger: container ,
+        start: 'bottom center', // Adjust as needed
         end: 'bottom top', // Adjust as needed
         scrub: true,
       },
@@ -205,12 +232,16 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
         </div>
 
-        <div className="one">
-          <p>
+        <div ref={oneRef} className="one">
+          <div ref={pContainerRef} className='p_container'>
+          <p >
             Specialize in creating stunning website landing pages and portfolios that showcase your unique brand and
-            captivate your audience. With my expertise in web design and content creation, I help businesses and
+            captivate your audience. With my expertise in web development and content creation, I help businesses and
             individuals establish a strong online presence that leaves a lasting impression.
           </p>
+          </div>
+          
+          <img ref={typingRef} className='gif_typing'src="images/typing.gif" alt="GIF" />
         </div>
 
         <div className="two"></div>

@@ -89,6 +89,16 @@
     transition:  .5s;
     scale: .99;
   }
+
+  .gif_typing{
+    height: 500px;
+    width: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    position: absolute;
+    right: -10%;
+
+  }
   
   .home_container {
 
@@ -188,29 +198,36 @@
   }
   .one {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 800px;
     width: 100%;
     padding: 1em;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
     
   }
 
-  .one > p {
-    align-self: flex-start;
-    font-size: 24px;
+  .p_container{
+
+    width: 60%;
+    position: relative;
+    z-index: 2;
+    mix-blend-mode: difference;
+    display: flex;
+    transform: translateY(50%);
+
+  }
+  .p_container > p {
+    font-size: 28px;
     line-height: 1.5em;
     padding: 1.5em;
+    font-weight: 500;
+    color: lightgray;
+    width: 100%;
     margin-inline-start: 1em;
-    width: auto;
-  }
-  
-  .one > p:nth-last-child(1) {
-    width: 50%;
-    align-self: flex-end;
+
+
   }
   
   .hero_img {
@@ -331,7 +348,13 @@
     font-size: 20px;
     border: 1px solid rgba(128, 128, 128, .7);
     }
-
+  .gif_typing{
+    width: auto;
+    height: 400px;
+    padding: 1em;
+    aspect-ratio: 1/1;
+    right: -50%;
+  }
     .hero_container {
      height: 100vh;
      align-items: center;
@@ -384,15 +407,22 @@
       width: 95%;
     }
     .one {
+      display: flex;
       padding: 0;
       padding-top: 10%;
+      flex-direction: column;
+
     }
   
-    .one > p {
-      padding: 5%;
-      text-align: left;
+    .p_container{
+      width: 100%;
+      bottom: 0;
+      transform: translateY(50%);
     }
-  
+    .p_container > p{
+      font-size: 16px;
+    }
+
     .one > p:nth-last-child(1) {
       width: 100%;
       align-self: flex-end;
