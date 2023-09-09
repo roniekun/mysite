@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/Footer.css';
 import NavbarLinks from './pages/Navlinks';
-import Socials from './pages/assets/icons/Socials';
+import Socials from '../assets/icons/Socials';
 // import SiteLogo from './SiteLogo';
 
 const Footer = ({setShowNavbar, isSmallScreen}) => {

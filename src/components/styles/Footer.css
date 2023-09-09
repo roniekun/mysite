@@ -22,10 +22,12 @@
 }
 .footer_cta_container > h2{
 
-  color: whitesmoke;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
+  filter: brightness(90%);
+  color: var(--gold);
+
 }
 
 

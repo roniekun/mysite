@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
 import Header from './components/Header';
 import Home from './components/pages/Home';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
-import Menu from './components/pages/assets/buttons/Menu';
+import Menu from './assets/buttons/Menu';
 import Navbar from './components/Navbar';
 import NotFound from './components/pages/NotFound';
 import PageModal from './assets/Page-modal';

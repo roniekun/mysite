@@ -115,6 +115,7 @@
   }
  
   .active_link{
-    color: red;
+    color: var(--gold);
+    filter: brightness(80%);
 }
 }

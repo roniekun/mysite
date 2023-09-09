@@ -1,6 +1,6 @@
 import './styles/Navbar.css';
+import Socials from '../assets/icons/Socials';
 import { ThemeContext } from '../context/ThemeContext';
-import SocialLinks from './pages/assets/icons/Socials';
 import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
 import SiteLogo from './SiteLogo';
@@ -87,7 +87,7 @@ const Navbar = ({ showNavbar,
                                               fontWeight: '700',
                                              }}>Socials</h3>
             <div style={{marginBlock: '10px'}}>
-            <SocialLinks 
+            <Socials
              navSocialLink={{
               display: 'flex',
               justifyContent: 'center', 

@@ -3,7 +3,7 @@ import { ThemeContext } from '../context/ThemeContext';
 import './styles/Header.css';
 import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
-import Menu from './pages/assets/buttons/Menu';
+import Menu from '../assets/buttons/Menu';
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   

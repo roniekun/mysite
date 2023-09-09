@@ -1,6 +1,6 @@
 import React from 'react';
 import './Menu.css';
-import { ThemeContext } from '../../../../context/ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { Cross as Hamburger } from 'hamburger-react'; //https://hamburger-react.netlify.app/
 
 
