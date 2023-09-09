@@ -47,7 +47,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(typing, {
-      x: isSmallScreen ? 100 : -200,
+      x:-200,
       scrollTrigger: {
         trigger: container,
         start: 'center center', // Adjust as needed
@@ -57,11 +57,11 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(p, {
-      y: isSmallScreen ? 0 : -100,
-      x: isSmallScreen ? 90 : 0,
+      y: -100,
+    
       scrollTrigger: {
-        trigger: container ,
-        start: 'bottom center', // Adjust as needed
+        trigger:  one,
+        start: 'top center', // Adjust as needed
         end: 'bottom top', // Adjust as needed
         scrub: true,
       },
