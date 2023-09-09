@@ -91,9 +91,9 @@
   }
 
   .gif_typing{
-    height: 400px;
+    height: 500px;
     width: auto;
-    aspect-ratio: 3/2;
+    aspect-ratio: 3/3;
     object-fit: cover;
     position:relative;
     transform: translate(200%, 20%)
@@ -434,8 +434,8 @@
     .p_container{
       width: 100%;
       padding: .5em;
-      height: auto;
-      gap: 50px;
+      height: 80%;
+      justify-content: space-around;
     }
     .one > h2{
       font-size: 24px;
