@@ -57,7 +57,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(p, {
-      y: isSmallScreen ? -10 : -100,
+      y: isSmallScreen ? -15 : -100,
     
       scrollTrigger: {
         trigger:  one,
