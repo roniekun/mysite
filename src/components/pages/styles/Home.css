@@ -200,12 +200,11 @@
     display: flex;
     height: 800px;
     width: 100%;
-    padding: 1em;
+    padding: 2em;
     justify-items: center;
     align-items: center;
     position: relative;
     overflow: hidden;
-    
   }
 
   .p_container{
@@ -216,14 +215,22 @@
     mix-blend-mode: difference;
     display: flex;
     transform: translateY(50%);
+    color: lightgray;
+    flex-direction: column;
 
+  }
+  .p_container > h2 {
+    border: gray 1px solid;
+    padding: 1em;
+    width: fit-content;
+    border-radius: 30px;
+    font-weight: 400;
   }
   .p_container > p {
     font-size: 28px;
-    line-height: 1.5em;
-    padding: 1.5em;
+    padding-block: 1.5em;
     font-weight: 500;
-    color: lightgray;
+    
     width: 100%;
   }
   
@@ -351,7 +358,7 @@
     padding: 1em;
     aspect-ratio: 1/1;
     right: -50%;
-    top: 0;
+    top: 5%;
   }
     .hero_container {
      height: 100vh;
@@ -407,18 +414,21 @@
     .one {
       display: flex;
       padding: 0;
-      padding-top: 10%;
       flex-direction: column;
       display: flex;
       justify-content: flex-end;
+      padding: 1em;
     }
   
     .p_container{
       width: 100%;
       
     }
+    .p_container > h2{
+      font-size: 18px;
+    }
     .p_container > p{
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .one > p:nth-last-child(1) {

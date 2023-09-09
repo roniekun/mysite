@@ -57,12 +57,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(p, {
-      y: -100,
+      y: isSmallScreen ? -20 : -100,
     
       scrollTrigger: {
         trigger:  one,
         start: 'top center', // Adjust as needed
-        end: 'bottom top', // Adjust as needed
+        end: 'center top', // Adjust as needed
         scrub: true,
       },
     });
@@ -234,6 +234,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
 
         <div ref={oneRef} className="one">
           <div ref={pContainerRef} className='p_container'>
+          <h2>Web Development</h2>
           <p >
             Specialize in creating stunning website landing pages and portfolios that showcase your unique brand and
             captivate your audience. With my expertise in web development and content creation, I help businesses and
