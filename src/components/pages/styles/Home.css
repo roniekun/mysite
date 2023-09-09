@@ -368,6 +368,7 @@
     position: absolute;
     width: 95%;
     height:400px;
+    bottom: 5%;
     aspect-ratio: 1/1;
     transform: translateY(0%)
   }
@@ -425,15 +426,16 @@
     .one {
       display: flex;
       padding: 0;
-      flex-direction: column-reverse;
       display: flex;
-      justify-content: space-between;
       padding: .5em;
+      align-items: center;
     }
   
     .p_container{
       width: 100%;
       padding: .5em;
+      height: auto;
+      gap: 50px;
     }
     .one > h2{
       font-size: 24px;
@@ -442,6 +444,14 @@
     .p_container > p{
       font-size: 18px;
     }
+    .p_container > p:nth-child(1){
+      font-size: 28px;
 
-  }
-  
+    }
+    .p_container > p:nth-child(2){
+      width: 70%;
+      background-color: rgba(255, 255, 255, .1);
+      padding-inline: .5em;
+      transform: translateX(5%);
+}
+}
