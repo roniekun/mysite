@@ -17,12 +17,12 @@
 }
 
 .navlogo_wrapper{
-  border: 1px gray solid;
+  background-color: black;
   align-self: center;
   width: 60px;
   height: 60px;
   display: flex;
-  border-radius: 50% ;
+  border-radius: 7px ;
   justify-content: center;
   align-items: center;
 }
@@ -85,7 +85,7 @@
 
     .navbar_wrapper{
 
-    justify-content: flex-end;
+    justify-content: center;
   }
 
 

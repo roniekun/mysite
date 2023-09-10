@@ -30,11 +30,11 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
                headerLogo={{fontSize: '12px'}} />
             </div> 
               {isSmallScreen &&
-              <div className='menu_wrapper'>
+              <div style={{backgroundColor: showNavbar ? 'black': 'transparent'}} className='menu_wrapper'>
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
               displayIcon={true}
-              MenuContainer={{backgroundColor: 'transparent'}}/>
+              MenuContainer={{backgroundColor: showNavbar? 'black' : 'transparent'}}/>
               </div>}
               {!isSmallScreen &&
                <div className='navlinks_wrapper'>
