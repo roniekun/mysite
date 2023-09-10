@@ -59,7 +59,7 @@
   color: whitesmoke;
 }
 .active_link{
-  color: var(--gold);
+  filter: brightness(200%);
 }
 
 @media (max-width: 1024px) {
@@ -112,9 +112,5 @@
     color:lightgray;
     text-align: left;
   }
- 
-  .active_link{
-    color: var(--gold);
-    filter: brightness(80%);
-}
+
 }

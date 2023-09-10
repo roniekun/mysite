@@ -69,17 +69,19 @@
   .email{
 
     cursor: pointer;
-    font-size: 22px;
+    font-size: 12px;
     height: auto;
     width: auto;
-    font-weight: 500;
+    font-weight: bold;
     color: black;
     user-select: none;
     background-color: lightgray;
     padding: 1em;
-    border-radius: 3px;
-    padding-inline: 1.5em;
+    border-radius: 30px;
+    padding-inline: 3em;
     border: 1px solid rgba(128, 128, 128, .3);
+    text-transform: uppercase;
+
   }
 
   .email:hover{
@@ -91,12 +93,14 @@
   }
 
   .gif_typing{
-    height: 500px;
+    height: 450px;
     width: auto;
-    aspect-ratio: 3/3;
-    object-fit: cover;
-    position:relative;
-    transform: translate(200%, 20%)
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    grid-area: three;
+    transform: translateX(50%);
+    opacity: 0;
+    align-self: center;
 
   }
   
@@ -197,19 +201,22 @@
 
   }
   .one {
-    display: flex;
+    display: grid;
+    grid-template-areas: 'one one'
+                         'two three'
+                         'four three'
+                         'four three';
     height: 800px;
+    grid-template-columns: repeat(2, 1fr) ;
     width: 100%;
     justify-items: center;
-    align-items: center;
     position: relative;
     overflow: hidden;
-    place-content: center;
     padding: 1em;
   }
 
   .p_container{
-    width: 60%;
+    width: 100%;
     opacity: 0;
     position: relative;
     z-index: 2;
@@ -217,10 +224,14 @@
     flex-direction: column;
     padding: 1em;
     padding-block: 2.5em;
+    grid-area: two;
   }
   .p_container2{
     width: 100%;
     padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   .p_container2 > h3{
     font-size: 32px;
@@ -232,10 +243,20 @@
   }
   .p_container2 > p{
     font-size: 28px;
+    grid-area: two;
+
+
   
   }
-  .one > h2 {
-    position: absolute;
+  .one_title_wrapper{
+
+    display: flex;
+    width: fit-content;
+    align-self: center;
+    grid-area: one;
+  }
+  .one_title_wrapper > h2 {
+    position: relative;
     font-family: 'Handjet';
     border: gray 1px solid;
     padding: .5em;
@@ -244,27 +265,27 @@
     align-self: center;
     border-radius: 30px;
     font-weight: 400;
-    top:10%
   }
   .p_container > p {
-    font-size: 18px;
+    font-size: 24px;
     padding-block: 1em;
     width: 100%;
-  }
+    text-transform: uppercase;
 
-  .p_container > p:nth-child(1){
-    font-size: 36px;
   }
-  .p_container > p:nth-child(2){
+  .one > p{
     width: 50%;
-    align-self: flex-end;
     text-align: right;
+    width: auto;
+    text-transform: uppercase;
+    font-size: 16px;
     margin-inline: 5%;
+    grid-area: four;
   }
   .slides_services{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
     height: 80%;
     width: 100%;
     padding: 1em;
@@ -321,15 +342,18 @@
     white-space: nowrap;
   }
   
+  /* SECOND SECTION */
+  
   .two {
     display: flex;
-    height: 800px;
+    height: 1600px;
+    background-color: lightslategray;
     padding: 5%;
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     position: sticky;
     background-color:cream;
     top:0;
@@ -397,16 +421,14 @@
     color: white;
     font-family: 'Handjet';
     background-color: transparent;
-    font-size: 20px;
     border: 1px solid rgba(128, 128, 128, .7);
     }
   .gif_typing{
-    position: absolute;
+    position: relative;
     width: 95%;
-    height:400px;
+    height:200px;
     bottom: 5%;
     aspect-ratio: 1/1;
-    transform: translateY(20%)
   }
     .hero_container {
      height: 100vh;
@@ -463,31 +485,28 @@
       display: flex;
       padding: 0;
       display: flex;
-      padding: .5em;
-      align-items: center;
+      width: 95%;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      padding-block: 1.5em;
+      flex-direction: column;
     }
   
     .p_container{
       width: 100%;
       padding: .5em;
-      height: 80%;
-      justify-content: space-around;
+      height: auto;
+      align-items: center;
     }
-    .one > h2{
+    .one_title_wrapper > h2{
       font-size: 24px;
       top: 5%;
-    }
-    .p_container > p{
-      font-size: 18px;
-    }
-    .p_container > p:nth-child(1){
-      font-size: 28px;
 
     }
-    .p_container > p:nth-child(2){
-      width: 70%;
-      background-color: rgba(255, 255, 255, .1);
-      padding-inline: .5em;
-      transform: translateX(5%);
-}
+    .p_container > p{
+      font-size: 28px;
+      padding: .5em;
+    }
+
+
 }

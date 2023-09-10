@@ -10,7 +10,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
     <div className='footer_container'>
       <div  className='footer_cta_container'>
       <h2>Your website, your brand's canvas – Let's paint your online masterpiece today!</h2>
-      <h1>Email</h1>
+      <a href="">roniebenitez01@gmail.com</a>
       </div>
       <div className='footer_links_wrapper'>
  

@@ -28,11 +28,11 @@ const Preloader = () => {
 
     tl.fromTo(
       logo,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0 }
+      { opacity: 0, scale: 1.5 },
+      { opacity: 1, scale: 1 }
     );
 
-    tl.to(cover,{y:0, delay: 1, ease: 'linear'});
+    tl.to(cover,{x:0, delay: 1, ease: 'linear'});
 
     tl.to(container, {
       y: -initialPosition.height,
