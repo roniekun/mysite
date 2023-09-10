@@ -38,12 +38,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const p =pContainerRef.current;
     
     gsap.to(typing, {
-      x: '1%', opacity:1,
+      x: '5%', opacity:1,
+
       scrollTrigger: {
         trigger: one,
         start: 'top center', // Adjust as needed
         end: 'bottom top', // Adjust as needed
-        markers: true,
       },
     });
 
@@ -92,8 +92,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         },
         {
           opacity: 1,
-          duration: 1,
-        }, '-=.2'
+        }
       );
   
     tl.to(slider, { opacity: 1 });
@@ -108,17 +107,13 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         {
           y: 0,
           opacity: 1,
-          duration: 0.7,
-        },
-        '-=0.5'
-      );
+        })
     });
 
         tl.fromTo(emailRef.current, {
           opacity: 0,
-          duration: .1,
         },
-        {opacity: 1});
+        {opacity: 1},'-=.7');
    
 
     gsap.set(secondText.current, { left: secondText.current.getBoundingClientRect().width });
@@ -235,11 +230,9 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           <img ref={typingRef} className='gif_typing'src="images/typing.gif" alt="GIF" />
           <p>With my expertise in web development and content creation, I help businesses and
             individuals establish a strong online presence that leaves a lasting impression.</p>
-          
-       
         </div>
 
-        <div className="two">
+        {/* <div className="two">
           <h2>Services</h2>
           <div className='slides_services'>
             <div className='p_container2'>
@@ -254,9 +247,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
             ensuring it leaves a memorable impact on potential clients and employers.</p>
           </div>
           </div>
-         
-
-        </div>
+        </div> */}
          <div className='three'></div>
       </div>
 

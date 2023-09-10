@@ -4,6 +4,7 @@ import './styles/Header.css';
 import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
 import Menu from '../assets/buttons/Menu';
+import NavbarLinks from './pages/Navlinks';
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   
@@ -26,7 +27,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
-               headerLogo={{color: isSmallScreen ? 'whitesmoke' : 'gray', fontSize: '16px'}} />
+               headerLogo={{fontSize: '12px'}} />
             </div> 
               {isSmallScreen &&
               <div className='menu_wrapper'>
@@ -34,8 +35,14 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
               setShowNavbar={setShowNavbar}
               displayIcon={true}
               MenuContainer={{backgroundColor: 'transparent'}}/>
-              </div>
-              }
+              </div>}
+              {!isSmallScreen &&
+               <div className='navlinks_wrapper'>
+               <NavbarLinks 
+               setShowNavbar={setShowNavbar}
+               headerNavbarLink= {{textTransform: 'uppercase',
+               fontSize: '12px' }}/>
+             </div>}
           </div>
         )
       }

@@ -4,6 +4,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import './styles/Navlinks.css';
 
 const NavbarLinks = ({
+  headerNavbarLink,
   showNavbar,
   isSmallScreen,
   setShowNavbar,
@@ -65,7 +66,8 @@ const NavbarLinks = ({
           className="link_wrapper" key={link.to}>
           <NavLink
             style={{...NavbarLinksLink,
-                    ...footerNavbarLink}}
+                    ...footerNavbarLink,
+                   ...headerNavbarLink}}
             ref={navbarlinkRefs[index]}
             onClick={() => handleLinkClick()}
             className={`navbar_link ${
