@@ -95,12 +95,11 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(techH1Ref.current, {
-      scale: 1000,
-      duration: 1,
+      scale: 2000,
       scrollTrigger: {
         pin: techRef.current,
         trigger:  techRef.current,
-        start: 'center center', // Adjust as needed
+        start: 'top center', // Adjust as needed
         end: 'bottom top', // Adjust as needed
         scrub: true,
       },
@@ -307,9 +306,10 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
         </div> */}
          <div className='three'></div>
-         
+         <div className='spacer'>
          <div ref={techRef} className='tech'>
             <h1 ref={techH1Ref}>What i use in my projects</h1></div>
+         </div>
 
          <div className='four'>
 
