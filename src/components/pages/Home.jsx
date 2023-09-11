@@ -95,7 +95,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(techH1Ref.current, {
-      scale: 1000, duration: 3,
       scrollTrigger: {
         pin: techRef.current,
         pinSpacing: false,

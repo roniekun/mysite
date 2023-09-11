@@ -394,15 +394,12 @@
   }
   .tech{
     min-height: 100vh;
-    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: gray;
-    padding: 5%;
+    background-color: whitesmoke;
   }
 
   .tech h1{
@@ -421,6 +418,7 @@
     align-items: center;
     background-color: black;
     padding: 5%;
+    z-index: 1;
   }
   
   .four div{

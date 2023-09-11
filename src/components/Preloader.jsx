@@ -32,7 +32,7 @@ const Preloader = () => {
       { opacity: 1, scale: 1 }
     );
 
-    tl.to(cover,{x:0, delay: 1, ease: 'linear'});
+    tl.to(cover,{y:0, delay: 1, ease: 'linear'});
 
     tl.to(container, {
       y: -initialPosition.height,
