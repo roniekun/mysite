@@ -36,6 +36,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const oneRef = useRef(null);
   const pContainerRef = useRef(null);
   const secondText = useRef(null);
+  const spacerRef = useRef(null);
   const thirdText = useRef(null);
   const typingRef = useRef(null);
   const forthText = useRef(null);
@@ -97,27 +98,20 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
 
 
     pinword.to(techH1Ref.current, {
+      scale: 1.5, duration: 1,
+      delay: .3,
       scrollTrigger: {
         pin: techRef.current,
         pinSpacing: false,
-        trigger:  techRef.current,
+        trigger:  spacerRef.current,
         start: 'top top',
         end: 'bottom top', // Adjust as needed
         scrub: true,
-        markers: true,
       },
     });
 
     pinword.to(techH1Ref.current, {
-      x: -100,
-      scrollTrigger: {
-        pin: techRef.current,
-        pinSpacing: false,
-        trigger:  techRef.current,
-        start: 'top top',
-        end: 'bottom top', // Adjust as needed
-        scrub: true,
-      },
+      x: "500%",
     });
 
     const elements = [
@@ -321,7 +315,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
         </div> */}
          <div className='three'></div>
-         <div className='spacer'>
+         <div ref={spacerRef} className='spacer'>
          <div ref={techRef} className='tech'>
             <h1 ref={techH1Ref}>What i use in my projects</h1></div>
          </div>
