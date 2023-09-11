@@ -97,9 +97,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
 
-    pinword.to(techH1Ref.current, {
+    gsap.to(techH1Ref.current, {
       scale: 1.5, duration: 1,
-      delay: .3,
       scrollTrigger: {
         pin: techRef.current,
         pinSpacing: false,
@@ -110,9 +109,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       },
     });
 
-    pinword.to(techH1Ref.current, {
-      x: "500%",
-    });
 
     const elements = [
       aRef.current,
