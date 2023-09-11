@@ -10,6 +10,19 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const heroTexts = ' Transforming Visions into Digital Masterpiece-';
   const heroTextWords = heroTexts.split('-');
 
+  const techRef = useRef(null);
+  const techH1Ref = useRef(null);
+
+  const aRef = useRef(null);
+  const bRef = useRef(null);
+  const cRef = useRef(null);
+  const dRef = useRef(null);
+  const eRef = useRef(null);
+  const fRef = useRef(null);
+  const gRef = useRef(null);
+  const hRef = useRef(null);
+  const iRef = useRef(null);
+
   const aboutRef = useRef(null);
   const emailRef = useRef(null);
   const bgHeroRef = useRef(null);
@@ -26,6 +39,19 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const thirdText = useRef(null);
   const typingRef = useRef(null);
   const forthText = useRef(null);
+
+  const createScrollTriggerAnimation = (element) => {
+    gsap.fromTo(element, {
+      opacity: 0,
+    },
+    {opacity:1, x: 0,duration: 1,  
+      scrollTrigger: {
+      trigger: element,
+      start: 'top center', // Adjust the trigger start point as needed
+      end: 'center center',
+      ease: 'linear', // Adjust the trigger end point as needed
+    }, });
+  };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -67,6 +93,38 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         scrub: true,
       },
     });
+
+    gsap.to(techH1Ref.current, {
+      scale: 100,
+      duration: 1,
+      scrollTrigger: {
+        pin: techRef.current,
+        trigger:  techRef.current,
+        start: 'center center', // Adjust as needed
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
+      },
+    });
+
+    const elements = [
+      aRef.current,
+      bRef.current,
+      cRef.current,
+      dRef.current,
+      eRef.current,
+      fRef.current,
+      gRef.current,
+      hRef.current,
+      iRef.current,
+    ];
+  
+    elements.forEach((element) => {
+      if (element) {
+        createScrollTriggerAnimation(element);
+      }
+    });
+
+    
   }, []);
 
   let xPercent = 0;
@@ -249,6 +307,24 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
         </div> */}
          <div className='three'></div>
+         
+         <div className='tech_container'>
+         <div ref={techRef} className='tech'>
+            <h1 ref={techH1Ref}>What i use in my projects</h1></div>
+          </div>
+         <div className='four'>
+
+         <div ref={aRef}><h1>Visual Studio</h1></div>
+         <div ref={bRef}><h1>Npm</h1></div>
+         <div ref={cRef}><h1>Git</h1></div>
+          <div ref={dRef}><h1>css</h1></div>
+          <div ref={eRef}><h1>html</h1></div>
+          <div ref={fRef}><h1>react</h1></div>
+          <div ref={gRef}><h1>tailwind</h1></div>
+          <div ref={hRef}><h1>gsap</h1></div>
+          <div ref={iRef}><h1>framer motion</h1></div>
+
+         </div>
       </div>
 
       <Footer isSmallScreen={isSmallScreen} setShowNavbar={setShowNavbar} />
