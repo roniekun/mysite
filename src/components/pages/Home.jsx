@@ -58,6 +58,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
 
     const container = heroContainerRef.current;
     const slider = sliderRef.current;
+    const pinword = gsap.timeline();
     const bg = bgHeroRef.current;
     const typing =typingRef.current;
     const one =oneRef.current;
@@ -94,7 +95,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       },
     });
 
-    gsap.to(techH1Ref.current, {
+
+    pinword.to(techH1Ref.current, {
       scrollTrigger: {
         pin: techRef.current,
         pinSpacing: false,
@@ -103,6 +105,18 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         end: 'bottom top', // Adjust as needed
         scrub: true,
         markers: true,
+      },
+    });
+
+    pinword.to(techH1Ref.current, {
+      x: -100,
+      scrollTrigger: {
+        pin: techRef.current,
+        pinSpacing: false,
+        trigger:  techRef.current,
+        start: 'top top',
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
       },
     });
 
