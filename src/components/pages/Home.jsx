@@ -44,10 +44,10 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.fromTo(element, {
       opacity: 0,
     },
-    {opacity:1, x: 0,duration: 1,  
+    {opacity:1, x: 0,duration: 1,
       scrollTrigger: {
       trigger: element,
-      start: 'top center', // Adjust the trigger start point as needed
+      start: '-100% center', // Adjust the trigger start point as needed
       end: 'center center',
       ease: 'linear', // Adjust the trigger end point as needed
     }, });
@@ -95,13 +95,15 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(techH1Ref.current, {
-      scale: 2000,
+      scale: 2000,delay: 1,
       scrollTrigger: {
         pin: techRef.current,
+        pinSpacing: false,
         trigger:  techRef.current,
-        start: 'top center', // Adjust as needed
+        start: 'top top',
         end: 'bottom top', // Adjust as needed
         scrub: true,
+        markers: true,
       },
     });
 
