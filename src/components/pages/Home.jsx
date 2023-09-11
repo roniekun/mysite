@@ -64,11 +64,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
 
     const container = heroContainerRef.current;
     const slider = sliderRef.current;
-    const pinword = gsap.timeline();
     const bg = bgHeroRef.current;
     const typing =typingRef.current;
     const one =oneRef.current;
     const p =pContainerRef.current;
+
+   
     
     gsap.to(typing, {
       x: '5%', opacity:1,
@@ -101,24 +102,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       },
     });
 
-    const pintl = gsap.timeline();
-    
-    const pin = { scrollTrigger: {
-        pin: techRef.current,
-        trigger:  spacerRef.current,
-        start: 'top top',
-        end: 'bottom top', // Adjust as needed
-        scrub: true,
-        
-      },};
-      
-      gsap.to(techaH1Ref.current, {
-        x: '-100%', scrollTrigger: pin.scrollTrigger,
-      });
-      gsap.to(techbH1Ref.current, {
-        x: '-200%', scrollTrigger: pin.scrollTrigger, 
-      });
-
     const elements = [
       aRef.current,
       bRef.current,
@@ -137,7 +120,22 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       }
     });
 
-    
+    const pintl = gsap.timeline({
+
+      scrollTrigger: {
+        trigger: spacerRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        pin: true,
+        markers: true
+      }
+      });
+
+      pintl.to(techaH1Ref, {yPercent: 350, duration: 1})
+      pintl.to(techbH1Ref, {rotation: 360, duration: 3})
+      pintl.to(techcH1Ref, {xPercent: 350, duration: 1})
+
   }, []);
 
   let xPercent = 0;
@@ -198,10 +196,10 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       xPercent = -100;
     }
 
-    gsap.set(firstText.current, { xPercent: xPercent });
-    gsap.set(secondText.current, { xPercent: xPercent });
+    gsap.set(firstText.current, { x: xPercent });
+    gsap.set(secondText.current, { x: xPercent });
     requestAnimationFrame(animate1);
-    xPercent += 0.01;
+    xPercent += 0.5;
   };
 
   const animate2 = () => {
@@ -212,7 +210,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.set(thirdText.current, { xPercent: xPercent2 });
     gsap.set(forthText.current, { xPercent: xPercent2 });
     requestAnimationFrame(animate2);
-    xPercent2 -= 0.03;
+    xPercent2 -= 0.05;
   };
 
   const calculateFontSize = () => {
@@ -324,6 +322,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
          <div ref={spacerRef} className='spacer'>
 
          <div ref={techRef} className='tech'>
+          <div></div>
             <h1 ref={techaH1Ref}>What</h1>
             <h1 ref={techbH1Ref}>I</h1>
             <h1 ref={techcH1Ref}>Use</h1>
