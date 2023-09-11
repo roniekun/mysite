@@ -105,7 +105,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     
     const pin = { scrollTrigger: {
         pin: techRef.current,
-        pinSpacing: false,
         trigger:  spacerRef.current,
         start: 'top top',
         end: 'bottom top', // Adjust as needed
@@ -113,32 +112,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       },};
       
       pintl.to(techaH1Ref.current, {
-        visibility: 'visible', duration: .03, 
-        scrollTrigger: pin.scrollTrigger, });
-        pintl.to(techbH1Ref.current, {
-          visibility: 'visible', 
-          scrollTrigger: pin.scrollTrigger, });
-          pintl.to(techcH1Ref.current, {
-            visibility: 'visible', 
-            scrollTrigger: pin.scrollTrigger, });
-            pintl.to(techdH1Ref.current, {
-              visibility: 'visible', 
-              scrollTrigger: pin.scrollTrigger, });
-              pintl.to(techaH1Ref.current, {
-                visibility: 'collapse', display :'none',
-                scrollTrigger: pin.scrollTrigger, });
-                pintl.to(techbH1Ref.current, {
-                  visibility: 'collapse', display: 'none', 
-                  scrollTrigger: pin.scrollTrigger, });
-                  pintl.to(techeH1Ref.current, {
-                    visibility: 'visible', 
-                    scrollTrigger: pin.scrollTrigger, });
-                    pintl.to(techfH1Ref.current, {
-                      visibility: 'visible', 
-                      scrollTrigger: pin.scrollTrigger, });
-                
-
-
+        x: '-100%', duration: .03, scrollTrigger: pin.scrollTrigger,
+      });
 
     const elements = [
       aRef.current,
