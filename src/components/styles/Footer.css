@@ -26,10 +26,8 @@
   font-size: 36px;
   font-weight: 700;
   filter: brightness(90%);
-  color: var(--gold);
-
+  color: white;
 }
-
 
 .footer_cta_button{
 

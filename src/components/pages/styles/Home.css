@@ -406,6 +406,12 @@
     font-size: 150px;
     text-align: center;
   }
+@media(max-width: 600px){
+
+  .tech h1{
+    font-size: 32px;
+  }
+}
 /* FOUR *//* FOUR *//* FOUR *//* FOUR *//* FOUR *//* FOUR *//* FOUR *//* FOUR */
 
   .four{
@@ -435,6 +441,11 @@
     color: white;
     font-size: 100px;
     font-weight: bold;
+  }
+  @media(max-width: 600px){
+    .four h1{
+      font-size: 32px;
+    }
   }
   
   @media (max-width: 1024px) {
