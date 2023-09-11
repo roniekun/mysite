@@ -71,7 +71,6 @@
     border: 1px solid rgba(11, 15, 25, 0.1);
     border-radius: 3px;
     padding-inline: 5%;
-    background-color: var(--primary-color);
     position: fixed;
     inset: 0;
     z-index: 8888;
