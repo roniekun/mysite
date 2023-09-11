@@ -109,10 +109,14 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         start: 'top top',
         end: 'bottom top', // Adjust as needed
         scrub: true,
+        
       },};
       
-      pintl.to(techaH1Ref.current, {
-        x: '-100%', duration: .03, scrollTrigger: pin.scrollTrigger,
+      gsap.to(techaH1Ref.current, {
+        x: '-100%', scrollTrigger: pin.scrollTrigger,
+      });
+      gsap.to(techbH1Ref.current, {
+        x: '-200%', scrollTrigger: pin.scrollTrigger, 
       });
 
     const elements = [

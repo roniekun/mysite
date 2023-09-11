@@ -394,20 +394,20 @@
   }
   .tech{
     min-height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
-    background-color: red;
     position: relative;
-    overflow: hidden;
     background-color: whitesmoke;
+    
   }
 
   .tech > h1{
-    font-size: 150px;
+    flex-shrink: 1;
+    font-size: 100px;
     width: 100vw;
     text-align: center;
+    background-color: gray;
   }
 
 
