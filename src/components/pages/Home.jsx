@@ -120,18 +120,18 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       }
     });
 
-    ScrollTrigger.create({
-      trigger: spacerRef.current,
-      start: "top top",
-      end: "bottom top",
-      pin: techRef.current,
-    });
 
     // Create GSAP timeline
-    const pintl = gsap.timeline();
+    const pintl = gsap.timeline(
+      ScrollTrigger.create({
+        trigger: spacerRef.current,
+        start: "top top",
+        end: "bottom top",
+        pin: techRef.current,
+      }));
 
-    pintl.to(techaH1Ref, { x: 100, duration: 1 })
-      .to(techbH1Ref, { x: 100, duration: 3 })
+    pintl.to(techaH1Ref, { x: -100, duration: 1 })
+      .to(techbH1Ref, { x: -100, duration: 3 })
       .to(techcH1Ref, { y: 150, duration: 1 });
 
   }, []);
