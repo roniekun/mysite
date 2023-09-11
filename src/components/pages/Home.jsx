@@ -95,7 +95,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     });
 
     gsap.to(techH1Ref.current, {
-      scale: 100,
+      scale: 1000,
       duration: 1,
       scrollTrigger: {
         pin: techRef.current,
@@ -308,10 +308,9 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         </div> */}
          <div className='three'></div>
          
-         <div className='tech_container'>
          <div ref={techRef} className='tech'>
             <h1 ref={techH1Ref}>What i use in my projects</h1></div>
-          </div>
+
          <div className='four'>
 
          <div ref={aRef}><h1>Visual Studio</h1></div>
