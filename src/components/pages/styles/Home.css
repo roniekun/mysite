@@ -397,16 +397,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     position: relative;
     overflow: hidden;
     background-color: whitesmoke;
   }
 
-  .tech h1{
+  .tech > h1{
     font-size: 150px;
     text-align: center;
+    visibility: collapse;
   }
+
+
+ 
 @media(max-width: 600px){
 
   .tech h1{

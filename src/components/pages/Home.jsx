@@ -11,7 +11,12 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const heroTextWords = heroTexts.split('-');
 
   const techRef = useRef(null);
-  const techH1Ref = useRef(null);
+  const techaH1Ref = useRef(null);
+  const techbH1Ref = useRef(null);
+  const techcH1Ref = useRef(null);
+  const techdH1Ref = useRef(null);
+  const techeH1Ref = useRef(null);
+  const techfH1Ref = useRef(null);
 
   const aRef = useRef(null);
   const bRef = useRef(null);
@@ -96,18 +101,43 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       },
     });
 
-
-    gsap.to(techH1Ref.current, {
-      scale: 1.5, duration: 1,
-      scrollTrigger: {
+    const pintl = gsap.timeline();
+    
+    const pin = { scrollTrigger: {
         pin: techRef.current,
         pinSpacing: false,
         trigger:  spacerRef.current,
         start: 'top top',
         end: 'bottom top', // Adjust as needed
         scrub: true,
-      },
-    });
+      },};
+      
+      pintl.to(techaH1Ref.current, {
+        visibility: 'visible', duration: .03, 
+        scrollTrigger: pin.scrollTrigger, });
+        pintl.to(techbH1Ref.current, {
+          visibility: 'visible', 
+          scrollTrigger: pin.scrollTrigger, });
+          pintl.to(techcH1Ref.current, {
+            visibility: 'visible', 
+            scrollTrigger: pin.scrollTrigger, });
+            pintl.to(techdH1Ref.current, {
+              visibility: 'visible', 
+              scrollTrigger: pin.scrollTrigger, });
+              pintl.to(techaH1Ref.current, {
+                visibility: 'collapse', display :'none',
+                scrollTrigger: pin.scrollTrigger, });
+                pintl.to(techbH1Ref.current, {
+                  visibility: 'collapse', display: 'none', 
+                  scrollTrigger: pin.scrollTrigger, });
+                  pintl.to(techeH1Ref.current, {
+                    visibility: 'visible', 
+                    scrollTrigger: pin.scrollTrigger, });
+                    pintl.to(techfH1Ref.current, {
+                      visibility: 'visible', 
+                      scrollTrigger: pin.scrollTrigger, });
+                
+
 
 
     const elements = [
@@ -311,11 +341,18 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
         </div> */}
          <div className='three'></div>
-         <div ref={spacerRef} className='spacer'>
-         <div ref={techRef} className='tech'>
-            <h1 ref={techH1Ref}>What i use in my projects</h1></div>
-         </div>
 
+         <div ref={spacerRef} className='spacer'>
+
+         <div ref={techRef} className='tech'>
+            <h1 ref={techaH1Ref}>What</h1>
+            <h1 ref={techbH1Ref}>I</h1>
+            <h1 ref={techcH1Ref}>Use</h1>
+            <h1 ref={techdH1Ref}>In</h1>
+            <h1 ref={techeH1Ref}>My</h1>
+            <h1 ref={techfH1Ref}>Projects</h1>
+         </div>
+         </div>
          <div className='four'>
 
          <div ref={aRef}><h1>Visual Studio</h1></div>
