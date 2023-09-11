@@ -127,14 +127,13 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         start: "top top",
         end: "bottom top",
         scrub: 1,
-        pin: true,
-        markers: true
+        pin: techRef.current,
       }
       });
 
-      pintl.to(techaH1Ref, {yPercent: 350, duration: 1})
-      pintl.to(techbH1Ref, {rotation: 360, duration: 3})
-      pintl.to(techcH1Ref, {xPercent: 350, duration: 1})
+      pintl.to(techaH1Ref, {x: -350, duration: 1})
+      pintl.to(techbH1Ref, {x: 360, duration: 3})
+      pintl.to(techcH1Ref, {y: -350, duration: 1})
 
   }, []);
 
