@@ -46,6 +46,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   const typingRef = useRef(null);
   const forthText = useRef(null);
 
+  // SCROLL TRIGGER CONFIG
   const createScrollTriggerAnimation = (element) => {
     gsap.fromTo(element, {
       opacity: 0,
@@ -67,34 +68,24 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     const typing =typingRef.current;
     const one =oneRef.current;
     const p =pContainerRef.current;
+    const tl = gsap.timeline();
+    const title = heroTitleRefs.current;
+    const slider = sliderRef.current;
+    const about= aboutRef.current;
 
-    const timeline = gsap.timeline({
+// ScrollTrigger for background image
+    gsap.to(bg, {
+      y: 100,
       scrollTrigger: {
-          trigger: spacerRef.current,
-          start: "top top",
-          end: "+=300%",
-          scrub: true,
-          pin: true,
+        trigger: container,
+        start: 'top top', // Adjust as needed
+        end: 'bottom top', // Adjust as needed
+        scrub: true,
       },
-  });
-  
-  timeline.from(techRef.current, { x: -100, opacity: 0, duration: 1 });
-  timeline.from(techaH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
-  timeline.from(techbH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
-  timeline.from(techcH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
-  timeline.from(techdH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
-  timeline.from(techeH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
-  timeline.from(techfH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+    });
 
-  ScrollTrigger.create({
-    trigger: spacerRef.current,
-    start: "top top",
-    end: "+=300%",
-    pin: true,
-    pinSpacing: false,
-});
+// ONE ANIMATION // ONE ANIMATION // ONE ANIMATION // ONE ANIMATION // ONE ANIMATION
 
-    
     gsap.to(typing, {
       x: '5%', opacity:1,
 
@@ -116,47 +107,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       },
     });
 
-    gsap.to(bg, {
-      y: 100,
-      scrollTrigger: {
-        trigger: container,
-        start: 'top top', // Adjust as needed
-        end: 'bottom top', // Adjust as needed
-        scrub: true,
-      },
-    });
 
-    const elements = [
-      aRef.current,
-      bRef.current,
-      cRef.current,
-      dRef.current,
-      eRef.current,
-      fRef.current,
-      gRef.current,
-      hRef.current,
-      iRef.current,
-    ];
-  
-    elements.forEach((element) => {
-      if (element) {
-        createScrollTriggerAnimation(element);
-      }
-    });
-
-    
-  }, []);
-
-  let xPercent = 0;
-  let xPercent2 = 0;
-
-  useEffect(() => {
-    const tl = gsap.timeline();
-    const title = heroTitleRefs.current;
-    const slider = sliderRef.current;
-    const bg = bgHeroRef.current;
-    const about= aboutRef.current;
-    const container= heroContainerRef.current;
+// HERO TIMELINE // HERO TIMELINE // HERO TIMELINE // HERO TIMELINE // HERO TIMELINE
 
     gsap.set(slider,{ y: 300 })
     gsap.set(about,{ y:  -220  })
@@ -193,36 +145,62 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
         },
         {opacity: 1},'-=.7');
    
+// TEXTSLIDER // TEXTSLIDER // TEXTSLIDER // TEXTSLIDER // TEXTSLIDER // TEXTSLIDER 
 
-    gsap.set(secondText.current, { left: secondText.current.getBoundingClientRect().width });
-    requestAnimationFrame(animate1);
-    gsap.set(forthText.current, { left: forthText.current.getBoundingClientRect().width });
-    requestAnimationFrame(animate2);
+      let xPercent = 0;
+      let xPercent2 = 0;
+  
+     const animate1 = () => {
+      if (xPercent > 0) {
+        xPercent = -100;
+      }
+  
+      gsap.set(firstText.current, { x: xPercent });
+      gsap.set(secondText.current, { x: xPercent });
+      requestAnimationFrame(animate1);
+      xPercent += 0.5;
+    };
+  
+    const animate2 = () => {
+      if (xPercent2 < -100) {
+        xPercent2 = 0;
+      }
+  
+      gsap.set(thirdText.current, { xPercent: xPercent2 });
+      gsap.set(forthText.current, { xPercent: xPercent2 });
+      requestAnimationFrame(animate2);
+      xPercent2 -= 0.05;
+    };
+  
+      gsap.set(secondText.current, { left: secondText.current.getBoundingClientRect().width });
+      requestAnimationFrame(animate1);
+      gsap.set(forthText.current, { left: forthText.current.getBoundingClientRect().width });
+      requestAnimationFrame(animate2);
+
+
+// TECH SLIDES ANIMATION // TECH SLIDES ANIMATION // TECH SLIDES ANIMATION // TECH SLIDES ANIMATION
+
+      const elements = [
+        aRef.current,
+        bRef.current,
+        cRef.current,
+        dRef.current,
+        eRef.current,
+        fRef.current,
+        gRef.current,
+        hRef.current,
+        iRef.current,
+      ];
+    
+      elements.forEach((element) => {
+          createScrollTriggerAnimation(element);
+      });
+
   }, []);
+    
+  // DYNAMIC FONT SIZE   // DYNAMIC FONT SIZE   // DYNAMIC FONT SIZE   // DYNAMIC FONT SIZE
 
-  const animate1 = () => {
-    if (xPercent > 0) {
-      xPercent = -100;
-    }
-
-    gsap.set(firstText.current, { x: xPercent });
-    gsap.set(secondText.current, { x: xPercent });
-    requestAnimationFrame(animate1);
-    xPercent += 0.5;
-  };
-
-  const animate2 = () => {
-    if (xPercent2 < -100) {
-      xPercent2 = 0;
-    }
-
-    gsap.set(thirdText.current, { xPercent: xPercent2 });
-    gsap.set(forthText.current, { xPercent: xPercent2 });
-    requestAnimationFrame(animate2);
-    xPercent2 -= 0.05;
-  };
-
-  const calculateFontSize = () => {
+   const calculateFontSize = () => {
     const newFontSize = isSmallScreen ? '17' : window.innerWidth / 32;
     setFontSize(newFontSize);
   };
@@ -236,6 +214,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     };
   }, [window.innerWidth]);
 
+  // EMAIL CONFIG   // EMAIL CONFIG   // EMAIL CONFIG   // EMAIL CONFIG   // EMAIL CONFIG
+
   const email = 'roniebenitez01@gmail.com';
   const subject = 'Project Request';
 
@@ -248,14 +228,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     <div className="home_container">
       <div className="content">
         <div ref={heroContainerRef} className="hero_container">
-        {!isSmallScreen &&
-          <div  ref={aboutRef}  className='about_shortcut_container' >
-          <MagneticEffect>
-          <div style={{position: 'relative'}} >
-          <NavLink  to={'/about'} className='about_shortcut'> <h3>About me</h3> </NavLink>
-          </div>
-          </MagneticEffect>
-          </div>}
           
           <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" />
         
@@ -327,20 +299,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
         </div> */}
          <div className='three'></div>
-
-         <div ref={spacerRef} className='spacer'>
-
-         <div ref={techRef} className='tech'>
-          <div></div>
-          <h1 ref={techaH1Ref}>What</h1>
-            <h1 ref={techbH1Ref}>I</h1>
-            <h1 ref={techcH1Ref}>Use</h1>
-            <h1 ref={techdH1Ref}>In</h1>
-            <h1 ref={techeH1Ref}>My</h1>
-            <h1 ref={techfH1Ref}>Projects</h1>
-
-         </div>
-         </div>
          <div className='four'>
 
          <div ref={aRef}><h1>Visual Studio</h1></div>
@@ -351,7 +309,6 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           <div ref={fRef}><h1>react</h1></div>
           <div ref={gRef}><h1>tailwind</h1></div>
           <div ref={hRef}><h1>gsap</h1></div>
-          <div ref={iRef}><h1>framer motion</h1></div>
 
          </div>
       </div>
