@@ -120,19 +120,19 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       }
     });
 
-
     // Create GSAP timeline
     const pintl = gsap.timeline(
       ScrollTrigger.create({
-        trigger: spacerRef.current,
+        trigger: techRef.current,
         start: "top top",
         end: "bottom top",
         pin: techRef.current,
+        scrub: true,
       }));
 
-    pintl.to(techaH1Ref, { x: -100, duration: 1 })
-      .to(techbH1Ref, { x: -100, duration: 3 })
-      .to(techcH1Ref, { y: 150, duration: 1 });
+      pintl.to(techaH1Ref.current,{xPercent: -100})
+      pintl.to(techbH1Ref.current,{xPercent: -100})
+      pintl.to(techcH1Ref.current,{xPercent: -100})
 
   }, []);
 
