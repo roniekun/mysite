@@ -63,13 +63,37 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const container = heroContainerRef.current;
-    const slider = sliderRef.current;
     const bg = bgHeroRef.current;
     const typing =typingRef.current;
     const one =oneRef.current;
     const p =pContainerRef.current;
 
-   
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+          trigger: spacerRef.current,
+          start: "top top",
+          end: "+=300%",
+          scrub: true,
+          pin: true,
+      },
+  });
+  
+  timeline.from(techRef.current, { x: -100, opacity: 0, duration: 1 });
+  timeline.from(techaH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+  timeline.from(techbH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+  timeline.from(techcH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+  timeline.from(techdH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+  timeline.from(techeH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+  timeline.from(techfH1Ref.current, { x: -50, opacity: 0, duration: 0.5 });
+
+  ScrollTrigger.create({
+    trigger: spacerRef.current,
+    start: "top top",
+    end: "+=300%",
+    pin: true,
+    pinSpacing: false,
+});
+
     
     gsap.to(typing, {
       x: '5%', opacity:1,
@@ -120,20 +144,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       }
     });
 
-    // Create GSAP timeline
-    const pintl = gsap.timeline(
-      ScrollTrigger.create({
-        trigger: techRef.current,
-        start: "top top",
-        end: "bottom top",
-        pin: techRef.current,
-        scrub: true,
-      }));
-
-      pintl.to(techaH1Ref.current,{xPercent: -100})
-      pintl.to(techbH1Ref.current,{xPercent: -100})
-      pintl.to(techcH1Ref.current,{xPercent: -100})
-
+    
   }, []);
 
   let xPercent = 0;
@@ -321,12 +332,13 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
 
          <div ref={techRef} className='tech'>
           <div></div>
-            <h1 ref={techaH1Ref}>What</h1>
+          <h1 ref={techaH1Ref}>What</h1>
             <h1 ref={techbH1Ref}>I</h1>
             <h1 ref={techcH1Ref}>Use</h1>
             <h1 ref={techdH1Ref}>In</h1>
             <h1 ref={techeH1Ref}>My</h1>
             <h1 ref={techfH1Ref}>Projects</h1>
+
          </div>
          </div>
          <div className='four'>
