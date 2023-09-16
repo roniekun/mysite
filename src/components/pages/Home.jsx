@@ -235,6 +235,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           <div ref={heroContentRef} className="hero_content">
             <div style={{ overflow: 'hidden' }}>
               <h1 ref={heroTitleRefs} className="hero_title">
+              Elevate Your Visual Journey
               </h1>
             </div>
             <div style={{overflow: 'hidden'}} className="herotext_container">
@@ -243,14 +244,20 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
                   {word}</div>
               ))}
             </div>
-            <a ref={emailRef} onClick={handleClick} className="email">
+            <div className='hero_nav' ref={emailRef}> 
+            <button onClick={handleClick} className="hero_email">
               Start a project request
-            </a>
+            </button>
+           </div>
+           <div className='hero_image_container'>
+           <img src=""className='hero_image' />
+           </div>
+           
           </div>
           <div ref={sliderRef} className="textslider_wrapper">
             <div ref={sliderRef} className="textslider_container">
               <h1 className="bg_text" ref={firstText} style={{ fontSize: `${fontSize}px` }}>
-               
+
               </h1>
               <h1 className="bg_text" ref={secondText} style={{ fontSize: `${fontSize}px` }}>
                 

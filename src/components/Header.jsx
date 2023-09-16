@@ -27,21 +27,21 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             <div className='logo_wrapper'>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
-               headerLogo={{fontSize: '12px'}} />
+               headerLogo={{fontSize: '14px'}} />
             </div> 
               {isSmallScreen &&
-              <div style={{backgroundColor: showNavbar ? 'black': 'transparent'}} className='menu_wrapper'>
+              <div className='menu_wrapper'>
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
               displayIcon={true}
-              MenuContainer={{backgroundColor: showNavbar? 'black' : 'transparent'}}/>
+              MenuContainer={{}}/>
               </div>}
               {!isSmallScreen &&
                <div className='navlinks_wrapper'>
                <NavbarLinks 
                setShowNavbar={setShowNavbar}
                headerNavbarLink= {{textTransform: 'uppercase',
-               fontSize: '12px' }}/>
+               fontSize: '14px', fontWeight: '500' }}/>
              </div>}
           </div>
         )

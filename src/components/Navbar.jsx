@@ -71,7 +71,7 @@ const Navbar = ({ showNavbar,
          }}
           NavbarLinksWrapper={{}}
           NavbarLinksLink={{textTransform: 'uppercase',
-                            fontWeight: '500',
+                            fontWeight: '500', fontSize: isSmallScreen ? '24px' : '32px'
                             }}/>
           </div >
          <div ref={footerRef} 

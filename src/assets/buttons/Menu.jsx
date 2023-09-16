@@ -31,7 +31,7 @@ const Menu = ({ showNavbar,
               {showNavbar? 'Close' : 'MENU'}</button>}
               {displayIcon &&  
               <Hamburger toggle={setShowNavbar} 
-              color= { showNavbar? '#fafafa': 'black' }
+              color= { showNavbar? '#fafafa': 'whitesmoke' }
               toggled={showNavbar}
               hideOutline={false}
               distance='sm' duration={0.3} size={16} />}
