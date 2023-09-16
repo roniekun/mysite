@@ -31,7 +31,7 @@ const ContactForm = ({isSmallScreen}) => {
     const btn = formBtnRef.current;
   
     gsap.to(btn, {
-      x: isSmallScreen ? 125 : 200, duration: 1,
+      x:  100, duration: 1,
       scrollTrigger: {
         trigger: form,
         start: 'top top', // Adjust as needed

@@ -4,7 +4,7 @@ import { ThemeContext } from '../context/ThemeContext';
 import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
 import SiteLogo from './SiteLogo';
-import { Power1, gsap } from 'gsap';
+import { gsap } from 'gsap';
 
 const Navbar = ({ showNavbar,
                 isSmallScreen, 
@@ -70,7 +70,7 @@ const Navbar = ({ showNavbar,
           NavbarLinksContainer={{flexDirection: 'column',
          }}
           NavbarLinksWrapper={{}}
-          NavbarLinksLink={{textTransform: 'capitalize',
+          NavbarLinksLink={{textTransform: 'uppercase',
                             fontWeight: '500',
                             }}/>
           </div >

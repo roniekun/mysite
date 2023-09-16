@@ -45,7 +45,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
                         paddingInline: '0',
                         rowGap: '0'
                         }}
-        footerNavbarLink={{fontSize: '18px', 
+        footerNavbarLink={{fontSize: '12px', 
                         fontWeight: '400',
                         textTransform: 'capitalize',
                         }}
@@ -60,15 +60,16 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
       footerIconContainer={{
                             }}
       footerSocialLink={{fill: 'gray',
-                          textTransform: 'capitalize'
+                          fontSize: '12px',
+                          textTransform: 'capitalize',
+                          
                           }}
       footerContainer={{ flexDirection: 'column', 
                           alignItems: 'flex-end',
                          }}/></div>
       <div className='footer_text_wrapper'>
-      <h3 style={{color: 'whitesmoke',
-                 fontSize: '18px',
-                 fontWeight: '700'}}>ALL RIGHTS RESERVED 2023</h3>
+      <h2 style={{color: 'whitesmoke',
+                 fontWeight: '700'}}>ALL RIGHTS RESERVED 2023</h2>
       <h4>www.buildbyrk.com</h4>
       {/* <SiteLogo 
       setShowNavbar={setShowNavbar}/> */}

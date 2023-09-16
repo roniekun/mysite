@@ -10,6 +10,7 @@ const Menu = ({ showNavbar,
                   MenuContainer,
                   setIsScroll,
                   isScroll,
+                  isSmallSscreen,
                   displayText,
                   displayIcon }) => {
   
@@ -30,8 +31,7 @@ const Menu = ({ showNavbar,
               {showNavbar? 'Close' : 'MENU'}</button>}
               {displayIcon &&  
               <Hamburger toggle={setShowNavbar} 
-              color= {showNavbar? '#fafafa': '#fafafa' }
-              
+              color= { showNavbar? '#fafafa': 'black' }
               toggled={showNavbar}
               hideOutline={false}
               distance='sm' duration={0.3} size={16} />}

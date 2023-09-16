@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import MagneticEffect from '../../assets/MagneticEffect/MagneticEffect';
 
 const Home = ({ setShowNavbar, isSmallScreen }) => {
+  
   const heroTexts = ' Transforming Visions into Digital Masterpiece-';
   const heroTextWords = heroTexts.split('-');
 
@@ -229,19 +230,17 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
       <div className="content">
         <div ref={heroContainerRef} className="hero_container">
           
-          <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" />
+          {/* <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" /> */}
         
           <div ref={heroContentRef} className="hero_content">
             <div style={{ overflow: 'hidden' }}>
               <h1 ref={heroTitleRefs} className="hero_title">
-                unlock your <br /> <span> visual story</span>
               </h1>
             </div>
             <div style={{overflow: 'hidden'}} className="herotext_container">
               {heroTextWords.map((word, index) => (
                 <div style={{overflow: 'hidden'}} key={index} ref={heroTextRefs[index]} className="hero_text">
-                  {word}
-                </div>
+                  {word}</div>
               ))}
             </div>
             <a ref={emailRef} onClick={handleClick} className="email">
