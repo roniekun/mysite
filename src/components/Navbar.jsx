@@ -53,12 +53,12 @@ const Navbar = ({ showNavbar,
           id={`component-${themeContext.theme}`}>
             
 
-          <div className= 'navlogo_wrapper' ref={logoRef} style={{visibility: isScroll? ''  : 'collapse'}}>
+          {/* <div className= 'navlogo_wrapper' ref={logoRef} style={{visibility: isScroll? ''  : 'collapse'}}>
            <SiteLogo setShowNavbar={setShowNavbar}
             showNavbar={showNavbar}
             navbarContainer={{color: 'gray',
                             fill: 'gray'}}/>
-          </div>
+          </div> */}
         
           <div ref={navItemsRef}
               className='navbar_wrapper'>

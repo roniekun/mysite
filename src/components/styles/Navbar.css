@@ -3,17 +3,15 @@
   flex-direction: column;
   display: flex;
   margin-top: 0;
-  justify-content: flex-start;
+  justify-content: center;
   list-style: none;
   right: 0;
   top: 0;
   position: fixed;
   z-index: 8888;
   gap: 10%;
-  padding-top: 10%;
   overflow: hidden;
   background-color: var(--primary-color);
-  filter: brightness(125%);
 }
 
 .navlogo_wrapper{
@@ -80,10 +78,10 @@
     font-weight: 100;
     box-sizing: border-box;
     flex-direction: column;
+    justify-content: center;
   }
 
     .navbar_wrapper{
-
     justify-content: center;
   }
 

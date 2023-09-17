@@ -5,6 +5,7 @@ import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
 import Menu from '../assets/buttons/Menu';
 import NavbarLinks from './pages/Navlinks';
+import Socials from '../assets/icons/Socials';
 
 function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   
@@ -43,6 +44,13 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
                headerNavbarLink= {{textTransform: 'uppercase',
                fontSize: '14px', fontWeight: '500' }}/>
              </div>}
+             {/* {!isSmallScreen &&
+             <div className='socials_wrapper'>
+               <Socials displayIcons={true}
+                headerIconContainer={{margin: '5px'}}
+                headerSocialLink={{fill: 'lightgray'}}/>
+             </div>
+             } */}
           </div>
         )
       }

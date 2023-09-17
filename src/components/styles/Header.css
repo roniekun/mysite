@@ -1,7 +1,7 @@
 .header_container{
   position: fixed;
   width:100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   z-index: 8888;
@@ -36,6 +36,15 @@
   padding-inline: 1em;
   border-radius: 7px;
   height: 60px;
+}
+.socials_wrapper{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: fit-content;
+  z-index: 9999;
 }
 
 @media (max-width: 600px) {

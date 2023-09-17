@@ -16,7 +16,9 @@ const Socials = ({
                       contactIconContainer,
                       footerIconContainer,
                       footerContainer,
-                      footerSocialLink
+                      footerSocialLink,
+                      headerIconContainer,
+                      headerSocialLink,
 
                 }) => {
 
@@ -25,7 +27,6 @@ const Socials = ({
   const socialMediaLinks = [
     { name: 'Github', fill: '#E4405F', icon: <GithubIcon />, url: 'https://www.github.com/roniekun', userhandle: '' },
     { name: 'Facebook', fill: '#1877F2', icon: <FacebookIcon />, url: 'https://www.facebook.com/ronieuxjpg', userhandle: '' },
-    { name: 'Tiktok', fill: '#000000', icon: <TiktokIcon/>, url: 'https://www.tiktok.com/ronieuxjpg', userhandle: '' },
     { name: 'Instagram', fill: '#E4405F', icon: <InstagramIcon />, url: 'https://www.instagram.com/ronieuxjpg', userhandle: '' },
     { name: 'LinkedIn', fill: '#E4405F', icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/roniebenitez', userhandle: '' },
   ];
@@ -36,7 +37,7 @@ const Socials = ({
         <div className='social_links_container' style={{...contactContainer,...footerContainer}}>
           {socialMediaLinks.map((link) => (
             <div         
-              style={{ ...contactIconContainer,...footerIconContainer}} 
+              style={{ ...contactIconContainer,...footerIconContainer,...headerIconContainer}} 
               key={link.name}
               className='icon_container'>  
                 <a
@@ -48,6 +49,7 @@ const Socials = ({
                     ...footerSocialLink,
                     ...navSocialLink,
                     ...contactSocialLink,
+                    ...headerSocialLink
                   }}
                   // onMouseEnter={() => setHoveredLink(link.name)} 
                   // onMouseLeave={() => setHoveredLink(null)}

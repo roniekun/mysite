@@ -57,5 +57,9 @@
       font-size: 16px;
       line-height: 1.5em;
     }
+    .about-us img{
+      height: 200px;
+      object-fit: contain;
+    }
   }
   
