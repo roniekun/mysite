@@ -1,4 +1,4 @@
-.about_container {
+.aboutContainer {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -9,7 +9,7 @@
     height: auto;
   }
   
-  .about-us {
+  .aboutUs {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -18,7 +18,7 @@
     gap:20px;
   }
   
-  .about-us img {
+  .aboutUs img {
     width: 100%;
     height: 600px;
     object-fit: cover;
@@ -26,38 +26,38 @@
     object-position: top;
   }
   
-  .about-us > h1 {
+  .aboutUs > h1 {
     font-size: 32px;
     font-weight: 500;
     line-height: 1.5em;
   }
   
-  .about-us > p {
+  .aboutUs > p {
     font-weight: 400;
     font-size: 24px;
     line-height: 1.5em;
   }
   @media (max-width: 1024px){
-    .about-us{
+    .aboutUs{
 
     margin-top: 5%;
     }
   }
   
   @media (max-width: 600px) {
-    .about_container {
+    .aboutContainer {
       margin-top: 55px;
     }
     
-    .about-us {
+    .aboutUs {
       width: 100%;
     }
-    .about-us > p{
+    .aboutUs > p{
 
       font-size: 16px;
       line-height: 1.5em;
     }
-    .about-us img{
+    .aboutUs img{
       height: 200px;
       object-fit: contain;
     }

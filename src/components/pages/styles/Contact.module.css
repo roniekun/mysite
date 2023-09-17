@@ -1,4 +1,4 @@
-.contact_container{
+.contactContainer{
     display: flex;
     height: auto;
     justify-content: space-evenly;
@@ -65,7 +65,7 @@
 
     font-weight: 500;
  }
-.form_container{
+.formContainer{
 
     height: 100%;
     width: 100%;
@@ -92,7 +92,7 @@ form{
     height: 800px;
 }
 
-.form_title{
+.formTitle{
     font-size: 100px;
     padding-block: 1em;
     /* padding-inline: .5em; */
@@ -122,7 +122,7 @@ form{
 
     font-size: 48px;
 }
-.form_title{
+.formTitle{
     font-size: 56px;
 }
 }

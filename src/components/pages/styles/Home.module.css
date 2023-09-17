@@ -1,4 +1,4 @@
-.home_container {
+.homeContainer {
   display: flex;
   width: 100vw;
   justify-content: flex-start;
@@ -11,7 +11,7 @@
 
 /* HERO */
 
-.bg_text {
+.bgText {
   justify-content: center;
   display: flex;
   text-transform: capitalize;
@@ -23,12 +23,12 @@
   user-select: none;
 }
 
-.bg_text:nth-child(1) {
+.bgText:nth-child(1) {
   position: absolute;
   left: 100%;
 }
 
-.bg_text2 {
+.bgText2 {
   justify-content: center;
   display: flex;
   text-transform: capitalize;
@@ -39,12 +39,12 @@
   user-select: none;
 }
 
-.bg_text2:nth-child(1) {
+.bgText2:nth-child(1) {
   position: absolute;
   left: 100%;
 }
 
-.hero_email {
+.email {
   cursor: pointer;
   font-size: 16px;
   height: auto;
@@ -60,12 +60,12 @@
   margin-block: 1em;
 }
 
-.hero_email:hover {
+.email:hover {
   filter: brightness(90%);
   transition: .5s;
 }
 
-.hero_container {
+.heroContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -77,7 +77,7 @@
   color: whitesmoke;
 }
 
-.hero_content {
+.heroContent{
   display: flex;
   transform: translateY(10%);
   flex-direction: column;
@@ -88,12 +88,12 @@
   z-index: 2;
 }
 
-.hero_nav {
+.heroNav{
   width: fit-content;
   height: fit-content;
 }
 
-.hero_image_container {
+.heroImageContainer{
   height: 600px;
   border: gray 1px solid;
   width: 100%;
@@ -101,11 +101,11 @@
   overflow: hidden;
 }
 
-.hero_image {
+.heroImage {
   object-fit: cover;
 }
 
-.hero_title {
+.heroTitle{
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -116,11 +116,11 @@
   opacity: 0;
 }
 
-.hero_title:hover {
+.heroTitle:hover {
   filter: brightness(95%);
 }
 
-.herotext_container {
+.heroTextContainer {
   width: 100;
   display: flex;
   flex-direction: row;
@@ -131,7 +131,7 @@
   align-items: flex-start;
 }
 
-.hero_text {
+.heroText {
   font-size: 32px;
   line-height: 1.5em;
   font-weight: 500;
@@ -143,7 +143,7 @@
   margin-right: 5px;
 }
 
-.textslider_wrapper {
+.textSliderWrapper{
   position: relative;
   opacity: 0;
   width: auto;
@@ -154,7 +154,7 @@
   border: 1px solid rgba(128, 128, 128, .3);
 }
 
-.textslider_container {
+.textSliderContainer {
   display: flex;
   height: auto;
   z-index: 1;
@@ -162,15 +162,15 @@
 }
 
 @media (max-width: 600px) {
-  .bg_text {
+  .bgText {
     font-weight: 600;
   }
 
-  .bg_text2 {
+  .bgText2 {
     font-weight: 400;
   }
 
-  .hero_email {
+  .email {
     text-align: center;
     padding: 1em;
     margin-block: .5em;
@@ -178,22 +178,22 @@
     border: 1px solid rgba(128, 128, 128, .7);
   }
 
-  .hero_container {
+  .heroContainer {
     align-items: center;
     height: 100vh;
   }
 
-  .hero_container > p {
+  .heroContainer > p {
     width: 100%;
   }
 
-  .hero_title {
+  .heroTitle {
     font-size: 28px;
     text-transform: capitalize;
     letter-spacing: 1px;
   }
 
-  .hero_image_container {
+  .heroImageContainer {
     height: 400px;
   }
 
@@ -201,12 +201,12 @@
     width: auto;
   }
 
-  .hero_content {
+  .heroContent{
     width: 100%;
     gap: 0;
   }
 
-  .hero_text {
+  .heroText {
     font-size: 16px;
     line-height: 16px;
     margin-right: 0;
@@ -243,14 +243,14 @@
   padding: 1em;
 }
 
-.one_title_wrapper {
+.oneTitleWrapper {
   display: flex;
   width: fit-content;
   align-self: center;
   grid-area: one;
 }
 
-.one_title_wrapper > h2 {
+.oneTitleWrapper > h2 {
   position: relative;
   font-family: 'Handjet';
   border: gray 1px solid;
@@ -262,7 +262,7 @@
   font-weight: 400;
 }
 
-.p_container > p {
+.pContainer > p {
   font-size: 24px;
   padding-block: 1em;
   width: 100%;
@@ -270,7 +270,7 @@
   flex: 1;
 }
 
-.p_container {
+.pContainer {
   width: 100%;
   opacity: 0;
   position: relative;
@@ -310,7 +310,7 @@
     flex-direction: column;
   }
 
-  .gif_typing {
+  .gifTyping {
     position: relative;
     width: 95%;
     height: 200px;
@@ -318,19 +318,19 @@
     aspect-ratio: 1/1;
   }
 
-  .p_container {
+  .pContainer {
     width: 100%;
     padding: .5em;
     height: auto;
     align-items: center;
   }
 
-  .one_title_wrapper > h2 {
+  .oneTitleWrapper > h2 {
     font-size: 24px;
     top: 5%;
   }
 
-  .p_container > p {
+  .pContainer > p {
     font-size: 28px;
     padding: .5em;
   }
@@ -378,7 +378,7 @@
   font-weight: 400;
 }
 
-.p_container2 {
+.pContainer2 {
   width: 100%;
   padding: 1em;
   display: flex;
@@ -386,14 +386,14 @@
   flex-direction: column;
 }
 
-.p_container2 > h3 {
+.pContainer2 > h3 {
   font-size: 32px;
   font-family: 'Handjet';
   font-weight: 400;
   padding-block: 1em;
 }
 
-.p_container2 > p {
+.pContainer2 > p {
   font-size: 28px;
   grid-area: two;
 }

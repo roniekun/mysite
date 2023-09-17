@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Footer from '../Footer';
-import './styles/Home.css';
+import styles from './styles/Home.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { NavLink } from 'react-router-dom';
-import MagneticEffect from '../../assets/MagneticEffect/MagneticEffect';
 
 const Home = ({ setShowNavbar, isSmallScreen }) => {
   
@@ -226,64 +224,64 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
   };
 
   return (
-    <div className="home_container">
+    <div className={styles.homeContainer}>
       <div className="content">
-        <div ref={heroContainerRef} className="hero_container">
+        <div ref={heroContainerRef} className={styles.heroContainer}>
           
           {/* <img ref={bgHeroRef} className="hero_image" src="images/bg-container.webp" /> */}
         
-          <div ref={heroContentRef} className="hero_content">
+          <div ref={heroContentRef} className={styles.heroContent}>
             <div style={{ overflow: 'hidden' }}>
-              <h1 ref={heroTitleRefs} className="hero_title">
+              <h1 ref={heroTitleRefs} className={styles.heroTitle}>
               Elevate Your Visual Journey
               </h1>
             </div>
-            <div style={{overflow: 'hidden'}} className="herotext_container">
+            <div style={{overflow: 'hidden'}} className={styles.heroTextContainer}>
               {heroTextWords.map((word, index) => (
-                <div style={{overflow: 'hidden'}} key={index} ref={heroTextRefs[index]} className="hero_text">
+                <div style={{overflow: 'hidden'}} key={index} ref={heroTextRefs[index]} className={styles.heroText}>
                   {word}</div>
               ))}
             </div>
-            <div className='hero_nav' ref={emailRef}> 
-            <button onClick={handleClick} className="hero_email">
+            <div className={styles.heroNav} ref={emailRef}> 
+            <button onClick={handleClick} className={styles.email}>
               Start a project request
             </button>
            </div>
-           <div className='hero_image_container'>
-           <img src=""className='hero_image' />
+           <div className={styles.heroImageContainer}>
+           <img src="" className={styles.heroImage}/>
            </div>
            
           </div>
-          <div ref={sliderRef} className="textslider_wrapper">
-            <div ref={sliderRef} className="textslider_container">
-              <h1 className="bg_text" ref={firstText} style={{ fontSize: `${fontSize}px` }}>
+          <div ref={sliderRef} className={styles.textSliderWrapper}>
+            <div ref={sliderRef} className={styles.textSliderContainer}>
+              <h1 className={styles.bgText} ref={firstText} style={{ fontSize: `${fontSize}px` }}>
 
               </h1>
-              <h1 className="bg_text" ref={secondText} style={{ fontSize: `${fontSize}px` }}>
+              <h1 className={styles.bgText} ref={secondText} style={{ fontSize: `${fontSize}px` }}>
                 
               </h1>
             </div>
-            <div className="textslider_container">
-              <h1 className="bg_text2" ref={thirdText} style={{ fontSize: `${fontSize}px` }}>
+            <div className={styles.textSliderContainer}>
+              <h1 className={styles.bgText2} ref={thirdText} style={{ fontSize: `${fontSize}px` }}>
               - rk - Web Development & Photography - rk - Web Development & Photography - rk - Web Development & Photography
               </h1>
-              <h1 className="bg_text2" ref={forthText} style={{ fontSize: `${fontSize}px` }}>
+              <h1 className={styles.bgText2} ref={forthText} style={{ fontSize: `${fontSize}px` }}>
               - rk - Web Development & Photography - rk - Web Development & Photography - rk - Web Development & Photography
               </h1>
             </div>
           </div>
         </div>
 
-        <div ref={oneRef} className="one">
-        <div  className='one_title_wrapper'><h2>Web Development</h2> </div>
+        <div ref={oneRef} className={styles.one}>
+        <div  className={styles.oneTitleWrapper}><h2>Web Development</h2> </div>
 
-          <div ref={pContainerRef} className='p_container'>
+          <div ref={pContainerRef} className={styles.pContainer}>
           <p>
             Specialize in creating stunning website landing pages and portfolios that showcase your 
             <strong> unique brand </strong> and captivate your audience. 
           </p>
           </div>
-          <img ref={typingRef} className='gif_typing'src="images/typing.gif" alt="GIF" />
+          <img ref={typingRef} className={styles.gifTyping}src="images/typing.gif" alt="GIF" />
           <p>With my expertise in web development and content creation, I help businesses and
             individuals establish a strong online presence that leaves a lasting impression.</p>
         </div>
@@ -304,8 +302,8 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
           </div>
           </div>
         </div> */}
-         <div className='three'></div>
-         <div className='four'>
+         <div className={styles.three}></div>
+         <div className={styles.four}>
 
          <div ref={aRef}><h1>Visual Studio</h1></div>
          <div ref={bRef}><h1>Npm</h1></div>

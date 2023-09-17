@@ -97,7 +97,8 @@ const Navbar = ({ showNavbar,
               margin: '7px',
               width: 'fit-content',
              }}
-              displayIcons={true}
+              displayIcons={isSmallScreen ? true : false}
+              displayNames={isSmallScreen ? false : true}
               showNavbar={showNavbar}/>
             </div>
            

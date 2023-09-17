@@ -1,12 +1,12 @@
 import React from 'react'
 import Footer from '../Footer';
-import './styles/About.css';
+import styles from './styles/About.module.css';
 
 const About = ({setShowNavbar, isSmallScreen}) => {
   return (
-    <div className='about_container'>
+    <div className={styles.aboutContainer}>
 
-        <div className='about-us'>
+        <div className={styles.aboutUs}>
         <img src="images/bg-container.webp" />
         <h1>About me</h1>
       
