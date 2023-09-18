@@ -67,8 +67,7 @@ const Navbar = ({ showNavbar,
           setShowNavbar={setShowNavbar}
           isScroll={isScroll}
           isSmallScreen={isSmallScreen}
-          NavbarLinksContainer={{flexDirection: 'column',
-         }}
+          NavbarLinksContainer={{flexDirection: 'column', display: 'flex'}}
           NavbarLinksWrapper={{}}
           NavbarLinksLink={{textTransform: 'uppercase',
                             fontWeight: '500', fontSize: isSmallScreen ? '24px' : '32px'

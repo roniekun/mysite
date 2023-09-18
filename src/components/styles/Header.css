@@ -1,7 +1,7 @@
 .header_container{
   position: fixed;
   width:100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   z-index: 8888;
@@ -12,7 +12,7 @@
   z-index: 99999;
   top: 0;
   opacity: 0;
-  padding-inline: 10%;
+  padding-inline: 2%;
 }
 
 .logo_wrapper{
@@ -57,7 +57,7 @@
   z-index: 9999;
   padding-inline: 0;
   width: 100vw;
-  margin-inline: 2%;
+  padding-inline: 2%;
   margin-block-start: 0;
 
 }  
