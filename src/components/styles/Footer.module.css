@@ -1,4 +1,4 @@
-.footer_cta_container{
+.footerCtaContainer{
   display: flex;
   width: 95%;
   flex-direction: column;
@@ -7,20 +7,19 @@
   padding: 2em;
   height: 500px;
   gap: 2em;
-  /* background-color: rgba(250, 250, 250, 0.05);
-  border: rgba(128, 128, 128, .3) 0.5px solid ; */
+ 
 }
-.footer_cta_container > h1{
+.footerCtaContainer > h1{
   font-size: 40px;
   text-align: center;
   color: white;
   margin: 1em;
 
 }
-.footer_cta_container > h1 span{
+.footerCtaContainer> h1 span{
   font-size: 100px;
 }
-.footer_cta_container > h2{
+.footerCtaContainer> h2{
 
   text-align: center;
   font-size: 36px;
@@ -29,32 +28,7 @@
   color: white;
 }
 
-.footer_cta_button{
-
-  height: fit-content;
-  width: fit-content;
-  padding: 1.5em;
-  background-color: transparent;
-  color: whitesmoke;
-  border-radius: 7px;
-  font-size: 16px;
-  filter: brightness(100%) saturate(125%);
-  font-family: 'Ranade', sans-serif;
-  cursor: pointer;
-  transition: .3s;
-  border: rgba(128, 128, 128, .3) 1px solid ;
-}
-
-.footer_cta_button:hover{
-  
-  background-color: var(--orange);
-  transition: .3s;
-  scale: 1.025;
-  filter: brightness(90%);
-  
-}
-
-.footer_nav_container{
+.footerNavContainer{
 
   width: auto;
   display: flex;
@@ -64,7 +38,7 @@
   align-items: center;
  
 }
-.footer_nav_container > h2{
+.footerNavContainer> h2{
 
   color: white;
   font-weight: 700;
@@ -74,7 +48,7 @@
   font-size: 18px;
 }
 
-.footer_links_wrapper{
+.footerLinksWrapper{
   position: relative;
   justify-content: space-evenly;
   width: 100%;
@@ -87,7 +61,7 @@
 
 }
 
-.footer_links_wrapper::before{
+.footerLinksWrapper::before{
   content: '';
   background-color: gray;
   position: absolute;
@@ -97,7 +71,7 @@
 }
 
 
-.footer_social_container {
+.footerSocialContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -105,18 +79,18 @@
   padding:1em;
 }
 
-.footer_social_container > h2{
+.footerSocialContainer > h2{
 
   color: whitesmoke;
   text-transform: uppercase;
   font-weight: 700;
   margin-block: .5em;
 }
-.footer_container {
+.footerContainer {
     
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   height: auto;
   /* background-color: #1C1D20; */
@@ -129,7 +103,7 @@
   z-index: 1;
   }
 
-.footer_text_wrapper{
+.footerTextWrapper{
 
   display: flex;
   justify-content: center;
@@ -142,13 +116,13 @@
 
 
 }
-.footer_text_wrapper > h4:nth-of-type(1){
+.footerTextWrapper > h4:nth-of-type(1){
 
   font-weight: 400;
   color: whitesmoke;
 
 }
-.footer_text_wrapper > h2{
+.footerTextWrapper > h2{
 
   font-weight: 500;
   font-size: 18px;
@@ -164,13 +138,11 @@
 }
 
 .link a:hover{
-
-  text-decoration: underline;
   color: whitesmoke;
   transition: .3s;
 
 }
-.tools_container{
+.toolsContainer{
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -180,19 +152,16 @@
   align-self: flex-start;
   
 }
-.tools_container > h3{
+.toolsContainer > h3{
 
   color: whitesmoke;
   font-weight: 700;
   margin-block: .5em;
 }
 
-
-
-
 @media(max-width: 600px){
 
-  .footer_links_wrapper{
+  .footerLinksWrapper{
 
     flex-direction: column;
     padding: .5em;
@@ -200,25 +169,25 @@
     align-items: center;
   }
 
-  .footer_nav_container{
+  .footerNavContainer{
     justify-content: center;
     align-items: end;
     width: 100%;
   }
 
-  .footer_nav_container > h2{
+  .footerNavContainer > h2{
 
     align-self: flex-start;
   }
 
-  .footer_social_container{
+  .footerSocialContainer{
     width: 100%;
 
   }
-  .footer_social_container > h2{
+  .footerSocialContainer > h2{
     align-self: flex-start;
   }
-  .footer_container{
+  .footerContainer{
 
     height: auto;
     padding-top: 1em;
@@ -228,24 +197,24 @@
     flex-wrap: nowrap;
 
   }
-  .footer_cta_container{
+  .footerCtaContainer{
 
     padding-block: 3em;
     gap: 2em;
   }
-  .footer_cta_container > h2{
+  .footerCtaContainer> h2{
 
     font-size: 24px;
   }
 
-  .footer_text_wrapper{
+  .footerTextWrapper{
 
     align-items: center;
     align-self: center;
     padding: 2em;
     
   }
-  .tools_container{
+  .toolsContainer{
 
     padding: 1em;
   }

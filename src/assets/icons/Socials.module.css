@@ -1,4 +1,4 @@
-.social_links_container{
+.socialLinksContainer{
 
   display: flex;
   width: fit-content;
@@ -6,10 +6,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
 }
-.icon_container{
 
+.iconContainer{
   display: flex;
   position: relative;
   height: fit-content;
@@ -17,20 +16,17 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
- 
-
 }
 
-.social_link{
+.socialLink{
    font-size: 18px;
    color: gray;
    transition: .3s;
    text-decoration: none;
    user-select: none;
-  
 }
 
-.icon_container svg {
+.icoCcontainer svg {
     width: 25px;
     height: 25px;
     opacity: 1;
@@ -38,43 +34,29 @@
     margin: 0;
   }
 
-.icon_container svg:hover{
+.icoCcontainer svg:hover{
 
     fill: white;
     transition: .3s;
-    
 }
 
-.social_link:hover{
-  text-decoration: underline;
+.socialLink:hover{
   color: whitesmoke;
 }
   
-
 @media (max-width: 600px) {
 
-.social_links_container{
+.socialLinksContainer{
     position: relative;
     width: 100%;
-  
-  
-   
-   
-
-   
 }
-.icon_container{
 
+.iconContainer{
   padding: 0px 0px 0px 0px;
- 
-
- 
 }
-.icon_container svg {
+
+.iconContainer svg {
   width: 20px;
   height: 20px;
-
-
 }
-
 }

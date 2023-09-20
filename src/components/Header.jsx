@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import './styles/Header.css';
+import styles from './styles/Header.module.css';
 import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
 import Menu from '../assets/buttons/Menu';
@@ -24,25 +24,30 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-          <div ref={containerRef} id={`component-${theme}`} className='header_container'>
-            <div className='logo_wrapper'>
+          <div ref={containerRef} id={`component-${theme}`} className={styles.headerContainer}>
+            <div className={styles.logoWrapper}>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
-               headerLogo={{fontSize: '14px'}} />
+               headerLogo={{fontSize: '14px',
+                            fontWeight: '600'}} />
             </div> 
               {isSmallScreen &&
-              <div className='menu_wrapper'>
+              <div className={styles.menuWrapper}>
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
               displayIcon={true}
               MenuContainer={{}}/>
               </div>}
               {!isSmallScreen &&
-               <div className='navlinks_wrapper'>
+               <div className={styles.navLinksWrapper}>
                <NavbarLinks 
                setShowNavbar={setShowNavbar}
-               headerNavbarLink= {{textTransform: 'uppercase',
-               fontSize: '14px', fontWeight: '500' }}/>
+               headerNavbarWrapper={{ border: '1px solid white',
+                                      padding: '.5em', 
+                                      borderRadius: '30px', 
+                                      paddingInline: '1.6em'}}
+               headerNavbarLink= {{textTransform: 'capitalize',
+               fontSize: '14px', fontWeight: '600',}}/>
              </div>}
              {/* {!isSmallScreen &&
              <div className='socials_wrapper'>

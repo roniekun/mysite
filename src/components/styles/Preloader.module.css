@@ -1,4 +1,4 @@
-.preloader_container{
+.preloaderContainer{
     z-index: 99999;
     position: fixed;
     display: flex;
@@ -6,12 +6,20 @@
     left: 0;
     height: 100vh;
     width: 100%;
+    align-items: center;
     background-color:black;
     justify-content: center;
     overflow: hidden;
     z-index: 99999999;
 }
-.preloader_logo{
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: auto;
+    }
+.preloaderLogo{
     opacity: 0;
     color:whitesmoke;
     align-self: center;
@@ -21,7 +29,7 @@
     
 }
 
-.preloader_logo span{
+.preloaderLogo span{
     font-style: italic;
 }
 .cover{
@@ -35,7 +43,7 @@
 }
 @media (max-width: 600px){
 
-    .preloader_logo{
+    .preloaderLogo{
         font-size: 50px;
     }
 }

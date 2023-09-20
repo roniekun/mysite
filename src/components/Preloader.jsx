@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import './styles/Preloader.css';
+import styles from './styles/Preloader.module.css';
 import { gsap } from 'gsap';
-import { delay } from 'framer-motion';
 
 const Preloader = () => {
   const containerRef = useRef(null);
@@ -49,11 +48,14 @@ const Preloader = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className='preloader_container'>
-      <div ref={coverRef} className='cover'></div>
-      <h1 className='preloader_logo' ref={logoRef}>
+    <div ref={containerRef} className={styles.preloaderContainer}>
+
+      <div className={styles.logoContainer}>
+      <div ref={coverRef} className={styles.cover}></div>
+      <h1 className={styles.preloaderLogo} ref={logoRef}>
         R<span>k</span>
       </h1>
+      </div>
     </div>
   );
 };

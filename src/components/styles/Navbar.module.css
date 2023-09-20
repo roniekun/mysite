@@ -1,4 +1,4 @@
-.navbar_container {
+.navbarContainer {
   box-sizing: border-box;
   flex-direction: column;
   display: flex;
@@ -14,7 +14,7 @@
   background-color: var(--primary-color);
 }
 
-.navlogo_wrapper{
+.navLogoWrapper{
   background-color: black;
   align-self: center;
   width: 60px;
@@ -24,13 +24,13 @@
   justify-content: center;
   align-items: center;
 }
-.navbar_wrapper{
+.navbarWrapper{
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.nav_footer {
+.navFooter {
   font-weight: 400;
   font-size: 11px;
   color: gray;
@@ -49,18 +49,18 @@
 }
 
 @media (max-width: 1024px) {
-  .navbar_container {
+  .navbarContainer {
     width: 100vw;
   }
 
-  .navbar_wrapper{
+  .navbarWrapper{
     justify-content: center;
   }
 }
 
 @media (max-width: 600px) {
 
-  .navbar_container {
+  .navbarContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -81,13 +81,13 @@
     justify-content: center;
   }
 
-    .navbar_wrapper{
+    .navbarWrapper{
     justify-content: center;
   }
 
 
-  .navbar_container::before,
-  .navbar_container::after,
+  .navbarContainer::before,
+  .navbarContainer::after,
   .hide::after {
     display: none;
   }
@@ -123,7 +123,7 @@
     width: 100%;
     transform: translate(0, 500%);
   }
-  .nav_footer{
+  .navFooter{
     color:lightgray;
 
   }

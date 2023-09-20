@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { NavLink, useLocation } from 'react-router-dom';
-import './styles/Navlinks.css';
+import styles from './styles/Navlinks.module.css';
 
 const NavbarLinks = ({
   headerNavbarLink,
+  headerNavbarWrapper,
   showNavbar,
   isSmallScreen,
   setShowNavbar,
@@ -58,21 +59,19 @@ const NavbarLinks = ({
                 ...footerContainer
                 }}
 
-           className='links_container'
+           className={styles.linksContainer}
           ref={navbarContainerRef}>
       
           {links.map((link, index) => (
-          <div style={{...NavbarLinksWrapper,...footerNavbarWrapper}} 
-          className="link_wrapper" key={link.to}>
+          <div style={{...NavbarLinksWrapper,...footerNavbarWrapper,...headerNavbarWrapper}} 
+          className={styles.linkWrapper}key={link.to}>
           <NavLink
             style={{...NavbarLinksLink,
                     ...footerNavbarLink,
                    ...headerNavbarLink}}
             ref={navbarlinkRefs[index]}
             onClick={() => handleLinkClick()}
-            className={`navbar_link ${
-              location.pathname === link.to ? 'active_link' : ''
-            }`}
+            className={`${styles.navbarLink} ${location.pathname === link.to ? styles.activeLink : ''}`}
             to={link.to}>
             {link.text}
           </NavLink>

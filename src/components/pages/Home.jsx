@@ -253,7 +253,7 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
            
           </div>
           <div ref={sliderRef} className={styles.textSliderWrapper}>
-            <div ref={sliderRef} className={styles.textSliderContainer}>
+            <div className={styles.textSliderContainer}>
               <h1 className={styles.bgText} ref={firstText} style={{ fontSize: `${fontSize}px` }}>
 
               </h1>

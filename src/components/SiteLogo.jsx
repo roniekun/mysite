@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import './styles/SiteLogo.css';
+import styles from './styles/SiteLogo.module.css';
 
 // import { ReactComponent as MyLogo } from './sitelogo.svg' ;
 
@@ -31,8 +31,8 @@ const SiteLogo = ({
     onMouseEnter={handleHover} // Set color to black on hover
     onMouseLeave={handleMouseLeave}
     style={{textDecoration: 'none', color: isSmallScreen ? '#fafafa' : color,...headerContainer}} 
-    className='site_logo_container'>
-      <p style={{...navbarContainer,...headerLogo}} className='logo'>RKCODE</p>
+    className={styles.logoContainer}>
+      <p style={{...navbarContainer,...headerLogo}} className={styles.logo}>RKCODEBASE</p>
     </NavLink> 
   )
 }

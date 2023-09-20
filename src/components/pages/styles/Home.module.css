@@ -32,7 +32,7 @@
   justify-content: center;
   display: flex;
   text-transform: capitalize;
-  font-family: 'Handjet';
+  font-family: 'Handjet', sans-serif;
   z-index: 1;
   padding-right: 10px;
   font-weight: 500;
@@ -58,6 +58,7 @@
   padding-inline: 1.5em;
   border: 1px solid rgba(128, 128, 128, 1);
   margin-block: 1em;
+  margin-bottom: 50px;
 }
 
 .email:hover {
@@ -177,6 +178,7 @@
     margin-block: .1em;
     background-color: transparent;
     border: 1px solid rgba(128, 128, 128, .7);
+    margin-bottom: 30px;
   }
 
   .heroContainer {
@@ -192,6 +194,7 @@
     font-size: 24px;
     text-transform: capitalize;
     letter-spacing: 1px;
+    width: 95%;
   }
 
   .heroImageContainer {
@@ -212,16 +215,13 @@
     font-size: 14px;
     line-height: 16px;
     margin-right: 0;
-  }
-
-  .hero_img {
-    width: 95%;
+    width: 90%;
   }
 }
 
 /* ONE */
 
-.gif_typing {
+.gifTyping {
   height: 450px;
   width: auto;
   aspect-ratio: 3/2;

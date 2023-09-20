@@ -1,5 +1,4 @@
-.site_logo_container{
-
+.logoContainer{
     position:relative;
     display:flex;
     justify-content:center;
@@ -22,15 +21,12 @@
 }
 @media (max-width:600px){
 
-    .site_logo_container{
-      
+    .logoContainer{
       position: relative;
       margin-block: 20px;  
       color: white;
       fill: white;
       width:fit-content;
-      
-
     }
 
   }

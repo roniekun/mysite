@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './App.css';
+import styles from './App.module.css';
 import About from './components/pages/About';
 import Community from './components/pages/Community';
 import Contact from './components/pages/Contact';
@@ -120,9 +120,9 @@ const App = () => {
           {({ theme }) => {
             return (
               
-              <div className='app_container' id={`component-${theme}`}>
+              <div className={styles.appContainer} id={`component-${theme}`}>
                {isLoading && <Preloader/> }
-              <div  className='header_wrapper'>
+              <div  className={styles.headerWrapper}>
               <Header 
                   isScroll={isScroll}
                   showNavbar={showNavbar}
@@ -133,10 +133,10 @@ const App = () => {
              
               <PageModal showNavbar={showNavbar}/>
 
-              <div ref={menuRef}  className='floating_menu_wrapper'>
+              <div ref={menuRef}  className={styles.floatingMenuWrapper}>
               <MagneticEffect>
               <div>
-              <div className='floating_menu'>
+              <div className={styles.floatingMenu}>
               { isDesktop ? (
               <MagneticEffect>
                 <div>

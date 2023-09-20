@@ -1,9 +1,8 @@
-import './styles/Navbar.css';
+import styles from './styles/Navbar.module.css';
 import Socials from '../assets/icons/Socials';
 import { ThemeContext } from '../context/ThemeContext';
 import React, { useEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
-import SiteLogo from './SiteLogo';
 import { gsap } from 'gsap';
 
 const Navbar = ({ showNavbar,
@@ -49,7 +48,7 @@ const Navbar = ({ showNavbar,
             width: isSmallScreen || isMediumScreen ? '100vw' : '40vw',
             transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)',
           }}
-          className={`navbar_container ${isScroll ? 'bg-color' : ''}`}
+          className={`${styles.navbarContainer} ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
             
 
@@ -61,7 +60,7 @@ const Navbar = ({ showNavbar,
           </div> */}
         
           <div ref={navItemsRef}
-              className='navbar_wrapper'>
+              className={styles.navbarWrapper}>
           <NavbarLinks 
           showNavbar={showNavbar}
           setShowNavbar={setShowNavbar}
@@ -82,7 +81,7 @@ const Navbar = ({ showNavbar,
                           bottom: '0',
                           marginBottom: '10%',
                            }}>
-             <h3 className='nav_footer' style={{textTransform: 'uppercase',
+            <h3 className={styles.navFooter} style={{textTransform: 'uppercase',
                                               fontWeight: '700',
                                              }}>Socials</h3>
             <div style={{marginBlock: '10px'}}>
@@ -101,7 +100,7 @@ const Navbar = ({ showNavbar,
               showNavbar={showNavbar}/>
             </div>
            
-            <h3 className='nav_footer'>www.buildbyrk.com</h3>
+            <h3 className={styles.navFooter}>www.buildbyrk.com</h3>
             </div>
           </nav>
         )}

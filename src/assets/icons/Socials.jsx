@@ -1,8 +1,7 @@
 import React, { useState } from 'react'; // Import useState
-import './Socials.css';
+import styles from './Socials.module.css';
 import { ReactComponent as FacebookIcon } from './svg/facebook.svg';
 import { ReactComponent as InstagramIcon } from './svg/instagram.svg';
-import { ReactComponent as TiktokIcon } from './svg/tiktok.svg';
 import { ReactComponent as GithubIcon } from './svg/github.svg';
 import { ReactComponent as LinkedinIcon } from './svg/linkedin.svg';
 import { ThemeContext } from '../../context/ThemeContext';
@@ -34,12 +33,13 @@ const Socials = ({
   return (
     <ThemeContext.Consumer>
       {({ theme }) => (
-        <div className='social_links_container' style={{...contactContainer,...footerContainer}}>
+        <div className={styles.socialLinksContainer} 
+        style={{...contactContainer,...footerContainer}}>
           {socialMediaLinks.map((link) => (
             <div         
               style={{ ...contactIconContainer,...footerIconContainer,...headerIconContainer}} 
               key={link.name}
-              className='icon_container'>  
+              className={styles.iconContainer}>  
                 <a
                   id={`component-${theme}`}
                   href={link.url}
@@ -53,7 +53,7 @@ const Socials = ({
                   }}
                   // onMouseEnter={() => setHoveredLink(link.name)} 
                   // onMouseLeave={() => setHoveredLink(null)}
-                  className='social_link'
+                  className={styles.socialLink}
                   rel="noopener noreferrer">
                    {displayNames &&link.name}
                   {displayIcons && link.icon}
