@@ -26,8 +26,8 @@
 }
 .navbarWrapper{
   display: flex;
-  justify-content: center;
-  width: 100%;
+  align-self: flex-end;
+  width: fit-content;
 }
 
 .navFooter {
@@ -62,7 +62,6 @@
 
   .navbarContainer {
     display: flex;
-    flex-direction: row;
     align-items: center;
     width: 100vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -72,10 +71,7 @@
     position: fixed;
     inset: 0;
     z-index: 8888;
-    top: 0;
-    right: 0;
     overflow: hidden;
-    font-weight: 100;
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;

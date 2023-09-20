@@ -20,13 +20,13 @@ const Navbar = ({ showNavbar,
 
   useEffect(() => {
     const itemAnim = {
-      y: showNavbar ? 0 : isSmallScreen ? 1000 : 0,
-      x: showNavbar ? 0 : isSmallScreen ? '0' : '-1000',
+      y: showNavbar ? 0 : 760,
+      // x: showNavbar ? 0 : isSmallScreen ? '0' : '-1000',
       duration: .8,
     };
     const containerAnim = {
-      y: showNavbar ? 0 : isSmallScreen ? '-200%' : '0%',
-      x: showNavbar ? 0 : isSmallScreen ? '0%' : '200%',
+      y: showNavbar ? '0%' : '-100%',
+      // x: showNavbar ? 0 : isSmallScreen ? '0%' : '200%',
       duration:.8,
     };
   
@@ -44,9 +44,9 @@ const Navbar = ({ showNavbar,
           <nav 
           ref={navbarContainerRef}
           style={{
-            height: isDesktop || isMediumScreen ? '100vh' : ( isSmallScreen && window.innerHeight < 500 ? '100vh' : '75vh'),
-            width: isSmallScreen || isMediumScreen ? '100vw' : '40vw',
-            transform: isSmallScreen? 'translate(0%, -100%)': 'translate(100%, 0)',
+            height: '100vh',
+            width: '100vw', padding: '5%',
+            transform: 'translateY(-100%)',
           }}
           className={`${styles.navbarContainer} ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
@@ -66,12 +66,11 @@ const Navbar = ({ showNavbar,
           setShowNavbar={setShowNavbar}
           isScroll={isScroll}
           isSmallScreen={isSmallScreen}
-          NavbarLinksContainer={{flexDirection: 'column', display: 'flex'}}
-          NavbarLinksWrapper={{}}
+          NavbarLinksContainer={{flexDirection: 'column', display: 'flex', alignItems: 'flex-end', width: '100%'}}
+          NavbarLinksWrapper={{ backgroundColor: 'transparent'}}
           NavbarLinksLink={{textTransform: 'uppercase',
-                            fontWeight: '500', fontSize: isSmallScreen ? '24px' : '32px'
-                            }}/>
-          </div >
+                            fontWeight: '900', fontSize: isSmallScreen ? '40px' : isMediumScreen ? '60px' : '80px'}}/>
+        </div >
          <div ref={footerRef} 
          style={{ position: isSmallScreen ? 'absolute' : 'relative', 
                           display: 'flex',

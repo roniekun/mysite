@@ -7,7 +7,6 @@ const NavbarLinks = ({
   headerNavbarLink,
   headerNavbarWrapper,
   showNavbar,
-  isSmallScreen,
   setShowNavbar,
   footerContainer,
   footerNavbarLink,
@@ -35,10 +34,10 @@ const NavbarLinks = ({
       navbarlinkRefs.forEach((navbarlinkRef, index) => {
         gsap.fromTo(
           navbarlinkRef.current,
-          { y: '100',},
+          { opacity: 0, yPercent: 100},
+
           {
-            x: '0',
-            y: '0',
+            yPercent: 0,
             opacity: 1,
             duration: .9,
             delay: index * .1 ,
@@ -46,7 +45,7 @@ const NavbarLinks = ({
         );
       });
     }
-  }, [showNavbar, isSmallScreen, navbarlinkRefs]);
+  }, [showNavbar, navbarlinkRefs]);
 
   const handleLinkClick = () => {
     window.scrollTo({ top: 0 });
@@ -58,8 +57,7 @@ const NavbarLinks = ({
                 ...NavbarLinksContainer,
                 ...footerContainer
                 }}
-
-           className={styles.linksContainer}
+          className={styles.linksContainer}
           ref={navbarContainerRef}>
       
           {links.map((link, index) => (
