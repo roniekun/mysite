@@ -37,7 +37,7 @@
 
 .navbarLink {
   text-decoration: none;
-  color: gray;
+  color:gray;
   user-select: none;
   text-align: right;
   line-height: 1em;
@@ -45,11 +45,9 @@
 
  .navbarLink:hover{
 
-  color: whitesmoke;
+  color: lightgray;
 }
-.activeLink{
-  filter: brightness(200%);
-}
+
 
 @media (max-width: 600px) {
 

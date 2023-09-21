@@ -65,16 +65,12 @@ const ContactForm = ({isSmallScreen}) => {
 
   };
   
-
   const handleSubmit = async e => {
     e.preventDefault();
-
     
-
     if (formData.firstname && formData.lastname && formData.email && formData.message) {
       formData.name = formData.firstname + ' ' + formData.lastname;
       setIsSubmitting(true);
-
 
       try {
         const submissionData = {
@@ -104,8 +100,6 @@ const ContactForm = ({isSmallScreen}) => {
   const closeModal = () => {
     setShowModal(false);
   };
-
-
 
   return (
     
@@ -153,8 +147,9 @@ const ContactForm = ({isSmallScreen}) => {
           <textarea
             className='text_area'
             id="message"
-            placeholder='Hi, Good day, Mapahimo ko sang ano...'
+            placeholder='Hi, Good day,'
             name="message"
+            rows={4}
             value={formData.message}
             onChange={handleChange}
             required

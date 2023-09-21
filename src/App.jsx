@@ -24,7 +24,7 @@ const App = () => {
   const [isScroll, setIsScroll] = useState();
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 600);
   const [isMediumScreen, setIsMediumScreen] = useState (window.innerWidth <= 1024 && window.innerWidth > 600)
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 600);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
   const [showNavbar, setShowNavbar] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const menuRef = useRef(null);
@@ -56,7 +56,7 @@ const App = () => {
 
     const screenWidth = window.innerWidth;
 
-    setIsDesktop(screenWidth > 600);
+    setIsDesktop(screenWidth > 1024);
     setIsSmallScreen(screenWidth <= 600);
     setIsMediumScreen(screenWidth <= 1024 && screenWidth > 600)
 
@@ -127,7 +127,9 @@ const App = () => {
                   isScroll={isScroll}
                   showNavbar={showNavbar}
                   setShowNavbar={setShowNavbar}
-                  isSmallScreen={isSmallScreen}/>
+                  isSmallScreen={isSmallScreen}
+                  isMediumScreen={isMediumScreen}
+                  isDesktop={isDesktop}/>
               </div>
              
              

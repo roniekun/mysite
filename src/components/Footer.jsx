@@ -47,9 +47,10 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
                         alignItems: isSmallScreen ? 'flex-end' : 'flex-start',
                         rowGap: '0'
                         }}
-        footerNavbarLink={{fontSize: '12px', 
+        footerNavbarLink={{fontSize: '16px', 
                         fontWeight: '400',
                         textTransform: 'capitalize',
+                        lineHeight: '1.5em'
                         }}
         footerNavbarWrapper={{paddingBlock: '0', padding:'0', marginInline: '0' }}/>
       </div>
@@ -62,7 +63,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
       footerIconContainer={{
                             }}
       footerSocialLink={{fill: 'gray',
-                          fontSize: '12px',
+                          fontSize: '16px',
                           textTransform: 'capitalize',
                           
                           }}
@@ -70,13 +71,12 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
                           alignItems: 'flex-end',
                          }}/></div>
       <div className={styles.footerTextWrapper}>
-      <h2 style={{color: 'whitesmoke',
-                 fontWeight: '700'}}>ALL RIGHTS RESERVED 2023</h2>
+      <h2 style={{fontWeight: '700'}}>ALL RIGHTS RESERVED 2023</h2>
       <h4>www.buildbyrk.com</h4>
       {/* <SiteLogo 
       setShowNavbar={setShowNavbar}/> */}
       <h4>version 1.1</h4>
-      <a style={{textDecoration: 'none', color: 'gray'}} href="#">developed by roniekun </a>
+      <a style={{textDecoration: 'none', color: 'black'}} href="#">developed by roniekun </a>
      </div>
       </div>
      

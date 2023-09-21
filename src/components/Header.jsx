@@ -7,7 +7,7 @@ import Menu from '../assets/buttons/Menu';
 import NavbarLinks from './pages/Navlinks';
 import Socials from '../assets/icons/Socials';
 
-function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
+function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumScreen, isDesktop }) {
   
   const containerRef = useRef(null);
 
@@ -19,7 +19,6 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
       opacity: 1,
     });
   }, [isScroll]);
-  
  
   return (
     <ThemeContext.Consumer>
@@ -28,34 +27,32 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
             <div className={styles.logoWrapper}>
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
-               headerLogo={{fontSize: '14px',
+               headerLogo={{fontSize: '16px',
                             fontWeight: '600'}} />
             </div> 
-              {isSmallScreen &&
+            { isSmallScreen &&
               <div className={styles.menuWrapper}>
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
               displayIcon={true}
               MenuContainer={{}}/>
               </div>}
-              {!isSmallScreen &&
+              { isMediumScreen &&
+              <div className={styles.menuWrapper}>
+              <Menu showNavbar={showNavbar} 
+              setShowNavbar={setShowNavbar}
+              displayIcon={true}
+              MenuContainer={{}}/>
+              </div>}
+              {isDesktop &&
                <div className={styles.navLinksWrapper}>
                <NavbarLinks 
                setShowNavbar={setShowNavbar}
-               headerNavbarWrapper={{ border: '1px solid white',
-                                      padding: '.5em', 
-                                      borderRadius: '30px', 
-                                      paddingInline: '1.6em'}}
-               headerNavbarLink= {{textTransform: 'capitalize',
-               fontSize: '14px', fontWeight: '600',}}/>
+               headerNavbarWrapper={{ padding: '.3em', 
+                                      borderRadius: '30px'}}
+               headerNavbarLink= {{textTransform: 'uppercase',
+               fontSize: '14px', fontWeight: '400',}}/>
              </div>}
-             {/* {!isSmallScreen &&
-             <div className='socials_wrapper'>
-               <Socials displayIcons={true}
-                headerIconContainer={{margin: '5px'}}
-                headerSocialLink={{fill: 'lightgray'}}/>
-             </div>
-             } */}
           </div>
         )
       }
@@ -64,3 +61,12 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen }) {
 }
 
 export default Header;
+
+
+    {/* {!isSmallScreen &&
+             <div className='socials_wrapper'>
+               <Socials displayIcons={true}
+                headerIconContainer={{margin: '5px'}}
+                headerSocialLink={{fill: 'lightgray'}}/>
+             </div>
+             } */}

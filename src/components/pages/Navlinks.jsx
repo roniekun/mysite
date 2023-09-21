@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { NavLink, useLocation } from 'react-router-dom';
 import styles from './styles/Navlinks.module.css';
+import { delay } from 'framer-motion';
 
 const NavbarLinks = ({
   headerNavbarLink,
@@ -18,7 +19,6 @@ const NavbarLinks = ({
   }) => {
 
   const location = useLocation();
-  const navbarContainerRef = useRef(null);
 
   const links = [
     { to: '/', text: 'home ' },
@@ -26,26 +26,25 @@ const NavbarLinks = ({
     { to: '/contact', text: 'contact  ' },
     
   ];
-
+  const containerRef = useRef(null);
   const navbarlinkRefs = links.map(() => useRef(null));
-
+  const tl = gsap.timeline();
   useEffect(() => {
     if (showNavbar ) {
+      tl.from(containerRef.current,{delay: .5, opacity: 0});
       navbarlinkRefs.forEach((navbarlinkRef, index) => {
-        gsap.fromTo(
-          navbarlinkRef.current,
-          { opacity: 0, yPercent: 100},
-
+        tl.fromTo(
+          navbarlinkRef.current, 
+          { 
+            opacity: 0, yPercent: 100},
           {
             yPercent: 0,
             opacity: 1,
-            duration: .9,
-            delay: index * .1 ,
-          }
-        );
+            delay: index * .1,
+          }, "-=.5");
       });
     }
-  }, [showNavbar, navbarlinkRefs]);
+6  }, [showNavbar, navbarlinkRefs]);
 
   const handleLinkClick = () => {
     window.scrollTo({ top: 0 });
@@ -58,7 +57,7 @@ const NavbarLinks = ({
                 ...footerContainer
                 }}
           className={styles.linksContainer}
-          ref={navbarContainerRef}>
+          ref={containerRef}>
       
           {links.map((link, index) => (
           <div style={{...NavbarLinksWrapper,...footerNavbarWrapper,...headerNavbarWrapper}} 

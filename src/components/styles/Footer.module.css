@@ -5,14 +5,14 @@
   justify-content: flex-start;
   align-items: center;
   padding: 2em;
-  height: 500px;
+  height: 250px;
   gap: 2em;
  
 }
 .footerCtaContainer > h1{
   font-size: 40px;
   text-align: center;
-  color: white;
+  color: black;
   margin: 1em;
 
 }
@@ -25,7 +25,7 @@
   font-size: 36px;
   font-weight: 700;
   filter: brightness(90%);
-  color: white;
+  color: black;
 }
 
 .footerNavContainer{
@@ -40,30 +40,29 @@
 }
 .footerNavContainer> h2{
 
-  color: white;
+  color: black;
   font-weight: 700;
   width: fit-content;
+  align-self: flex-start;
   text-transform: uppercase;
   margin-block: .5em;
   font-size: 18px;
 }
 
 .footerLinksWrapper{
+  
   position: relative;
+  height: 400px;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   display: flex;
-  font-size: 12px;
-
-  align-items: flex-start;
   padding-block: 2em;
-  background-color: #181818;
-
 }
 
 .footerLinksWrapper::before{
   content: '';
-  background-color: gray;
+  background-color: black;
   position: absolute;
   width: 100%;
   height: 1px;
@@ -81,7 +80,7 @@
 
 .footerSocialContainer > h2{
 
-  color: whitesmoke;
+  color: black;
   text-transform: uppercase;
   font-weight: 700;
   margin-block: .5em;
@@ -90,11 +89,8 @@
     
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', sans-serif;
   width: 100%;
   height: auto;
-  /* background-color: #1C1D20; */
-  background-color: var(--primary-color);
   justify-content: space-evenly;
   align-items: center; 
   padding-top: 3em;
@@ -109,7 +105,7 @@
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  color: gray;
+  color: black;
   width: auto;
   gap: 5px;
   padding-block: 1.5em;
@@ -119,26 +115,27 @@
 .footerTextWrapper > h4:nth-of-type(1){
 
   font-weight: 400;
-  color: whitesmoke;
+  color: black;
 
 }
 .footerTextWrapper > h2{
 
   font-weight: 500;
   font-size: 18px;
+  color: black;
  
 }
 
 .link a{
-
+  line-height: 21px;
   text-decoration: none;
-  color: gray;
-  font-size: 12px;
+  color: black;
+  font-size: 16px;
   user-select: none;
 }
 
 .link a:hover{
-  color: whitesmoke;
+  color: black;
   transition: .3s;
 
 }
@@ -149,12 +146,11 @@
   align-items: flex-start;
   padding-block: 1em;
   width: auto;
-  align-self: flex-start;
-  
 }
+
 .toolsContainer > h3{
 
-  color: whitesmoke;
+  color: black;
   font-weight: 700;
   margin-block: .5em;
 }

@@ -33,7 +33,7 @@
 
  
 }
-.contact_title_wrapper > h1{
+.contactTitleWrapper> h1{
 
     align-self: center;
     font-size: 72px;
@@ -95,9 +95,8 @@ form{
 .formTitle{
     font-size: 100px;
     padding-block: 1em;
-    /* padding-inline: .5em; */
+    text-transform: uppercase;
     align-self: flex-start;
-    font-family: 'Handjet';
 }
 @media (max-width: 1024px){
 
@@ -118,7 +117,7 @@ form{
     font-size: 16px;
     line-height: 1.5em;
 }
-.contact_title_wrapper > h1{
+.contactTitleWrapper > h1{
 
     font-size: 48px;
 }
