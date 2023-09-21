@@ -44,7 +44,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
         footerContainer={{flexDirection: 'column',
                         display: 'flex',
                         paddingInline: '0',
-                        alignItems: isSmallScreen ? 'flex-end' : 'flex-start',
+                        alignItems: 'flex-start',
                         rowGap: '0'
                         }}
         footerNavbarLink={{fontSize: '16px', 
