@@ -163,6 +163,7 @@
     padding: .5em;
     gap: 1em;
     align-items: center;
+    height: 1000px;
   }
 
   .footerNavContainer{
@@ -213,6 +214,7 @@
   .toolsContainer{
 
     padding: 1em;
+    align-self: flex-start;
   }
 
 }

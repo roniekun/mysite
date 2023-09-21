@@ -71,7 +71,7 @@ const Footer = ({setShowNavbar, isSmallScreen}) => {
                           alignItems: 'flex-end',
                          }}/></div>
       <div className={styles.footerTextWrapper}>
-      <h2 style={{fontWeight: '700'}}>ALL RIGHTS RESERVED 2023</h2>
+      <h2 style={{fontWeight: '700', textAlign: 'center'}}>ALL RIGHTS RESERVED 2023</h2>
       <h4>www.buildbyrk.com</h4>
       {/* <SiteLogo 
       setShowNavbar={setShowNavbar}/> */}
