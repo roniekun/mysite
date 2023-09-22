@@ -24,6 +24,7 @@
   z-index: 99999;  
   transition: .3s;
   border-radius: 7px;
+  backdrop-filter: blur(2px);
 }
 .navLinksWrapper{
   display: flex;
@@ -34,6 +35,8 @@
   border-radius: 7px;
   height: 60px;
   z-index: 9999;
+  backdrop-filter: blur(2px);
+
 }
 .socialsWrapper{
   position: relative;

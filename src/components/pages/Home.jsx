@@ -172,10 +172,10 @@ const Home = ({ setShowNavbar, isSmallScreen, showNavbar, isScroll, isDesktop, i
       xPercent2 -= 0.05;
     };
   
-      gsap.set(secondText.current, { left: secondText.current.getBoundingClientRect().width });
-      requestAnimationFrame(animate1);
-      gsap.set(forthText.current, { left: forthText.current.getBoundingClientRect().width });
-      requestAnimationFrame(animate2);
+      // gsap.set(secondText.current, { left: secondText.current.getBoundingClientRect().width });
+      // requestAnimationFrame(animate1);
+      // gsap.set(forthText.current, { left: forthText.current.getBoundingClientRect().width });
+      // requestAnimationFrame(animate2);
 
 
 // TECH SLIDES ANIMATION // TECH SLIDES ANIMATION // TECH SLIDES ANIMATION // TECH SLIDES ANIMATION

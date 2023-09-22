@@ -29,7 +29,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumSc
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
                headerLogo={{fontSize: '16px',
-                            fontWeight: '600',
+                            fontWeight: '400',
                             color: setColor}} />
             </div> 
             { isSmallScreen &&
