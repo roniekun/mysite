@@ -7,7 +7,7 @@ import Menu from '../assets/buttons/Menu';
 import NavbarLinks from './pages/Navlinks';
 import Socials from '../assets/icons/Socials';
 
-function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumScreen, isDesktop }) {
+function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumScreen, isDesktop, setColor}) {
   
   const containerRef = useRef(null);
 
@@ -21,6 +21,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumSc
   }, [isScroll]);
  
   return (
+
     <ThemeContext.Consumer>
       {({ theme }) => (
           <div ref={containerRef} id={`component-${theme}`} className={styles.headerContainer}>
@@ -28,7 +29,8 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumSc
               <SiteLogo setShowNavbar={setShowNavbar}
               showNavbar={showNavbar}
                headerLogo={{fontSize: '16px',
-                            fontWeight: '600'}} />
+                            fontWeight: '600',
+                            color: setColor}} />
             </div> 
             { isSmallScreen &&
               <div className={styles.menuWrapper}>
@@ -51,7 +53,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumSc
                headerNavbarWrapper={{ padding: '.3em', 
                                       borderRadius: '30px'}}
                headerNavbarLink= {{textTransform: 'uppercase',
-               fontSize: '14px', fontWeight: '400',}}/>
+               fontSize: '14px', fontWeight: '400', color: setColor}}/>
              </div>}
           </div>
         )

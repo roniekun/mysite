@@ -3,8 +3,9 @@ import Footer from '../Footer';
 import styles from './styles/Home.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Header from '../Header';
 
-const Home = ({ setShowNavbar, isSmallScreen }) => {
+const Home = ({ setShowNavbar, isSmallScreen, showNavbar, isScroll, isDesktop, isMediumScreen }) => {
   
   const heroTexts = ' Transforming Visions into Digital Masterpiece-';
   const heroTextWords = heroTexts.split('-');
@@ -225,6 +226,16 @@ const Home = ({ setShowNavbar, isSmallScreen }) => {
 
   return (
     <div className={styles.homeContainer}>
+      
+              <Header 
+                  isScroll={isScroll}
+                  showNavbar={showNavbar}
+                  setShowNavbar={setShowNavbar}
+                  isSmallScreen={isSmallScreen}
+                  isMediumScreen={isMediumScreen}
+                  isDesktop={isDesktop}
+                  setColor={'white'}/>
+             
       <div className="content">
         <div ref={heroContainerRef} className={styles.heroContainer}>
           

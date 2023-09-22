@@ -5,15 +5,17 @@ import './Contactform.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import MagneticEffect from '../MagneticEffect/MagneticEffect';
+import ContactModal from './Contactmodal';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDCbfEVWBnQQ0LtWmWQdomUifl8QOncSDM",
-  authDomain: "netlify-project-contact-form.firebaseapp.com",
-  projectId: "netlify-project-contact-form",
-  storageBucket: "netlify-project-contact-form.appspot.com",
-  messagingSenderId: "1062242217772",
-  appId: "1:1062242217772:web:29e9de0bf9c2f49f5d4689"
+  apiKey: "AIzaSyC2yJ3-lNxbO6h6Ma5oPET6pKtDn67arME",
+  authDomain: "rkcodebase.firebaseapp.com",
+  projectId: "rkcodebase",
+  storageBucket: "rkcodebase.appspot.com",
+  messagingSenderId: "145578979256",
+  appId: "1:145578979256:web:b85285981655e35a17a94d",
+  measurementId: "G-41GM0KC6M7"
 };
 
 // Initialize Firebase
@@ -42,9 +44,7 @@ const ContactForm = ({isSmallScreen}) => {
   }, []);
  
   const initialFormData = {
-    name: '',
     firstname: '',
-    lastname: '',
     email: '',
     message: '',
   };
@@ -68,8 +68,7 @@ const ContactForm = ({isSmallScreen}) => {
   const handleSubmit = async e => {
     e.preventDefault();
     
-    if (formData.firstname && formData.lastname && formData.email && formData.message) {
-      formData.name = formData.firstname + ' ' + formData.lastname;
+    if (formData.firstname && formData.email && formData.message) {
       setIsSubmitting(true);
 
       try {
@@ -82,6 +81,7 @@ const ContactForm = ({isSmallScreen}) => {
         setIsSuccess(true);
         setModalMessage('Form submitted successfully!');
         setIsSubmitting(false);
+        console.log('success')
       } catch (error) {
         setIsSuccess(false);
         setModalMessage('Failed to submit the form. Please try again later.');
@@ -164,13 +164,13 @@ const ContactForm = ({isSmallScreen}) => {
         </div>
         </MagneticEffect>
         </div>
-           {/* {showModal && (
+           {showModal && (
         <ContactModal
           isSuccess={isSuccess}
           message={modalMessage}
           closeModal={closeModal}
         />
-      )} */}
+      )}
       </form>
   );
 };

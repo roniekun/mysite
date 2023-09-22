@@ -1,10 +1,19 @@
 import React from 'react'
 import Footer from '../Footer';
 import styles from './styles/About.module.css';
+import Header from '../Header';
 
-const About = ({setShowNavbar, isSmallScreen}) => {
+const About = ({setShowNavbar, isSmallScreen, isScroll, showNavbar,isMediumScreen, isDesktop}) => {
   return (
     <div className={styles.aboutContainer}>
+        <Header 
+          isScroll={isScroll}
+          showNavbar={showNavbar}
+          setShowNavbar={setShowNavbar}
+          isSmallScreen={isSmallScreen}
+          isMediumScreen={isMediumScreen}
+          isDesktop={isDesktop}
+          setColor={'black'}/>
 
         <div className={styles.aboutUs}>
         <img src="images/bg-container.webp" />

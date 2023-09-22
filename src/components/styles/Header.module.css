@@ -33,6 +33,7 @@
   padding-inline: 1em;
   border-radius: 7px;
   height: 60px;
+  z-index: 9999;
 }
 .socialsWrapper{
   position: relative;

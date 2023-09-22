@@ -6,7 +6,6 @@ import Community from './components/pages/Community';
 import Contact from './components/pages/Contact';
 import Gallery from './components/pages/Gallery';
 import { gsap } from 'gsap';
-import Header from './components/Header';
 import Home from './components/pages/Home';
 import MagneticEffect from './assets/MagneticEffect/MagneticEffect';
 import Menu from './assets/buttons/Menu';
@@ -122,17 +121,6 @@ const App = () => {
               
               <div className={styles.appContainer} id={`component-${theme}`}>
                {isLoading && <Preloader/> }
-              <div  className={styles.headerWrapper}>
-              <Header 
-                  isScroll={isScroll}
-                  showNavbar={showNavbar}
-                  setShowNavbar={setShowNavbar}
-                  isSmallScreen={isSmallScreen}
-                  isMediumScreen={isMediumScreen}
-                  isDesktop={isDesktop}/>
-              </div>
-             
-             
               <PageModal showNavbar={showNavbar}/>
 
               <div ref={menuRef}  className={styles.floatingMenuWrapper}>
@@ -193,6 +181,7 @@ const App = () => {
                 <Routes>
                   <Route path='/' 
                   element={<Home 
+                  isDesktop={isDesktop}
                   isSmallScreen={isSmallScreen} 
                   isMediumScreen={isMediumScreen} 
                   showNavbar={showNavbar}
@@ -204,7 +193,10 @@ const App = () => {
                   element={<About 
                   isSmallScreen={isSmallScreen} 
                   showNavbar={showNavbar}
-                  setShowNavbar={setShowNavbar} />}
+                  setShowNavbar={setShowNavbar}
+                  isDesktop={isDesktop}
+                  isScroll={isScroll}
+                  isMediumScreen={isMediumScreen} />}
                   />
 
                   <Route path='/community' 
@@ -223,6 +215,9 @@ const App = () => {
 
                   <Route path='/contact'
                    element={<Contact 
+                   isDesktop={isDesktop}
+                   isScroll={isScroll}
+                   isMediumScreen={isMediumScreen}
                    isSmallScreen={isSmallScreen}  
                    showNavbar={showNavbar}
                    setShowNavbar={setShowNavbar} />} />
