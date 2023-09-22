@@ -138,6 +138,7 @@ const App = () => {
                     displayNames={false}
                     setIsScroll={setIsScroll}
                     isScroll={isScroll}
+                    setColor={'white'}
                     AppMenuContainer={{
                     position: 'relative',
                     backgroundColor: 'transparent',
@@ -154,6 +155,7 @@ const App = () => {
                   setShowNavbar={setShowNavbar}
                   displayNames={false}
                   setIsScroll={setIsScroll}
+                  setColor={'white'}
                   isScroll={isScroll}
                   AppMenuContainer={{
                   position: 'relative',

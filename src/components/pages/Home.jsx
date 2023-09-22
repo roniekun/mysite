@@ -226,7 +226,6 @@ const Home = ({ setShowNavbar, isSmallScreen, showNavbar, isScroll, isDesktop, i
 
   return (
     <div className={styles.homeContainer}>
-      
               <Header 
                   isScroll={isScroll}
                   showNavbar={showNavbar}

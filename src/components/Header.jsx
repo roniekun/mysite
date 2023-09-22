@@ -37,6 +37,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumSc
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
               displayIcon={true}
+              setColor={setColor}
               MenuContainer={{}}/>
               </div>}
               { isMediumScreen &&
@@ -44,6 +45,7 @@ function Header({ isScroll, showNavbar, setShowNavbar, isSmallScreen, isMediumSc
               <Menu showNavbar={showNavbar} 
               setShowNavbar={setShowNavbar}
               displayIcon={true}
+              setColor={setColor}
               MenuContainer={{}}/>
               </div>}
               {isDesktop &&
