@@ -26,6 +26,7 @@
   border-radius: 7px;
   backdrop-filter: blur(100px);
 }
+
 .navLinksWrapper{
   display: flex;
   justify-content: center;
@@ -37,6 +38,7 @@
   z-index: 9999;
   backdrop-filter: blur(100px);
 }
+
 .socialsWrapper{
   position: relative;
   display: flex;
@@ -57,19 +59,6 @@
   height: 60px;
 }  
 
-
-.headerContainer::after{
-  content: '';
-  transform: translate(50%, 50%);
-  right: 50%;
-  width: 90%;
-  height:1px;
-  bottom: 0;
-  position: absolute;
-  z-index: -1;
-  background-color: rgba(211, 211, 211, .2);
-}
-
 .menuWrapper{
   width: auto;
   width: 60px;
@@ -83,4 +72,8 @@
   padding-inline: 0;
 }
 
+.logoWrapper{
+  height: auto;
+  padding: .5em;
+}
 }

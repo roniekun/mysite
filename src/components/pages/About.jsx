@@ -13,7 +13,7 @@ const About = ({setShowNavbar, isSmallScreen, isScroll, showNavbar,isMediumScree
           isSmallScreen={isSmallScreen}
           isMediumScreen={isMediumScreen}
           isDesktop={isDesktop}
-          setColor={'black'}/>
+          setColor={showNavbar ? 'white' : 'black'}/>
 
         <div className={styles.aboutUs}>
         <img src="images/bg-container.webp" />

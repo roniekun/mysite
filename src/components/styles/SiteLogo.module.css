@@ -16,17 +16,22 @@
     color: lightgray;
     user-select: none;
     }
+
 .logo span{
      font-style: italic;
 }
+
 @media (max-width:600px){
 
     .logoContainer{
       position: relative;
-      margin-block: 20px;  
       color: white;
       fill: white;
       width:fit-content;
+      
+    }
+    .logo{
+      padding: 0;
     }
 
   }

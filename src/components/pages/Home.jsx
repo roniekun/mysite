@@ -233,7 +233,8 @@ const Home = ({ setShowNavbar, isSmallScreen, showNavbar, isScroll, isDesktop, i
                   isSmallScreen={isSmallScreen}
                   isMediumScreen={isMediumScreen}
                   isDesktop={isDesktop}
-                  setColor={'white'}/>
+                  setColor={showNavbar ? 'whitesmoke' : 'white'}/>
+
              
       <div className="content">
         <div ref={heroContainerRef} className={styles.heroContainer}>

@@ -14,7 +14,7 @@ const Contact = ({isSmallScreen, setShowNavbar, isScroll, showNavbar, isMediumSc
                   isSmallScreen={isSmallScreen}
                   isMediumScreen={isMediumScreen}
                   isDesktop={isDesktop}
-                  setColor={'black'}/>
+                  setColor={showNavbar ? 'white' :'black'}/>
 
       <div className={styles.contact}>
          <div className={styles.formContainer}>

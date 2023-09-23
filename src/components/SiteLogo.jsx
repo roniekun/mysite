@@ -12,14 +12,6 @@ const SiteLogo = ({
   navbarContainer,
   setShowNavbar}) => {
 
-  const [color, setColor] = useState('#6d6d6d');
-  const handleHover = () => {
-    setColor('gray');}
-
-  const handleMouseLeave = () => {
-  
-    setColor(showNavbar ? '#6d6d6d' : color);
-    }
   
     const handleClick = () => {
       window.scrollTo({ top: 0 });
@@ -28,9 +20,7 @@ const SiteLogo = ({
   return (
     <NavLink to='/' 
     onClick={handleClick}
-    onMouseEnter={handleHover} // Set color to black on hover
-    onMouseLeave={handleMouseLeave}
-    style={{textDecoration: 'none', color: isSmallScreen ? '#fafafa' : color,...headerContainer}} 
+    style={{textDecoration: 'none',...headerContainer}} 
     className={styles.logoContainer}>
       <p style={{...navbarContainer,...headerLogo}} className={styles.logo}>RKCODEBASE</p>
     </NavLink> 

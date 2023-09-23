@@ -1,7 +1,7 @@
 import styles from './styles/Navbar.module.css';
 import Socials from '../assets/icons/Socials';
 import { ThemeContext } from '../context/ThemeContext';
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import NavbarLinks from './pages/Navlinks';
 import { gsap } from 'gsap';
 
@@ -18,7 +18,7 @@ const Navbar = ({ showNavbar,
   const logoRef = useRef(null);
   
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const itemAnim = {
       y: showNavbar ? 0 : 760,
       // x: showNavbar ? 0 : isSmallScreen ? '0' : '-1000',
@@ -51,14 +51,6 @@ const Navbar = ({ showNavbar,
           className={`${styles.navbarContainer} ${isScroll ? 'bg-color' : ''}`}
           id={`component-${themeContext.theme}`}>
             
-
-          {/* <div className= 'navlogo_wrapper' ref={logoRef} style={{visibility: isScroll? ''  : 'collapse'}}>
-           <SiteLogo setShowNavbar={setShowNavbar}
-            showNavbar={showNavbar}
-            navbarContainer={{color: 'gray',
-                            fill: 'gray'}}/>
-          </div> */}
-        
           <div ref={navItemsRef}
               className={styles.navbarWrapper}>
           <NavbarLinks 
@@ -78,7 +70,9 @@ const Navbar = ({ showNavbar,
                           alignItems: 'center',
                           flexDirection: 'column',
                           bottom: '0',
-                          marginBottom: '10%',
+                          paddingBlock: '5%',
+                          width: '100%',
+                          marginBottom: isSmallScreen ?'20%' : '0',
                            }}>
             <h3 className={styles.navFooter} style={{textTransform: 'uppercase',
                                               fontWeight: '700',
